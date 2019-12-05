@@ -1,0 +1,53 @@
+// font-weight helper:
+
+// 100 Extra Light or Ura Light
+// 200 Light or Thin 300 Book or Demi
+// 400 Regular or Normal
+// 500 Medium
+// 600 Semibold or Demibold
+// 700 Bold
+// 800 Black or Extra Bold or Heavy
+// 900 Extra Black or Fat or Ura Black
+
+
+@mixin font($f-name, $f-style, $f-weight, $f-url, $f-format)
+	@font-face
+		font-family: $f-name
+		font-style: $f-style
+		font-weight: $f-weight
+		src: url($f-url) format($f-format)
+
+@include font('Proxima Nova', normal, 900, '../fonts/ProximaNova-Black.woff2', 'woff2' ) /* Super Modern Browsers */
+@include font('Proxima Nova', normal, 900, '../fonts/ProximaNova-Black.woff', 'woff' ) /* Modern Browsers */
+@include font('Proxima Nova', normal, 900, '../fonts/ProximaNova-Black.ttf', 'truetype' ) /* Safari, Android, iOS */
+@include font('Proxima Nova', normal, 900, '../fonts/ProximaNova-Black.eot?#iefix', 'embedded-opentype' ) /* Legacy iOS */
+
+@include font('Proxima Nova', normal, 800, '../fonts/ProximaNova-Extrabld.woff2', 'woff2' ) /* Super Modern Browsers */
+@include font('Proxima Nova', normal, 800, '../fonts/ProximaNova-Extrabld.woff', 'woff' ) /* Modern Browsers */
+@include font('Proxima Nova', normal, 800, '../fonts/ProximaNova-Extrabld.ttf', 'truetype' ) /* Safari, Android, iOS */
+@include font('Proxima Nova', normal, 800, '../fonts/ProximaNova-Extrabld.eot?#iefix', 'embedded-opentype' ) /* Legacy iOS */
+
+@include font('Proxima Nova', normal, 100, '../fonts/ProximaNovaT-Thin.woff2', 'woff2' ) /* Super Modern Browsers */
+@include font('Proxima Nova', normal, 100, '../fonts/ProximaNovaT-Thin.woff', 'woff' ) /* Modern Browsers */
+@include font('Proxima Nova', normal, 100, '../fonts/ProximaNovaT-Thin.ttf', 'truetype' ) /* Safari, Android, iOS */
+@include font('Proxima Nova', normal, 100, '../fonts/ProximaNovaT-Thin.eot?#iefix', 'embedded-opentype' ) /* Legacy iOS */
+
+@include font('Proxima Nova', normal, 300, '../fonts/ProximaNova-Light.woff2', 'woff2' ) /* Super Modern Browsers */
+@include font('Proxima Nova', normal, 300, '../fonts/ProximaNova-Light.woff', 'woff' ) /* Modern Browsers */
+@include font('Proxima Nova', normal, 300, '../fonts/ProximaNova-Light.ttf', 'truetype' ) /* Safari, Android, iOS */
+@include font('Proxima Nova', normal, 300, '../fonts/ProximaNova-Light.eot?#iefix', 'embedded-opentype' ) /* Legacy iOS */
+
+@include font('Proxima Nova', normal, bold, '../fonts/ProximaNova-Bold.woff2', 'woff2' ) /* Super Modern Browsers */
+@include font('Proxima Nova', normal, bold, '../fonts/ProximaNova-Bold.woff', 'woff' ) /* Modern Browsers */
+@include font('Proxima Nova', normal, bold, '../fonts/ProximaNova-Bold.ttf', 'truetype' ) /* Safari, Android, iOS */
+@include font('Proxima Nova', normal, bold, '../fonts/ProximaNova-Bold.eot?#iefix', 'embedded-opentype' ) /* Legacy iOS */
+
+@include font('Proxima Nova', normal, normal, '../fonts/ProximaNova-Regular.woff2', 'woff2' ) /* Super Modern Browsers */
+@include font('Proxima Nova', normal, normal, '../fonts/ProximaNova-Regular.woff', 'woff' ) /* Modern Browsers */
+@include font('Proxima Nova', normal, normal, '../fonts/ProximaNova-Regular.ttf', 'truetype' ) /* Safari, Android, iOS */
+@include font('Proxima Nova', normal, normal, '../fonts/ProximaNova-Regular.eot?#iefix', 'embedded-opentype' ) /* Legacy iOS */
+
+@include font('Proxima Nova', normal, 600, '../fonts/ProximaNova-Semibold.woff2', 'woff2' ) /* Super Modern Browsers */
+@include font('Proxima Nova', normal, 600, '../fonts/ProximaNova-Semibold.woff', 'woff' ) /* Modern Browsers */
+@include font('Proxima Nova', normal, 600, '../fonts/ProximaNova-Semibold.ttf', 'truetype' ) /* Safari, Android, iOS */
+@include font('Proxima Nova', normal, 600, '../fonts/ProximaNova-Semibold.eot?#iefix', 'embedded-opentype' ) /* Legacy iOS */
