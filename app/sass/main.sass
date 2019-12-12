@@ -1379,7 +1379,7 @@ header
 		.row
 			.title
 				margin-bottom: 30px
-.news__home				
+.news__home
 	.container
 		.row
 			.news__list
@@ -1804,7 +1804,7 @@ header
 					flex-basis: 385px
 					max-width: 385px
 					box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
-					border-radius: 20px					
+					border-radius: 20px
 					margin-bottom: 20px
 					.news__link
 						padding: 38px
@@ -1839,8 +1839,8 @@ header
 				object-fit: cover
 	.container
 		.row
-			.pagenews__wrap		
-				padding-top: 60px	
+			.pagenews__wrap
+				padding-top: 60px
 				display: flex
 				align-items: flex-start
 				justify-content: space-between
@@ -1855,14 +1855,14 @@ header
 				.pagenews__right
 					flex-basis: 48%
 					.pagenews__list
-						.pagenews__item									
+						.pagenews__item
 							background: #FFFFFF
 							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 							border-radius: 20px
 							margin-bottom: 20px
-							.pagenews__link	
+							.pagenews__link
 								padding: 50px
-								display: block													
+								display: block
 								.pagenews__title
 									font-family: 'Roboto', sans-serif
 									font-weight: 300
@@ -1909,7 +1909,7 @@ header
 					border-radius: 20px
 					padding: 0px
 					margin-bottom: 20px
-					img 
+					img
 						width: 100%
 					.license__link
 						font-family: 'Roboto', sans-serif
@@ -2039,8 +2039,367 @@ header
 							line-height: 28px
 							margin-bottom: 45px
 							&:last-child
-								margin-bottom: 0px							
+								margin-bottom: 0px
+///////////////equipment page
+.equipment
+	background-color: #fff
+	padding-bottom: 60px
+	.container
+		.row
+			.title
+				margin-bottom: 60px
+	.container
+		.row
+			.equipment__list
+				display: flex
+				align-items: flex-start
+				justify-content: flex-start
+				flex-direction: column
+				width: 100%
+				.equipment__item
+					display: flex
+					align-items: flex-start
+					justify-content: flex-start
+					flex-direction: column
+					margin-bottom: 60px
+					&:last-child
+						margin-bottom: 0px
 
+					.equipment__title
+						font-size: 36px
+						line-height: 36px
+						letter-spacing: 0.02em
+						color: $accent
+						margin-bottom: 30px
+					.equipment__content
+						display: flex
+						align-items: flex-start
+						justify-content: flex-start
+						.equipment__imgWrap
+							margin-right: 40px
+							.equipment__img
+								box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+								border-radius: 20px
+						.equipment__text
+							font-size: 18px
+							line-height: 25px
+							letter-spacing: 0.02em
+///////////////Specialists page
+.specialists
+	background-color: #fff
+	padding-bottom: 60px
+	.container
+		.row
+			.title
+				margin-bottom: 60px
+	.container
+		.row
+			&.specialists__top
+				margin-bottom: 60px
+				.specialists__title
+					font-weight: 300
+					font-size: 36px
+					line-height: 36px
+					letter-spacing: 0.02em
+					color: $accent
+					margin-bottom: 30px
+				.specialists__listTop
+					display: flex
+					align-items: flex-start
+					justify-content: space-between
+					width: 100%
+					.specialists__itemTop
+						display: flex
+						align-items: flex-start
+						justify-content: flex-start
+						flex-direction: column
+						background: #FFFFFF
+						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						border-radius: 20px
+						flex-basis: 588px
+						.specialists__link
+							width: 100%
+							.specialists__img
+								width: 100%
+								height: 442px
+								border-radius: 20px 20px 0px 0px
+							.specialists__info
+								display: flex
+								align-items: flex-start
+								justify-content: flex-start
+								flex-direction: column
+								.specialists__date
+									font-family: 'Roboto', sans-serif
+									font-weight: 300
+									font-size: 36px
+									line-height: 42px
+									color: #000000
+									padding: 30px 50px 25px
+								.specialists__description
+									font-family: 'Roboto', sans-serif
+									font-weight: 300
+									font-size: 24px
+									line-height: 28px
+									color: #000000
+									padding: 0px 50px 135px
+	.container
+		.row
+			&.specialists__bottom
+				.specialists__title
+					font-weight: 300
+					font-size: 36px
+					line-height: 36px
+					letter-spacing: 0.02em
+					color: $accent
+					margin-bottom: 30px
+				.specialists__listBottom
+					display: flex
+					align-items: flex-start
+					justify-content: space-between
+					flex-wrap: wrap
+					width: 100%
+
+					.specialists__itemBottom
+						display: flex
+						align-items: flex-start
+						justify-content: flex-start
+						flex-direction: column
+						background: #FFFFFF
+						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						border-radius: 20px
+						flex-basis: 385px
+						margin-bottom: 20px
+						.specialists__link
+							width: 100%
+							.specialists__img
+								width: 100%
+								height: 351px
+								border-radius: 20px 20px 0px 0px
+							.specialists__info
+								width: 100%
+								display: flex
+								align-items: flex-start
+								justify-content: center
+								flex-direction: column
+								.specialists__date
+									font-family: 'Roboto', sans-serif
+									font-weight: 300
+									font-size: 24px
+									line-height: 28px
+									color: #000000
+									padding-top: 30px
+									padding-bottom: 15px
+									margin: 0 auto
+								.specialists__description
+									font-family: 'Roboto', sans-serif
+									font-weight: 300
+									font-size: 18px
+									line-height: 21px
+									color: #000000
+									padding-bottom: 115px
+									margin: 0 auto
+///////////////Pagespecialist page
+.pagespecialist
+	background-color: #fff
+	padding-bottom: 60px
+	.container
+		.row
+			.title
+				margin-bottom: 60px
+	.container
+		.row
+			.pagespecialist__top
+				position: relative
+				width: 100%
+				.pagespecialist__wrapImg
+					max-width: 892px
+					height: 600px
+					img
+						width: 100%
+				.pagespecialist__caption
+					position: absolute
+					right: 0
+					top: 15px
+					background: #FFFFFF
+					box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+					border-radius: 20px
+					flex-basis: 385px
+					max-width: 385px
+					padding: 50px 30px 122px
+					.pagespecialist__description
+						font-family: 'Roboto', sans-serif
+						font-weight: 300
+						font-size: 20px
+						line-height: 23px
+						color: #000000
+						margin-bottom: 50px
+					.pagespecialist__experience
+						font-family: 'Roboto', sans-serif
+						font-weight: 300
+						font-size: 20px
+						line-height: 23px
+						color: #000000
+						margin-bottom: 50px
+					.pagespecialist__subtext
+						font-family: 'Roboto', sans-serif
+						font-weight: 300
+						font-size: 20px
+						line-height: 23px
+						color: #000000
+					.pagespecialist__timeList
+						font-family: 'Roboto', sans-serif
+						font-weight: 300
+						font-size: 20px
+						line-height: 23px
+						color: #000000
+						.pagespecialist__timeItem
+							margin-bottom: 5px
+							.pagespecialist__day
+							.pagespecialist__time
+.pagespecialist__diploms
+	.container
+		.row
+			.pagespecialist__title
+				font-weight: 300
+				font-size: 36px
+				line-height: 36px
+				letter-spacing: 0.02em
+				color: $accent
+				margin-bottom: 30px
+	.container-fluid
+		max-width: 1400px
+		.row
+			.pagespecialist__list
+				padding: 0 30px 60px
+				display: flex
+				align-items: flex-start
+				justify-content: space-between
+				flex-wrap: wrap
+				.pagespecialist__item
+					flex-basis: 330px
+					max-width: 330px
+					height: 300px
+					margin-bottom: 20px
+					.pagespecialist__link
+						img
+.pagespecialist__info
+	.container
+		.row
+			.pagespecialist__infoList
+				margin-top: 60px
+				.pagespecialist__infoItem
+					margin-bottom: 60px
+					.pagespecialist__title
+						font-family: 'Roboto', sans-serif
+						font-weight: 600
+						font-size: 36px
+						line-height: 42px
+						color: $accent
+						margin-bottom: 50px
+					.pagespecialist__list
+						.pagespecialist__item
+							display: flex
+							align-items: center
+							justify-content: flex-start
+							margin-bottom: 20px
+							span
+								font-family: 'Roboto', sans-serif
+								font-weight: bold
+								font-size: 36px
+								line-height: 42px
+								white-space: nowrap
+							p
+								font-family: 'Roboto', sans-serif
+								font-weight: 300
+								font-size: 20px
+								line-height: 23px
+								margin-bottom: 0px
+								margin-left: 220px
+///////////////About page
+.about
+	background-color: #fff
+	padding-bottom: 60px
+	.container
+		.row
+			.title
+				margin-bottom: 60px
+				text-transform: uppercase
+	.container
+		.row
+			.about__top
+				position: relative
+				width: 100%
+				.about__wrapImg
+					max-width: 892px
+					height: 600px
+					img
+						width: 100%
+				.about__caption
+					position: absolute
+					right: 0
+					top: 25px
+					background: #FFFFFF
+					box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+					border-radius: 20px
+					flex-basis: 385px
+					max-width: 385px
+					min-height: 550px
+					padding: 50px 30px 122px
+					.about__description
+						font-family: 'Roboto', sans-serif
+						font-weight: 300
+						font-size: 20px
+						line-height: 23px
+						color: #000000
+						margin-bottom: 50px
+.about__advantages
+	.container
+		.row
+			.about__title
+				font-weight: 300
+				font-size: 36px
+				line-height: 36px
+				letter-spacing: 0.02em
+				margin-bottom: 45px
+				color: $accent
+	.container
+		.row
+			.about__list
+				display: flex
+				align-items: center
+				justify-content: space-between
+				margin-bottom: 60px
+				width: 100%
+				.about__item
+					.about__caption
+						display: flex
+						align-items: center
+						justify-content: flex-start
+						flex-direction: column
+						.about__iconWrap
+							display: flex
+							align-items: flex-start
+							justify-content: center
+							min-height: 150px
+							margin-bottom: 60px
+							.about__icon
+						.about__textWrap
+							display: flex
+							align-items: center
+							justify-content: flex-start
+							flex-direction: column
+							min-height: 135px
+							.about__count
+								font-size: 64px
+								line-height: 63px
+								text-align: center
+								margin-bottom: 25px
+							.about__text
+								font-size: 24px
+								line-height: 24px
+								text-align: center
+								letter-spacing: 0.02em
+								max-width: 236px
 
 // FAQ page
 .main__faq
@@ -2736,9 +3095,9 @@ header
 
 footer
 	background: linear-gradient(360deg, #1C9DAC 0%, #50B9BD 100%)
-	.container		
-		.footer__nav		
-			border-bottom: 2px solid #fff		
+	.container
+		.footer__nav
+			border-bottom: 2px solid #fff
 			.footer__list
 				display: flex
 				align-items: flex-start
@@ -2747,7 +3106,7 @@ footer
 				padding: 60px 0 40px
 				width: 100%
 				.footer__elem
-					padding: 0 
+					padding: 0
 					.footer__title
 						font-weight: 300
 						font-size: 36px
