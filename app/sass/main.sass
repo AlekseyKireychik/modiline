@@ -206,83 +206,6 @@ input.error
 						button
 							width: 100%
 
-//popap 02
-.popap-02
-	background-color: #fff
-	// position: absolute
-	top: 200px
-	right: 0
-	left: 0
-
-	z-index: 1000
-	// display: none
-	display: block
-	&.is-active
-		display: block
-	.form
-		padding: 100px 108px
-		text-align: center
-		+media-breakpoint-down(md)
-			padding: 70px 50px
-		+media-breakpoint-down(sm)
-			padding: 50px 10px
-		.title
-			font-size: 44px
-			line-height: 48px
-			text-align: center
-			+media-breakpoint-down(xs)
-				font-size: 32px
-				line-height: 36px
-				padding: 0
-		.formWrap
-			padding: 0 100px
-			color: $accentTwo
-			+media-breakpoint-down(md)
-				padding: 0
-			.form__body
-				font-weight: 600
-				font-size: 28px
-				line-height: 48px
-				padding-bottom: 35px
-				+media-breakpoint-down(xs)
-					font-size: 24px
-					line-height: 32px
-			.form__time
-				font-weight: 600
-				font-size: 28px
-				line-height: 48px
-				text-align: center
-				background: #E5E7E8
-				border-radius: 10px
-				padding: 8px 40px
-		.popap__bottom
-			display: flex
-			align-items: center
-			justify-content: space-between
-			margin-bottom: 0
-			padding: 40px 15px 80px
-			+media-breakpoint-down(xs)
-				justify-content: center
-				padding: 40px 0px 20px
-			.popap__item
-				+media-breakpoint-down(md)
-					max-width: 230px
-				.popap__btn
-					min-width: 240px
-					+media-breakpoint-down(xs)
-						margin-bottom: 25px
-					&::after
-						padding-left: 20px
-						+media-breakpoint-down(md)
-							padding-left: 15px
-					&.prew
-						background: #FFFFFF
-						color: $accent
-						border: 1px solid $accent
-						&::after
-							content: url(../img/_src/arrowRedRight.svg)
-					&.next
-
 .overlay
 	position: absolute
 	top: 0
@@ -678,7 +601,6 @@ input.error
 
 //home page
 header
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 	.container-fluid
 		&.container__header
 			position: relative
@@ -824,38 +746,6 @@ header
 						&::after
 							top: 0
 							transform: rotate(-45deg)
-			.profile__subList
-				display: none
-				position: absolute
-				padding: 20px 20px 0px
-				background-color: #fff
-				width: 409px
-				top: 96px
-				z-index: 999
-				+media-breakpoint-up(xl)
-					right: calc(((100vw - 1272px)/2) * (-1))
-				+media-breakpoint-down(xl)
-					right: calc(((100vw - 1140px)/2) * (-1))
-				+media-breakpoint-down(lg)
-					right: calc(((100vw - 960px)/2) * (-1))
-				+media-breakpoint-down(md)
-					right: calc(((100vw - 720px)/2) * (-1))
-				+media-breakpoint-down(sm)
-					right: calc(((100vw - 540px)/2) * (-1))
-					top: 60px
-				+media-breakpoint-down(xs)
-					width: 320px
-					right: 0
-					top: 55px
-				&.is-active
-					display: block
-				.profile__item
-					margin-bottom: 10px
-					.profile__subLink
-						font-size: 16px
-						line-height: 34px
-						color: $accentTwo
-						white-space: nowrap
 			.nav
 				position: absolute
 				top: 96px
@@ -906,29 +796,6 @@ header
 								line-height: 34px
 								color: $accentTwo
 								font-weight: normal
-				.seti__list
-					display: flex
-					align-items: flex-start
-					justify-content: flex-start
-					padding-top: 20px
-					padding-bottom: 25px
-					.seti__item
-						display: flex
-						align-items: center
-						justify-content: center
-						padding-right: 19px
-						.seti__link
-							justify-content: center
-							align-items: center
-							display: inherit
-							border: 1px solid #E5E7E8
-							min-width: 54px
-							min-height: 54px
-							transition: .3s
-							&:hover
-								background-color: #f2f2f2
-								transition: .3s
-
 .home
 	.home__baner
 		background-image: url(../img/_src/bannerbg.jpg)
@@ -1192,203 +1059,6 @@ header
 								text-align: center
 								letter-spacing: 0.02em
 								max-width: 236px
-.akcii__home
-	padding-top: 120px
-	padding-bottom: 105px
-	overflow: hidden
-	+media-breakpoint-down(lg)
-		padding-bottom: 212px
-	+media-breakpoint-down(sm)
-		padding-top: 90px
-	+media-breakpoint-down(xs)
-		padding-top: 80px
-		padding-left: 25px
-		padding-right: 25px
-	.container
-		.row
-			&.akcii
-				position: relative
-				.akcii__counter
-					display: none
-					+media-breakpoint-down(lg)
-						display: block
-						top: 110.5%
-					+media-breakpoint-down(xs)
-						top: 108.5%
-						left: calc((100vw/2) - 64px )
-			.title
-				+media-breakpoint-down(sm)
-					font-size: 40px
-					line-height: 48px
-				+media-breakpoint-down(xs)
-					padding-left: 0px
-					font-size: 28px
-					line-height: 34px
-			.akcii__list
-				display: flex
-				align-items: flex-start
-				justify-content: center
-				flex-wrap: nowrap
-				width: 100%
-				position: relative
-				z-index: 1
-				+media-breakpoint-up(xl)
-					max-width: 1272px
-				+media-breakpoint-down(xl)
-					max-width: 1140px
-				+media-breakpoint-down(lg)
-					max-width: 842px
-				+media-breakpoint-down(md)
-					max-width: 692px
-				+media-breakpoint-down(sm)
-					max-width: 668px
-				+media-breakpoint-down(xs)
-					max-width: 100%
-				&:before
-					content: " "
-					background-image: url(../img/_src/needslide.jpg)
-					position: absolute
-					right: -27px
-					top: 0px
-					bottom: 0
-					width: 20px
-					display: none
-					+media-breakpoint-down(lg)
-						display: block
-						width: 220px
-						right: -235px
-					+media-breakpoint-down(md)
-						width: 65px
-						right: -85px
-					+media-breakpoint-down(xs)
-						width: 20px
-						right: -30px
-				.akcii__item
-					background-position: center
-					background-repeat: no-repeat
-					background-size: cover
-					display: flex
-					position: relative
-					+media-breakpoint-up(xl)
-						min-height: 488px
-						flex-basis: 407px
-						max-width: 407px
-						width: 407px
-					+media-breakpoint-down(xl)
-						min-height: 396px
-						max-width: 332px
-						flex-basis: 332px
-						width: 332px
-					+media-breakpoint-down(lg)
-						min-height: 488px
-						flex-basis: 407px
-						max-width: 407px
-						width: 407px
-					+media-breakpoint-down(md)
-						min-height: 396px
-						max-width: 332px
-						flex-basis: 332px
-						width: 332px
-					+media-breakpoint-down(xs)
-						min-height: 394px
-						max-width: calc(100vw - 50px)
-						flex-basis: calc(100vw - 50px)
-						width: calc(100vw - 50px)
-					&.akciiSale
-						position: relative
-						&::before
-							content: url(../img/_src/SALE.svg)
-							position: absolute
-							right: 0px
-							top: 51px
-					&.akciiNew
-						position: relative
-						&::before
-							content: url(../img/_src/NEW.svg)
-							position: absolute
-							right: 0px
-							top: 50px
-					&.item01
-						background-image: url(../img/_src/programs02.jpg)
-					&.item02
-						background-image: url(../img/_src/programs02.jpg)
-					&.item03
-						background-image: url(../img/_src/programs02.jpg)
-					.akcii__link
-						position: relative
-						display: flex
-						align-items: flex-start
-						justify-content: flex-end
-						flex-direction: column
-						min-height: 488px
-						flex-basis: 407px
-						width: 100%
-						+media-breakpoint-down(xs)
-							min-height: 394px
-							max-width: 100%
-							flex-basis: 100%
-						&:hover
-							.wrap__title
-								bottom: 112px
-								transition: .3s
-								.akcii__description
-									display: block
-									transition: .3s
-							.akcii__wrapBtn
-								.akcii__btn
-									background-color: $accent
-									transition: .3s
-						.wrap__title
-							position: absolute
-							left: 0
-							bottom: 112px
-							transition: .3s
-							.akcii__title
-								padding-left: 74px
-								padding-right: 25px
-								font-weight: bold
-								font-size: 28px
-								line-height: 34px
-								position: relative
-								transition: .3s
-								+media-breakpoint-down(xs)
-									font-size: 24px
-								&::before
-									content: url(../img/_src/square.svg)
-									position: absolute
-									left: 48px
-									top: -4px
-							.akcii__description
-								display: none
-								padding-left: 74px
-								padding-right: 45px
-								font-size: 18px
-								line-height: 28px
-								transition: .1s
-						.akcii__wrapBtn
-							position: absolute
-							left: 0
-							right: 0
-							bottom: 0
-							text-align: center
-							margin: 40px auto 0
-							width: 100%
-							border-top: 1px solid rgba(255, 255, 255, 0.25)
-							.akcii__btn
-								background-color: transparent
-								width: 100%
-								transition: .3s
-				&.slick-slider
-					.slick-list
-						margin: 0 0px
-						.slick-track
-							.slick-slide
-								margin: 0 10px
-					+media-breakpoint-down(xs)
-						.slick-prev
-							left: calc((100vw/2) - 128px )
-						.slick-next
-							left: calc((100vw/2))
 
 .order__home
 	background: linear-gradient(285.83deg, #1C9DAC 0%, #50B9BD 99.48%)
@@ -1445,279 +1115,6 @@ header
 						font-size: 14px
 						line-height: 16px
 						color: #000
-
-
-//Vacancies page
-.main__vacancies
-	background-color: #F7F7F7
-	.vacancies__banner
-		background-image: url(../img/_src/vacancies.jpg)
-		background-position: center
-		background-repeat: no-repeat
-		background-size: cover
-		position: relative
-		min-height: 736px
-		+media-breakpoint-down(xs)
-			background-image: url(../img/_src/vacanciesMobile.jpg)
-			min-height: 484px
-		.container__breadcrumb
-			.row
-				.nav__breadcrumb
-					a
-						color: #fff
-					.breadcrumb-item
-						color: #fff
-						opacity: 0.8
-						&::before
-							color: #fff
-							opacity: 0.8
-		.vacancies__caption
-			flex-direction: column
-			align-items: flex-start
-			justify-content: flex-start
-			max-width: 590px
-			+media-breakpoint-down(xs)
-				padding: 0 25px
-			.title
-				color: #fff
-				font-size: 54px
-				line-height: 100px
-				margin-bottom: 20px
-				+media-breakpoint-down(xs)
-					padding-left: 0
-			.text
-				font-size: 24px
-				line-height: 34px
-				color: #fff
-				margin-bottom: 130px
-				+media-breakpoint-down(xs)
-					font-size: 16px
-					line-height: 24px
-					margin-bottom: 60px
-			.vacancies__btn
-				display: inline-block
-				+media-breakpoint-down(xs)
-					padding: 14px 25px 14px 5px
-					width: 100%
-				.vacancies__counter
-					font-size: 14px
-					line-height: 34px
-					text-transform: uppercase
-					color: rgba(255, 255, 255, 0.4)
-					padding-left: 7px
-	.vacancies
-		padding: 120px 0
-		+media-breakpoint-down(md)
-			padding: 100px 0
-		+media-breakpoint-down(md)
-			padding: 100px 25px
-		.container
-			.row
-				.panel-group
-					width: 100%
-					.panel
-						background-color: #fff
-						padding: 50px
-						border-bottom: 1px solid #E5E7E8
-						+media-breakpoint-down(md)
-							padding: 50px 20px 50px 25px
-						+media-breakpoint-down(xs)
-							padding: 32px
-						.panel-heading
-							position: relative
-							display: flex
-							flex-direction: column
-							align-items: flex-start
-							justify-content: space-between
-							.panel-title
-								font-weight: 600
-								font-size: 24px
-								line-height: 36px
-								padding-left: 21px
-								position: relative
-								&.is-active
-									color: $accent
-								+media-breakpoint-down(md)
-									padding-left: 0px
-								+media-breakpoint-down(sm)
-									font-size: 20px
-								+media-breakpoint-down(xs)
-									font-size: 16px
-									line-height: 24px
-									padding-right: 15px
-								&::after
-									content: url(../img/_src/square.svg)
-									position: absolute
-									left: 0px
-									top: -2px
-									+media-breakpoint-down(md)
-										display: none
-							.panel-description
-								font-weight: 300
-								font-size: 18px
-								line-height: 28px
-								color: #999EA7
-								padding-left: 21px
-								margin-bottom: 40px
-								+media-breakpoint-down(md)
-									padding-left: 0px
-								+media-breakpoint-down(xs)
-									margin-bottom: 0px
-									font-size: 16px
-								&.active-desc
-									+media-breakpoint-down(xs)
-										display: none
-							.panel-collapse
-								width: 100%
-								.panel-description
-									font-weight: 300
-									font-size: 18px
-									line-height: 28px
-									color: #999EA7
-									padding-left: 21px
-									margin-bottom: 40px
-									display: none
-									+media-breakpoint-down(md)
-										padding-left: 0px
-									+media-breakpoint-down(xs)
-										margin-bottom: 0px
-										font-size: 16px
-									&.active-mobile
-										+media-breakpoint-down(xs)
-											display: block
-								.panel-body
-									display: flex
-									align-items: flex-start
-									justify-content: space-between
-									padding: 20px 20px 50px
-									+media-breakpoint-down(lg)
-										flex-wrap: wrap
-									+media-breakpoint-down(md)
-										padding: 20px 20px 50px 0
-									+media-breakpoint-down(sm)
-										padding: 20px 20px 20px 0
-									.vacancies__item
-										+media-breakpoint-down(md)
-											padding-top: 0px
-											&:last-child
-												padding-top: 25px
-										&:last-child
-											+media-breakpoint-down(lg)
-												padding-top: 35px
-										.vacancies__subTitle
-											font-weight: bold
-											font-size: 18px
-											line-height: 28px
-											color: $accentTwo
-											+media-breakpoint-down(xs)
-												font-size: 16px
-										.vacancies__list
-											.vacancies__point
-												font-size: 18px
-												line-height: 28px
-												margin-bottom: 5px
-												color: $accentTwo
-												+media-breakpoint-down(xs)
-													font-size: 16px
-								.btn-mobile
-									display: none
-									+media-breakpoint-down(md)
-										display: inline-block
-									+media-breakpoint-down(xs)
-										width: 100%
-										padding: 14px 25px 14px 5px
-
-							.vacancies__btnWrap
-								display: flex
-								align-items: center
-								justify-content: space-between
-								width: 100%
-								.panel-link
-									+media-breakpoint-down(md)
-										display: none
-								.vacancies__btnContainer
-									+media-breakpoint-down(md)
-										position: absolute
-										right: 0px
-										top: 0px
-									+media-breakpoint-down(xs)
-										top: -2px
-										right: -15px
-									.vacancies__btn
-										position: relative
-										font-weight: bold
-										font-size: 14px
-										line-height: 34px
-										text-transform: uppercase
-										color: $accent
-										.wrap
-											display: flex
-											align-items: center
-											justify-content: space-between
-											.btn__icon
-												display: block
-												position: relative
-												width: 30px
-												height: 30px
-												border-radius: 10px
-												background: transparent
-												cursor: pointer
-												z-index: 98
-												.btn__line
-													position: absolute
-													width: 15px
-													height: 1.5px
-													top: 45%
-													right: 50%
-													transform: translate(50%) rotate(45deg)
-													background-color: $accent
-													+media-breakpoint-down(md)
-														transform: translate(50%) rotate(0deg)
-													&::before
-														content: ""
-														position: absolute
-														width: 15px
-														height: 1.5px
-														transform: rotate(90deg)
-														background-color: $accent
-														top: 0px
-														+media-breakpoint-down(md)
-															display: none
-
-											.value
-												.disabled
-													display: none
-													+media-breakpoint-down(md)
-														display: none
-												.active
-													display: block
-													+media-breakpoint-down(md)
-														display: none
-										&.collapsed
-											.wrap
-												.value
-													.disabled
-														display: block
-														+media-breakpoint-down(md)
-															display: none
-													.active
-														display: none
-														+media-breakpoint-down(md)
-															display: none
-												.btn__icon
-													.btn__line
-														transform: translate(50%)
-														&::before
-															+media-breakpoint-down(md)
-																display: block
-
-						&.is-active
-							box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)
-							z-index: 99
-							margin: 0 0 6px 0
-							.panel-heading
-								.panel-title
-									color: $accent
 
 ///////////news page
 .news
@@ -1860,8 +1257,8 @@ header
 						padding: 36px 0px
 						&:hover
 							text-decoration: underline
-//////////////services page
-.services
+//////////////cost page
+.cost
 	background-color: #fff
 	padding-bottom: 60px
 	.container
@@ -1870,7 +1267,7 @@ header
 				margin-bottom: 30px
 	.container
 		.row
-			.services__list
+			.cost__list
 				display: flex
 				align-items: flex-start
 				justify-content: flex-start
@@ -1880,7 +1277,7 @@ header
 				padding-bottom: 0px
 				box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 				border-radius: 20px
-				.services__elem
+				.cost__elem
 					width: 100%
 					display: flex
 					align-items: flex-start
@@ -1889,25 +1286,25 @@ header
 					padding: 50px
 					&:nth-child(even)
 						background: rgba(80, 185, 189, 0.5)
-					.services__top
+					.cost__top
 						display: flex
 						align-items: center
 						justify-content: flex-start
 						width: 100%
 						padding-bottom: 60px
-						.services__title
+						.cost__title
 							font-family: 'Roboto', sans-serif
 							font-weight: 300
 							font-size: 36px
 							line-height: 42px
 							margin-right: 265px
-						.services__cost
+						.cost__cost
 							font-family: 'Roboto', sans-serif
 							font-weight: 300
 							font-size: 36px
 							line-height: 42px
-					.services__sublist
-						.services__item
+					.cost__sublist
+						.cost__item
 							font-family: 'Roboto', sans-serif
 							font-weight: 300
 							font-size: 24px
@@ -2340,7 +1737,182 @@ header
 								text-align: center
 								letter-spacing: 0.02em
 								max-width: 236px
-// /gallery
+
+/////////////////pageservice page
+.pageservice
+	background-color: #fff
+	padding-bottom: 60px
+	.container
+		.row
+			.title
+				margin-bottom: 60px
+				text-transform: uppercase
+	.container
+		.row
+			.pageservice__top
+				position: relative
+				width: 100%
+				.pageservice__wrapImg
+					max-width: 892px
+					height: 600px
+					img
+						width: 100%
+				.pageservice__caption
+					position: absolute
+					right: 0
+					top: 25px
+					display: flex
+					align-items: flex-start
+					justify-content: space-between
+					flex-direction: column
+					background: #FFFFFF
+					box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+					border-radius: 20px
+					flex-basis: 385px
+					max-width: 385px
+					min-height: 550px
+					padding: 50px
+					.pageservice__description
+						font-family: 'Roboto', sans-serif
+						font-weight: 400
+						font-size: 14px
+						line-height: 16px
+						color: #000000
+						margin-bottom: 50px
+					.pageservice__infoSpecialist
+						font-family: 'Roboto', sans-serif
+						font-weight: 400
+						font-size: 14px
+						line-height: 16px
+						color: #000000
+						margin-bottom: 50px
+					.pageservice__cost
+						font-family: 'Roboto', sans-serif
+						font-weight: 400
+						font-size: 14px
+						line-height: 16px
+						color: #000000
+						margin-bottom: 50px
+.pageservice__bottom
+	.container
+		.row
+			&.pageservice__content
+				padding-bottom: 60px
+				justify-content: space-between
+				.pageservice__left
+					max-width: 550px
+					.pageservice__info
+						min-height: 400px
+						padding-left: 20px
+						p 
+							font-family: "Open Sans", sans-serif
+							font-size: 18px
+							line-height: 25px
+					.pageservice__indicationsUse
+						padding-left: 20px
+						padding-bottom: 40px
+						p 
+							font-family: "Open Sans", sans-serif
+							font-size: 20px
+							line-height: 27px
+							font-weight: bold
+							padding-left: 10px
+						.pageservice__indicationsUseList							
+							margin-bottom: 0
+							.pageservice__indicationsUseItem
+								font-family: "Open Sans", sans-serif
+								font-size: 20px
+								line-height: 27px
+					.pageservice__contraindicationsUse
+						padding-left: 20px
+						padding-bottom: 60px
+						p 
+							font-family: "Open Sans", sans-serif
+							font-size: 24px
+							line-height: 33px
+							font-weight: bold
+							padding-left: 10px
+						.pageservice__contraindicationsUseList
+							margin-bottom: 0
+							.pageservice__contraindicationsUseItem
+								font-family: "Open Sans", sans-serif
+								font-size: 24px
+								line-height: 33px
+					.pageservice__relatedService
+						background: #FFFFFF
+						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.2)
+						border-radius: 20px
+						padding: 50px
+						margin-bottom: 20px
+						min-height: 300px
+						display: flex
+						align-items: flex-start
+						justify-content: space-between
+						flex-direction: column
+						&:last-child
+							margin-bottom: 0
+						.pageservice__relatedServiceTitle
+							font-family: 'Roboto', sans-serif
+							font-weight: 400
+							font-size: 24px
+							line-height: 28px
+						.pageservice__relatedServiceCost
+							font-family: 'Roboto', sans-serif
+							font-weight: 400
+							font-size: 24px
+							line-height: 28px
+							margin-bottom: 0
+				.pageservice__right
+					max-width: 588px
+					.pageservice__specialist
+						.specialists__title
+							font-weight: 300
+							font-size: 48px
+							line-height: 47px
+							letter-spacing: 0.02em
+							color: $accent
+							margin-bottom: 30px
+						.specialists__itemTop
+							display: flex
+							align-items: flex-start
+							justify-content: flex-start
+							flex-direction: column
+							background: #FFFFFF
+							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+							border-radius: 20px
+							flex-basis: 588px
+							min-height: 700px
+							margin-bottom: 20px
+							.specialists__link
+								width: 100%
+								.specialists__img
+									width: 100%
+									height: 442px
+									border-radius: 20px 20px 0px 0px
+								.specialists__info
+									width: 100%
+									display: flex
+									align-items: flex-start
+									justify-content: center
+									flex-direction: column
+									padding-left: 50px
+									.specialists__date
+										font-family: 'Roboto', sans-serif
+										font-weight: 300
+										font-size: 24px
+										line-height: 28px
+										color: #000000
+										padding-top: 30px
+										padding-bottom: 25px									
+									.specialists__description
+										font-family: 'Roboto', sans-serif
+										font-weight: 300
+										font-size: 18px
+										line-height: 21px
+										color: #000000
+										padding-bottom: 30px
+					.pageservice__form
+////////// /gallery
 .gallery
 	padding-bottom: 60px
 	.container
@@ -2404,7 +1976,7 @@ header
 								line-height: 28px
 								color: #fff
 								padding-bottom: 40px
-//contacts
+//////////contacts
 .contacts	
 	.container
 		.row
@@ -2446,699 +2018,9 @@ header
 					overflow: hidden
 					max-height: 484px
 					min-height: 484px
-
-// FAQ page
-.main__faq
-	background-color: #F7F7F7
-.faq
-	padding-bottom: 120px
-	+media-breakpoint-down(sm)
-		padding-bottom: 100px
-	+media-breakpoint-down(xs)
-		padding-bottom: 90px
-	.panel-group
-		width: 100%
-		+media-breakpoint-down(xs)
-			padding: 0 23px
-		.panel
-			background-color: #fff
-			padding: 50px
-			border-bottom: 1px solid #E5E7E8
-			+media-breakpoint-down(sm)
-				padding: 40px 35px
-			.panel-heading
-				.panel-title
-					.faq__btn
-						font-weight: bold
-						display: flex
-						align-items: center
-						justify-content: flex-start
-						color: $accent
-						+media-breakpoint-down(xs)
-							align-items: flex-start
-							flex-direction: column
-						.faq__number
-							font-weight: 600
-							font-size: 80px
-							line-height: 1
-							color: $accent
-							min-width: 96px
-							+media-breakpoint-down(sm)
-								display: none
-						.faq__title
-							padding-left: 50px
-							+media-breakpoint-down(sm)
-								padding-left: 0px
-						.faq__iconWrap
-							position: relative
-							background: #E72D2D
-							padding: 15px 32px
-							min-height: 64px
-							margin-left: auto
-							+media-breakpoint-down(xs)
-								margin-top: 20px
-								margin-left: 0
-							.faq__icon
-								position: absolute
-								width: 12.5px
-								height: 1.4px
-								top: 47%
-								right: 50%
-								-webkit-transform: translate(50%)
-								-ms-transform: translate(50%)
-								transform: translate(50%)
-								background-color: #fff
-								&::after
-									display: none
-						&.collapsed
-							color: $accentTwo
-							.faq__number
-								color: #F7F7F7
-							.faq__iconWrap
-								.faq__icon
-									&::after
-										display: block
-										content: ""
-										position: absolute
-										width: 12.5px
-										height: 1.4px
-										background-color: #fff
-										top: 0px
-										transform: rotate(90deg)
-			.panel-collapse
-				padding-left: 146px
-				padding-right: 115px
-				+media-breakpoint-down(sm)
-					padding-left: 0px
-					padding-right: 65px
-					+media-breakpoint-down(xs)
-						padding-right: 0px
-				.panel-body
-					padding-top: 50px
-					padding-bottom: 40px
-			&.is-active
-				margin-bottom: 10px
-				box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)
-				z-index: 99
-//certificte
-.certificte
-	.container
-		.row
-			&.top
-				display: flex
-				justify-content: space-between
-				align-items: flex-start
-				flex-wrap: nowrap
-				.top__left
-					display: flex
-					justify-content: flex-start
-					align-items: flex-start
-					flex-direction: column
-					+media-breakpoint-down(lg)
-						width: 100%
-					.title
-						font-size: 54px
-						line-height: 66px
-						margin-bottom: 30px
-						+media-breakpoint-down(lg)
-							margin-bottom: 0px
-						+media-breakpoint-down(xs)
-							font-size: 36px
-							line-height: 44px
-					.bannersmall
-						display: none
-						+media-breakpoint-down(lg)
-							display: block
-							margin: 0 auto
-							width: 100%
-					.description
-						max-width: 495px
-						font-size: 24px
-						line-height: 29px
-						margin-bottom: 30px
-						+media-breakpoint-down(lg)
-							margin: 0 auto 30px
-							width: 100%
-							max-width: 100%
-							text-align: center
-						+media-breakpoint-down(xs)
-							font-size: 16px
-							line-height: 19px
-							margin-bottom: 20px
-							padding-left: 20px
-							padding-right: 20px
-					.wrap__btnGroup
-						display: flex
-						flex-direction: column
-						+media-breakpoint-down(lg)
-							text-align: center
-							margin: 0 auto
-						+media-breakpoint-down(xs)
-							padding: 0 20px
-							width: 100%
-						.btn__checkout
-							max-width: 350px
-							margin-bottom: 50px
-							width: 100%
-							+media-breakpoint-down(xs)
-								margin-bottom: 40px
-								max-width: 100%
-								font-size: 10px
-								line-height: 34px
-								padding: 2px 55px 2px 35px
-						.description__if
-							font-size: 24px
-							line-height: 29px
-							margin-bottom: 50px
-							max-width: 350px
-							text-align: center
-							+media-breakpoint-down(lg)
-								margin: 0 auto 50px
-							+media-breakpoint-down(xs)
-								font-size: 16px
-								line-height: 19px
-								margin-bottom: 20px
-								max-width: 280px
-						.btn__use
-							background: #FFFFFF
-							color: #E72D2D
-							border: 1px solid #E72D2D
-							max-width: 350px
-							margin-bottom: 80px
-							width: 100%
-							&::after
-								content: url(../img/_src/arrowRedRight.svg)
-								padding-left: 20px
-							+media-breakpoint-down(xs)
-								margin-bottom: 60px
-								max-width: 100%
-								font-size: 10px
-								line-height: 34px
-								padding: 2px 55px 2px 35px
-				.top__right
-					display: block
-					+media-breakpoint-down(lg)
-						display: none
-.maincertificate
-	overflow: hidden
-.certificteUse
-	padding-bottom: 70px
-	+media-breakpoint-down(sm)
-		padding-left: 20px
-		padding-right: 20px
-	.maincontainer
-		width: 100%
-		padding-left: 15px
-		padding-right: 15px
-		margin: 0 auto
-		+media-breakpoint-down(xl)
-			max-width: 1140px
-		+media-breakpoint-down(lg)
-			max-width: 960px
-		+media-breakpoint-down(md)
-			max-width: 720px
-			&.sliders
-				max-width: 960px
-				margin-left: calc((100vw - 720px) / 2)
-		+media-breakpoint-down(sm)
-			max-width: 540px
-			&.sliders
-				margin-left: 0px
-				padding-right: 0
-		+media-breakpoint-down(xs)
-			max-width: 100%
-		.row
-			.certificteUse__tabs
-				border-bottom: none
-				flex-wrap: nowrap
-				margin-bottom: 60px
-				width: 100%
-				+media-breakpoint-down(sm)
-					flex-direction: column
-					max-width: 100%
-				+media-breakpoint-down(xs)
-					margin-bottom: 0px
-				.nav-item
-					flex-basis: 50%
-					width: 100%
-					&:first-child
-						padding-right: 10px
-						+media-breakpoint-down(sm)
-							flex-basis: 100%
-							padding-right: 0px
-							padding-bottom: 20px
-					&:last-child
-						padding-left: 10px
-						+media-breakpoint-down(sm)
-							flex-basis: 100%
-							padding-left: 0px
-							padding-bottom: 20px
-					.nav-link
-						font-weight: 600
-						font-size: 18px
-						line-height: 22px
-						color: #fff
-						background: $accentTwo
-						border-radius: 0
-						width: 100%
-						border: none
-						padding: 20px 25px
-						text-align: center
-						+media-breakpoint-down(sm)
-							max-width: 350px
-							margin: 0 auto
-						+media-breakpoint-down(xs)
-							max-width: 100%
-							font-size: 14px
-							line-height: 20px
-							padding: 10px 55px 10px 35px
-							margin: 0 auto
-						&.active
-							background: $accent
-			.tab-content
-				width: 100%
-				+media-breakpoint-down(sm)
-					max-width: 100%
-				.tab-pane
-					position: relative
-					.certificteUse__list
-						display: flex
-						align-items: flex-start
-						justify-content: space-between
-						flex-wrap: nowrap
-						max-width: 1272px
-						position: relative
-						z-index: 1
-						padding-bottom: 30px
-						margin-bottom: 0px
-						+media-breakpoint-down(md)
-							overflow-x: scroll
-							justify-content: flex-start
-							margin-right: calc((100vw - 720px) / 2)
-						+media-breakpoint-down(sm)
-							margin-right: 0px
-						// +media-breakpoint-up(xl)
-						// 	max-width: 1272px
-						// +media-breakpoint-down(xl)
-						// 	max-width: 1140px
-						// +media-breakpoint-down(lg)
-						// 	max-width: 960px
-						// +media-breakpoint-down(md)
-						// 	max-width: 720px
-						// +media-breakpoint-down(sm)
-						// 	max-width: 540px
-						// +media-breakpoint-down(xs)
-						// 	max-width: 100%
-						.certificteUse__item
-							background-position: center
-							background-repeat: no-repeat
-							background-size: cover
-							display: flex
-							align-items: flex-end
-							justify-content: flex-end
-							+media-breakpoint-up(xl)
-								min-height: 568px
-								flex-basis: 407px
-								max-width: 407px
-								width: 407px
-							+media-breakpoint-down(xl)
-								min-height: 396px
-								max-width: 332px
-								flex-basis: 332px
-								width: 332px
-							+media-breakpoint-down(lg)
-								min-height: 420px
-								flex-basis: 292px
-								max-width: 292px
-								min-width: 292px
-								width: 292px
-								margin-right: 16px
-								&:last-child
-									margin-right: 0px
-							+media-breakpoint-down(md)
-								&:last-child
-									margin-right: calc((100vw - 720px) / 2)
-							+media-breakpoint-down(xs)
-								// min-height: 394px
-								// max-width: 100%
-								// flex-basis: 100%
-								// width: calc(100vw - 50px)
-								min-height: 300px
-								flex-basis: 208px
-								max-width: 208px
-								min-width: 208px
-								width: 208px
-								margin-right: 10px
-							&.item01
-								background-image: url(../img/_src/cert.jpg)
-							&.item02
-								background-image: url(../img/_src/cert.jpg)
-							&.item03
-								background-image: url(../img/_src/cert.jpg)
-							&.item04
-								background-image: url(../img/_src/cert.jpg)
-							&.item05
-								background-image: url(../img/_src/cert.jpg)
-							&.item06
-								background-image: url(../img/_src/cert.jpg)
-							&.item07
-								background-image: url(../img/_src/cert.jpg)
-							&.item08
-								background-image: url(../img/_src/cert.jpg)
-							&.item09
-								background-image: url(../img/_src/cert.jpg)
-							&.item10
-								background-image: url(../img/_src/cert.jpg)
-							&.item11
-								background-image: url(../img/_src/cert.jpg)
-							&.item12
-								background-image: url(../img/_src/cert.jpg)
-							.certificteUse__content
-								position: relative
-								display: flex
-								align-items: flex-start
-								justify-content: flex-end
-								flex-direction: column
-								min-height: 568px
-								flex-basis: 407px
-								width: 100%
-								+media-breakpoint-down(lg)
-									flex-basis: 470px
-									min-height: 420px
-								+media-breakpoint-down(md)
-									flex-basis: 350px
-								+media-breakpoint-down(xs)
-									min-height: 300px
-									max-width: 100%
-									flex-basis: 100%
-								.certificteUse__total
-									position: absolute
-									left: 0
-									right: 0
-									bottom: 35px
-									font-weight: bold
-									font-size: 36px
-									line-height: 44px
-									color: #fff
-									padding-left: 35px
-									padding-right: 35px
-									border-top: 1px solid #C4C4C4
-									padding-top: 15px
-								.wrap__title
-									position: absolute
-									left: 0
-									bottom: 100px
-									transition: .3s
-									color: #fff
-									+media-breakpoint-down(sm)
-										left: 10px
-										right: 10px
-									+media-breakpoint-down(xs)
-										bottom: 50px
-									.certificteUse__title
-										padding-left: 47px
-										font-weight: bold
-										font-size: 28px
-										line-height: 34px
-										position: relative
-										transition: .3s
-										color: #fff
-										+media-breakpoint-down(sm)
-											padding-left: 20px
-											padding-right: 0px
-										+media-breakpoint-down(xs)
-											font-size: 20px
-											line-height: 24px
-											padding-right: 25px
-										&::before
-											content: url(../img/_src/square.svg)
-											position: absolute
-											left: 20px
-											top: -4px
-											+media-breakpoint-down(sm)
-												left: 0px
-									.certificteUse__description
-										// display: none
-										display: block
-										padding-left: 20px
-										font-size: 18px
-										line-height: 22px
-										transition: .3s
-										color: #fff
-										+media-breakpoint-down(lg)
-											font-size: 12px
-											line-height: 15px
-										+media-breakpoint-down(xs)
-											font-size: 10px
-											line-height: 12px
-											padding-left: 0px
-
-								.certificteUse__wrapBtn
-									position: absolute
-									left: 0
-									right: 0
-									bottom: 0
-									text-align: center
-									margin: 20px auto 0
-									width: 100%
-									border-top: 1px solid rgba(255, 255, 255, 0.25)
-									&:hover
-										.certificteUse__btn
-											background-color: $accent
-											transition: .3s
-									.certificteUse__btn
-										background-color: transparent
-										width: 100%
-										transition: .3s
-										&::after
-											padding-left: 40px
-										+media-breakpoint-down(xs)
-											padding: 0px 55px 0px 35px
-								.certificteUse__options
-									position: absolute
-									right: 0
-									top: 50px
-									color: #FFF
-									display: flex
-									align-items: center
-									justify-content: space-between
-									+media-breakpoint-down(lg)
-										top: 47px
-									+media-breakpoint-down(xs)
-										top: 33px
-									.certificteUse__time
-										position: relative
-										padding-right: 15px
-										font-weight: bold
-										font-size: 18px
-										line-height: 20px
-										&::before
-											content: url(../img/_src/time.svg)
-											position: absolute
-											right: 70px
-											top: -6px
-										&:hover
-											cursor: pointer
-											.certificteUse__container
-												display: block
-										+media-breakpoint-down(lg)
-											font-size: 12px
-											line-height: 20px
-											padding-right: 5px
-											&::before
-												content: url(../img/_src/time-ipad.svg)
-												right: 45px
-												top: 0px
-
-										.certificteUse__container
-											display: none
-											position: absolute
-											right: -20px
-											top: 50px
-											background-color: #fff
-											padding: 5px 12px
-											+media-breakpoint-down(lg)
-												padding: 0px 12px
-												right: -40px
-												top: 40px
-											.certificteUse__description
-												position: relative
-												font-size: 18px
-												line-height: 20px
-												color: $accentTwo
-												font-weight: bold
-												white-space: nowrap
-												+media-breakpoint-down(lg)
-													font-size: 12px
-													line-height: 15px
-												&::before
-													content: url(../img/_src/Polygon.svg)
-													position: absolute
-													right: 50%
-													top: -20px
-													transform: translate(50%)
-													+media-breakpoint-down(lg)
-														top: -15px
-									.certificteUse__counter
-										position: relative
-										padding-left: 40px
-										padding-right: 20px
-										font-weight: bold
-										font-size: 18px
-										line-height: 20px
-										&:hover
-											cursor: pointer
-											.certificteUse__container
-												display: block
-										&::before
-											content: url(../img/_src/palet.svg)
-											position: absolute
-											right: 40px
-											top: -4px
-										+media-breakpoint-down(lg)
-											font-size: 12px
-											line-height: 20px
-											padding-left: 25px
-											padding-right: 10px
-											&::before
-												content: url(../img/_src/palet-ipad.svg)
-												right: 25px
-												top: 0px
-										.certificteUse__container
-											display: none
-											position: absolute
-											right: -40px
-											top: 50px
-											background-color: #fff
-											padding: 5px 12px
-											+media-breakpoint-down(lg)
-												padding: 0px 12px
-												right: -40px
-												top: 40px
-											.certificteUse__description
-												position: relative
-												font-size: 18px
-												line-height: 20px
-												color: $accentTwo
-												font-weight: bold
-												white-space: nowrap
-												+media-breakpoint-down(lg)
-													font-size: 12px
-													line-height: 15px
-												&::before
-													content: url(../img/_src/Polygon.svg)
-													position: absolute
-													right: 50%
-													top: -20px
-													transform: translate(50%)
-													+media-breakpoint-down(lg)
-														top: -15px
-
-									.certificteUse__person
-										position: relative
-										padding-right: 20px
-										padding-left: 20px
-										font-weight: bold
-										font-size: 18px
-										line-height: 20px
-										&::before
-											content: url(../img/_src/man.svg)
-											position: absolute
-											right: 40px
-											top: -4px
-										&:hover
-											cursor: pointer
-											.certificteUse__container
-												display: block
-										+media-breakpoint-down(lg)
-											font-size: 12px
-											line-height: 20px
-											&::before
-												content: url(../img/_src/man-ipad.svg)
-												right: 35px
-												top: 0px
-												+media-breakpoint-down(xs)
-													right: 25px
-										+media-breakpoint-down(xs)
-											padding-right: 10px
-										.certificteUse__container
-											display: none
-											position: absolute
-											right: -55px
-											top: 50px
-											background-color: #fff
-											padding: 5px 12px
-											+media-breakpoint-down(lg)
-												padding: 0px 12px
-												right: -40px
-												top: 40px
-											.certificteUse__description
-												position: relative
-												font-size: 18px
-												line-height: 20px
-												color: $accentTwo
-												font-weight: bold
-												white-space: nowrap
-												+media-breakpoint-down(lg)
-													font-size: 12px
-													line-height: 15px
-												&::before
-													content: url(../img/_src/Polygon.svg)
-													position: absolute
-													right: 50%
-													top: -20px
-													transform: translate(50%)
-													+media-breakpoint-down(lg)
-														top: -15px
-									.certificteUse__order
-										background-color: $accent
-										font-weight: bold
-										font-size: 18px
-										line-height: 20px
-										color: #FFF
-										padding: 14px 10px
-										+media-breakpoint-down(lg)
-											padding: 7px 10px
-										+media-breakpoint-down(xs)
-											font-size: 10px
-											padding: 0px 10px
-
-						&.slick-slider
-							.slick-list
-								margin: 0 2px
-								+media-breakpoint-down(lg)
-									margin: 0 -2px
-									+media-breakpoint-down(sm)
-										margin: 0 -2px
-								.slick-track
-									.slick-slide
-										margin: 0 12px
-							+media-breakpoint-down(xs)
-								.slick-prev
-									left: calc((100vw/2) - 128px )
-								.slick-next
-									left: calc((100vw/2))
-						&#order-list02
-							.slick-list
-								margin: 0 -10px
-								+media-breakpoint-down(lg)
-									margin: 0 -2px
-					.slick-arrow
-						display: none
-						+media-breakpoint-down(lg)
-							display: block
-							top: 90%
-					.slider__counter
-						top: auto
-						bottom: 0px
-						display: none
-						+media-breakpoint-down(lg)
-							display: block
-							top: 86%
-							+media-breakpoint-down(sm)
-								top: 85%
-								left: calc((100vw/2) - 64px)
-
+.form
+	.form__top
+		.form__title
 footer
 	background: linear-gradient(360deg, #1C9DAC 0%, #50B9BD 100%)
 	.container
