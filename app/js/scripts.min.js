@@ -109,98 +109,21 @@ $(document).ready(function() {
     }
   }
 
-  $(".form").on("submit", function(e) {
-    e.preventDefault();
-
-    var formdata = {};
-    var fields = [];
-    var form = $(this);
-
-    $(this)
-      .find("[data-type]")
-      .each(function(i, e) {
-        var item = {};
-        if ($(e).data("type") == "Radio Button") {
-          if ($(e).is(":checked")) {
-            item["type"] = $(e).data("type");
-            item["label"] = $(e).data("label");
-            item["value"] = $(e).val();
-            item["required"] =
-              typeof $(e).data("validation") != "undefined" ? "true" : "false";
-            fields.push(item);
-          }
-        } else {
-          item["type"] = $(e).data("type");
-          item["label"] = $(e).data("label");
-          if (item["type"] == "Checkbox") {
-            $(e).is(":checked")
-              ? (item["value"] = "ticked")
-              : (item["value"] = "not ticked");
-          } else {
-            item["value"] = $(e).val();
-          }
-          item["required"] =
-            typeof $(e).data("validation") != "undefined" ? "true" : "false";
-          fields.push(item);
-        }
-      });
-
-    formdata["formid"] = form.find("[name=formid]").val();
-    formdata["url"] = form.find("[name=url]").val();
-    formdata["culturecode"] = form.find("[name=culturecode]").val();
-    formdata["fields"] = fields;
-
-    formdata = JSON.stringify(formdata);
-
-    $.ajax({
-      type: "POST",
-      url: "",
-      data: formdata,
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      success: function(data) {
-        form.trigger("reset");
-      },
-      error: function(data) {}
-    });
-  });
-
   //nav-menu
 
   $(".burger-menu").on("click", function(event) {
     event.preventDefault();
-    $("#nav-menu").toggleClass("is-active");
+    $(".header__nav").toggleClass("is-active");
     $(".burger-menu").toggleClass("is-active");
-    $(".profile__subList").removeClass("is-active");
+    $(".header__subList").removeClass("is-active");
   });
 
-  //menu
+  //sub-menu
 
-  $(".menu-title").on("click", function() {
-    if ($(this).hasClass("is-active")) {
-      $(".menu-title").removeClass("is-active");
-      $(".menu__list").removeClass("is-active");
-    } else {
-      $(".menu-title").removeClass("is-active");
-      $(".menu__list").removeClass("is-active");
-      $(this)
-        .children(".menu__list")
-        .addClass("is-active");
-      $(this).addClass("is-active");
-    }
+  $(".submenu").on("click", function() {
+    $(".submenu").toggleClass("is-active");
+    $(".header__subList").toggleClass("is-active");
   });
-
-  $(".header__link").hover(function(event) {
-    event.preventDefault();
-    $(this)
-      .siblings(".header__subList")
-      .toggleClass("is-active");
-    $(".header__subList").on("mouseenter", function() {
-      $(this).addClass("is-active");
-    });
-    $(".header__subList").on("mouseleave", function() {
-      $(this).removeClass("is-active");
-    });
-  });
+  
 
 });

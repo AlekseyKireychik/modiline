@@ -610,7 +610,7 @@ header
 				align-items: center
 				padding: 0px
 				+media-breakpoint-down(xs)
-					padding: 26px 24px
+					padding: 30px 20px
 				.header__logo
 					padding: 50px 0px 50px 40px
 					+media-breakpoint-down(xs)
@@ -619,14 +619,15 @@ header
 						+media-breakpoint-down(xs)
 							max-width: 130px
 				.header__nav
-					position: relative
 					z-index: 991
+					+media-breakpoint-down(xs)
+						padding: 0 20px!important
+						top: 95px!important
 					.header__list-nav
 						display: flex
 						justify-content: space-between
 						align-items: center
 						margin: 0
-
 						&.is-active
 							height: auto
 							display: flex
@@ -635,6 +636,21 @@ header
 						.header__item
 							margin: 0
 							position: relative
+							.header__phoneMobile
+								display: none
+								font-size: 24px
+								line-height: 24px
+								color: $text
+								position: relative
+								margin-left: 60px
+								&::before
+									position: absolute
+									content: url(../img/_src/phone-icon.png)
+									left: -60px
+									top: -8px
+
+								+media-breakpoint-down(sm)
+									display: block
 							.header__link
 								font-weight: 300
 								font-size: 18px
@@ -693,20 +709,27 @@ header
 						margin-right: 30px
 						padding-left: 35px
 						position: relative
-						+media-breakpoint-down(md)
+						+media-breakpoint-down(sm)
 							display: none
+					.header__request
+						+media-breakpoint-down(xs)
+							display: none
+					.header__requestMobile						
+						+media-breakpoint-down(xs)
+							display: block
+							padding: 5px 10px 5px 10px
+							font-size: 12px
+							line-height: 16px
 
 			.burger-menu
 				position: absolute
-				top: 28px
-				right: 0px
-				+media-breakpoint-down(sm)
-					top: 25px
+				top: 52px
+				right: 20px
 				+media-breakpoint-down(xs)
-					top: 18px
+					top: 24px
 					right: 24px
 				.burger-menu__button
-					display: block
+					display: none
 					position: relative
 					width: 45px
 					height: 45px
@@ -716,31 +739,31 @@ header
 					z-index: 991
 					.burger-menu__lines
 						position: absolute
-						width: 22px
-						height: 2px
+						width: 13.75px
+						height: 3.6px
 						top: 47%
 						right: 50%
 						transform: translate(50%)
-						background-color: #142C60
+						background-color: $accent
 						&::after
 							content: ""
 							position: absolute
-							width: 22px
-							height: 2px
-							background-color: #142C60
-							top: -8.5px
+							width: 20px
+							height: 3.6px
+							background-color: $accent
+							top: -7.2px
 						&::before
 							content: ""
 							position: absolute
-							width: 15px
-							height: 2px
-							background-color: #142C60
-							top: 8.5px
-				&.is-active
+							width: 20px
+							height: 3.6px
+							background-color: $accent
+							top: 7.2px
+				&.is-active					
 					.burger-menu__lines
 						background-color: transparent
 						&::before
-							width: 22px
+							width: 20px
 							top: 0
 							transform: rotate(45deg)
 						&::after
@@ -2080,3 +2103,5 @@ footer
 				.footer__item
 					padding-left: 40px
 					.footer__link
+
+@import media
