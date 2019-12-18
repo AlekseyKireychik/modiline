@@ -1,25 +1,5 @@
 //BackForm input-file
 
-function getFileName() {
-  let file = document.getElementById("uploaded-file").value;
-
-  file = file
-    .replace(/\\/g, "/")
-    .split("/")
-    .pop();
-
-  document.getElementById("file-name").innerHTML =
-    '<div id="del__container" class="del__container">' +
-    file +
-    '<span id="del-file"><span onclick="RemoveFunc()" class="name del-file-btn">Удалить файл</span></span>' +
-    "</div>";
-}
-function RemoveFunc() {
-  document.getElementById("uploaded-file").value = null;
-
-  let remove = document.getElementById("del__container").remove();
-  return false;
-}
 
 jQuery.each(jQuery("textarea[data-autoresize]"), function() {
   var offset = this.offsetHeight - this.clientHeight;
@@ -124,6 +104,15 @@ $(document).ready(function() {
     $(".submenu").toggleClass("is-active");
     $(".header__subList").toggleClass("is-active");
   });
-  
+  $(".reviews__list").slick({
+    infinite: true,
+    arrows: true,
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    focusOnSelect: true,
+    variableWidth: true
+  });
 
 });

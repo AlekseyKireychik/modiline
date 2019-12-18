@@ -1935,6 +1935,106 @@ header
 										color: #000000
 										padding-bottom: 30px
 					.pageservice__form
+////////reviews
+.reviews	
+	padding-bottom: 135px
+	.container
+		.row
+			.title
+				margin-bottom: 30px
+	.container		
+		.row
+			&.reviews__slider
+				position: relative
+				&::after
+					position: absolute
+					content: url(../img/_src/quote-left.png)						
+					left: 0px
+					top: 10px	
+				&::before
+					position: absolute
+					content: url(../img/_src/quote-right.png)						
+					right: 0px
+					bottom: 30px	
+				.reviews__list
+					max-width: 780px
+					margin: 0 auto
+					padding-top: 168px
+					padding-bottom: 190px								
+					.reviews__item	
+						.reviews__caption
+							max-width: 780px
+							text-align: center
+							.reviews__description
+								font-family: 'HelveticaNeueCyr', sans-serif
+								font-style: italic
+								font-weight: 400
+								font-size: 24px
+								line-height: 29px
+								color: #000
+								margin-bottom: 40px
+							.reviews__name
+								font-family: 'HelveticaNeueCyr', sans-serif
+								font-style: italic
+								font-weight: 500
+								font-size: 24px
+								line-height: 29px
+								color: #000
+					.slick-prev
+						top: 45%
+						left: -25%
+						width: 40px
+						height: 60px
+						&::before
+							content: url(../img/_src/arrLeft.png)
+							
+							// left: -31px
+							// top: -3px
+							cursor: pointer
+					.slick-next
+						top: 45%
+						right: -25%
+						width: 40px
+						height: 60px
+						&::before
+							content: url(../img/_src/arrRight.png)
+							cursor: pointer
+					.slick-dots
+						li
+							width: 25px
+							height: 25px
+							margin: 0 6px
+							button
+								width: 25px
+								height: 25px
+								&::before
+									width: 25px
+									height: 25px
+									border: 5px solid #1C9DAC
+									background: #FFFFFF
+									border-radius: 50%
+									content: ' '
+							&.slick-active
+								button
+									&::before
+.reviews__order
+	margin-bottom: 120px
+	.container
+		.row
+			&.reviews__caption
+				align-items: center
+				justify-content: flex-start
+				.title
+					font-weight: 300
+					font-size: 48px
+					line-height: 47px
+					letter-spacing: 0.02em
+					margin-bottom: 0
+				.btn
+					width: 208px
+					margin-left: 30px
+
+						
 ////////// /gallery
 .gallery
 	padding-bottom: 60px
@@ -2042,8 +2142,137 @@ header
 					max-height: 484px
 					min-height: 484px
 .form
+	box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+	padding: 50px 30px 40px 50px
+	flex-basis: 588px
+	border-radius: 20px
 	.form__top
 		.form__title
+			font-family: 'Roboto', sans-serif
+			font-weight: 300
+			font-size: 36px
+			line-height: 42px
+			margin-bottom: 10px
+		.form__description
+			font-family: 'Roboto', sans-serif
+			font-weight: 300
+			font-size: 14px
+			line-height: 16px
+			margin-bottom: 50px
+	.form__content
+		.mainform__group
+			margin-bottom: 44px
+			position: relative
+			.mainform__control
+				padding: 12px 16px
+				width: 100%
+				border: 1px solid #A1A4B1
+				border-radius: 4px
+				&::placeholder
+					font-family: 'Open Sans', sans-serif
+					font-weight: normal
+					font-size: 14px
+					line-height: 24px
+					color: #8B90A0
+			.mainform__label
+				font-family: 'Open Sans', sans-serif
+				font-weight: normal
+				font-size: 14px
+				line-height: 16px
+				color: #232735
+				position: absolute
+				left: 0
+				top: -25px
+			&.group-01
+			&.comment
+				margin-bottom: 0px
+				textarea
+					padding: 12px 16px
+					width: 100%
+					border: 1px solid #A1A4B1
+					border-radius: 4px
+					&::placeholder
+						font-family: 'Open Sans', sans-serif
+						font-weight: normal
+						font-size: 14px
+						line-height: 24px
+						color: #8B90A0
+				.mainform__label
+					font-family: 'Open Sans', sans-serif
+					font-weight: normal
+					font-size: 14px
+					line-height: 16px
+					color: #232735
+					position: absolute
+					left: 0
+					top: -25px
+		.form__bottom
+				padding-top: 50px
+				display: flex
+				align-items: center
+				align-items: flex-start
+				flex-direction: column
+				+media-breakpoint-down(lg)	
+					padding-top: 0px
+				.form-check
+					position: relative
+					padding-left: 44px
+					margin-bottom: 0
+					.form__check-input
+						background: #F7F7F7
+						border: 2px solid #F7F7F7
+					input[type="checkbox"]
+						display: inline-block
+						width: auto
+						margin-top: 5px
+						opacity: 0
+					.form__check-input + label::before
+						position: absolute
+						left: -35px
+						bottom: 7px
+						height: 18px
+						width: 18px
+						content: ""
+						background: #fff
+						display: inline-block
+						vertical-align: middle
+						border: 2px solid #000
+						border-radius: 2px
+						+media-breakpoint-down(md)
+							bottom: 5px
+						+media-breakpoint-down(xs)
+							bottom: auto
+					.form__check-input:checked + label::before
+						background: $accent
+						border: 2px solid $accent
+					.form__check-label
+						font-family: 'Roboto', sans-serif
+						font-weight: 300
+						font-size: 14px
+						line-height: 16px
+						padding-left: 0px
+						color: #000
+						margin-bottom: 20px
+						position: relative
+						cursor: pointer
+						&::after
+							display: none
+							position: absolute
+							content: url(../img/_src/check.svg)
+							left: -33px
+							bottom: 8px
+							cursor: pointer
+						+media-breakpoint-down(md)
+							padding-left: 12px
+					.form__check-input:checked + label::after
+						display: block
+				.form__box
+					button
+						min-width: 210px
+						font-family: 'Open Sans', sans-serif
+						font-weight: normal
+						font-size: 14px
+						line-height: 16px
 footer
 	background: linear-gradient(360deg, #1C9DAC 0%, #50B9BD 100%)
 	.container
