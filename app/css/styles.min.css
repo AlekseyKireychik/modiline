@@ -1911,10 +1911,12 @@ header .container-fluid.container__header .nav .menu__wrap .menu__list .menu__it
 }
 
 .home .home__baner .container .row .caption .caption__title {
-  font-size: 48px;
-  line-height: 47px;
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 70px;
+  letter-spacing: 0.03em;
   text-align: left;
-  color: #FFFFFF;
+  color: #1C9DAC;
 }
 
 .services__home {
