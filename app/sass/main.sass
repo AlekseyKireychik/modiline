@@ -66,11 +66,16 @@ body
 	letter-spacing: 0.02em
 	color: $accent
 	margin-bottom: 30px
+	+media-breakpoint-down(md)
+		font-size: 36px
+		line-height: 36px
+	+media-breakpoint-down(xs)
+		font-size: 24px
+		line-height: 24px
 select.error
 	border-bottom: 1px solid $accent
 input.error
 	border-bottom: 1px solid $accent
-
 
 .overlay
 	position: absolute
@@ -113,6 +118,8 @@ input.error
 			line-height: 18px
 			padding: 15px 15px 60px 0px
 			margin-bottom: 0
+			+media-breakpoint-down(xs)
+				padding: 15px 15px 40px 0px
 			.breadcrumb-item
 				a
 					color: #000
@@ -123,6 +130,8 @@ input.error
 						+media-breakpoint-down(xs)
 							word-wrap: normal
 header
+	+media-breakpoint-down(md)
+		box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.15)
 	.container-fluid
 		&.container__header
 			position: relative
@@ -222,6 +231,8 @@ header
 					justify-content: space-between
 					align-items: center
 					padding-right: 30px
+					+media-breakpoint-down(xs)
+					  	padding-right: 50px!important
 					.header__phone
 						font-weight: 300
 						font-size: 18px
@@ -236,7 +247,8 @@ header
 					.header__request
 						+media-breakpoint-down(xs)
 							display: none
-					.header__requestMobile						
+					.header__requestMobile
+						display: none
 						+media-breakpoint-down(xs)
 							display: block
 							padding: 5px 10px 5px 10px
@@ -281,7 +293,7 @@ header
 							height: 3.6px
 							background-color: $accent
 							top: 7.2px
-				&.is-active					
+				&.is-active
 					.burger-menu__lines
 						background-color: transparent
 						&::before
@@ -458,7 +470,7 @@ header
 						.header__request
 							+media-breakpoint-down(xs)
 								display: none
-						.header__requestMobile						
+						.header__requestMobile
 							+media-breakpoint-down(xs)
 								display: block
 								padding: 5px 10px 5px 10px
@@ -503,7 +515,7 @@ header
 								height: 3.6px
 								background-color: $accent
 								top: 7.2px
-					&.is-active					
+					&.is-active
 						.burger-menu__lines
 							background-color: transparent
 							&::before
@@ -712,7 +724,7 @@ header
 	.container
 		.row
 			&.specialists__bottom
-				
+
 				.specialists__title
 					font-weight: 300
 					font-size: 36px
@@ -1191,17 +1203,30 @@ header
 							line-height: 25px
 							letter-spacing: 0.02em
 ///////////////Specialists page
+.specialists__breadcrumb
+	+media-breakpoint-down(xs)
+		padding: 0 25px
 .specialists
 	background-color: #fff
 	padding-bottom: 60px
+	+media-breakpoint-down(sm)
+		padding-bottom: 20px
+	+media-breakpoint-down(xs)
+		padding: 0 25px 20px
 	.container
 		.row
 			.title
 				margin-bottom: 60px
+				+media-breakpoint-down(sm)
+					margin-bottom: 20px
 	.container
 		.row
 			&.specialists__top
 				margin-bottom: 60px
+				+media-breakpoint-down(sm)
+					margin-bottom: 20px
+				+media-breakpoint-down(xs)
+					margin-bottom: 0px
 				.specialists__title
 					font-weight: 300
 					font-size: 36px
@@ -1209,11 +1234,20 @@ header
 					letter-spacing: 0.02em
 					color: $accent
 					margin-bottom: 30px
+					+media-breakpoint-down(md)
+						font-size: 26px
+						line-height: 26px
+					+media-breakpoint-down(xs)
+						font-size: 20px
+						line-height: 24px
 				.specialists__listTop
 					display: flex
 					align-items: flex-start
 					justify-content: space-between
 					width: 100%
+					+media-breakpoint-down(sm)
+						flex-wrap: wrap
+						justify-content: center
 					.specialists__itemTop
 						display: flex
 						align-items: flex-start
@@ -1222,18 +1256,42 @@ header
 						background: #FFFFFF
 						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 						border-radius: 20px
-						flex-basis: 588px
+						flex-basis: 548px
+						position: relative
+						+media-breakpoint-down(lg)
+							flex-basis: 458px
+						+media-breakpoint-down(md)
+							flex-basis: 338px
+						+media-breakpoint-down(sm)
+							flex-basis: 388px
+							margin-bottom: 20px
+						+media-breakpoint-down(xs)
+							flex-basis: 100%
 						.specialists__link
 							width: 100%
 							.specialists__img
 								width: 100%
 								height: 442px
 								border-radius: 20px 20px 0px 0px
+								+media-breakpoint-down(md)
+									height: 351px
+								+media-breakpoint-down(xs)
+									height: 382px
+									border-radius: 20px
 							.specialists__info
 								display: flex
 								align-items: flex-start
 								justify-content: flex-start
 								flex-direction: column
+								+media-breakpoint-down(xs)
+									position: absolute
+									top: 0
+									left: 0
+									right: 0
+									bottom: 0
+									background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%)
+									border-radius: 20px
+									justify-content: flex-end
 								.specialists__date
 									font-family: 'Roboto', sans-serif
 									font-weight: 300
@@ -1241,6 +1299,16 @@ header
 									line-height: 42px
 									color: #000000
 									padding: 30px 50px 25px
+									+media-breakpoint-down(md)
+										padding: 30px 0px 15px
+										margin: 0 auto
+										font-size: 24px
+										line-height: 28px
+									+media-breakpoint-down(xs)
+										font-size: 18px
+										line-height: 21px
+										color: #fff
+										padding: 30px 0px 40px
 								.specialists__description
 									font-family: 'Roboto', sans-serif
 									font-weight: 300
@@ -1248,6 +1316,16 @@ header
 									line-height: 28px
 									color: #000000
 									padding: 0px 50px 135px
+									+media-breakpoint-down(md)
+										font-size: 18px
+										line-height: 21px
+										padding: 0px 0px 115px
+										margin: 0 auto
+									+media-breakpoint-down(xs)
+										font-size: 14px
+										line-height: 16px
+										color: #fff
+										padding: 0px 0px 25px
 	.container
 		.row
 			&.specialists__bottom
@@ -1258,13 +1336,20 @@ header
 					letter-spacing: 0.02em
 					color: $accent
 					margin-bottom: 30px
+					+media-breakpoint-down(md)
+						font-size: 26px
+						line-height: 26px
+					+media-breakpoint-down(xs)
+						font-size: 20px
+						line-height: 24px
 				.specialists__listBottom
 					display: flex
 					align-items: flex-start
 					justify-content: space-between
 					flex-wrap: wrap
 					width: 100%
-
+					+media-breakpoint-down(sm)
+						justify-content: center
 					.specialists__itemBottom
 						display: flex
 						align-items: flex-start
@@ -1275,18 +1360,37 @@ header
 						border-radius: 20px
 						flex-basis: 385px
 						margin-bottom: 20px
+						position: relative
+						+media-breakpoint-down(md)
+							flex-basis: 338px
+						+media-breakpoint-down(sm)
+							flex-basis: 388px
+						+media-breakpoint-down(xs)
+							flex-basis: 100%
 						.specialists__link
 							width: 100%
 							.specialists__img
 								width: 100%
 								height: 351px
 								border-radius: 20px 20px 0px 0px
+								+media-breakpoint-down(xs)
+									height: 382px
+									border-radius: 20px
 							.specialists__info
 								width: 100%
 								display: flex
 								align-items: flex-start
 								justify-content: center
 								flex-direction: column
+								+media-breakpoint-down(xs)
+									position: absolute
+									top: 0
+									left: 0
+									right: 0
+									bottom: 0
+									background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%)
+									border-radius: 20px
+									justify-content: flex-end
 								.specialists__date
 									font-family: 'Roboto', sans-serif
 									font-weight: 300
@@ -1296,6 +1400,11 @@ header
 									padding-top: 30px
 									padding-bottom: 15px
 									margin: 0 auto
+									+media-breakpoint-down(xs)
+										font-size: 18px
+										line-height: 21px
+										color: #fff
+										padding: 30px 0px 40px
 								.specialists__description
 									font-family: 'Roboto', sans-serif
 									font-weight: 300
@@ -1304,6 +1413,11 @@ header
 									color: #000000
 									padding-bottom: 115px
 									margin: 0 auto
+									+media-breakpoint-down(xs)
+										font-size: 14px
+										line-height: 16px
+										color: #fff
+										padding: 0px 0px 25px
 ///////////////Pagespecialist page
 .pagespecialist
 	background-color: #fff
@@ -1573,20 +1687,20 @@ header
 					.pageservice__info
 						min-height: 400px
 						padding-left: 20px
-						p 
+						p
 							font-family: "Open Sans", sans-serif
 							font-size: 18px
 							line-height: 25px
 					.pageservice__indicationsUse
 						padding-left: 20px
 						padding-bottom: 40px
-						p 
+						p
 							font-family: "Open Sans", sans-serif
 							font-size: 20px
 							line-height: 27px
 							font-weight: bold
 							padding-left: 10px
-						.pageservice__indicationsUseList							
+						.pageservice__indicationsUseList
 							margin-bottom: 0
 							.pageservice__indicationsUseItem
 								font-family: "Open Sans", sans-serif
@@ -1595,7 +1709,7 @@ header
 					.pageservice__contraindicationsUse
 						padding-left: 20px
 						padding-bottom: 60px
-						p 
+						p
 							font-family: "Open Sans", sans-serif
 							font-size: 24px
 							line-height: 33px
@@ -1672,7 +1786,7 @@ header
 										line-height: 28px
 										color: #000000
 										padding-top: 30px
-										padding-bottom: 25px									
+										padding-bottom: 25px
 									.specialists__description
 										font-family: 'Roboto', sans-serif
 										font-weight: 300
@@ -1682,32 +1796,32 @@ header
 										padding-bottom: 30px
 					.pageservice__form
 ////////reviews
-.reviews	
+.reviews
 	padding-bottom: 135px
 	.container
 		.row
 			.title
 				margin-bottom: 30px
-	.container		
+	.container
 		.row
 			&.reviews__slider
 				position: relative
 				&::after
 					position: absolute
-					content: url(../img/_src/quote-left.png)						
+					content: url(../img/_src/quote-left.png)
 					left: 0px
-					top: 10px	
+					top: 10px
 				&::before
 					position: absolute
-					content: url(../img/_src/quote-right.png)						
+					content: url(../img/_src/quote-right.png)
 					right: 0px
-					bottom: 30px	
+					bottom: 30px
 				.reviews__list
 					max-width: 780px
 					margin: 0 auto
 					padding-top: 168px
-					padding-bottom: 190px								
-					.reviews__item	
+					padding-bottom: 190px
+					.reviews__item
 						.reviews__caption
 							max-width: 780px
 							text-align: center
@@ -1733,7 +1847,7 @@ header
 						height: 60px
 						&::before
 							content: url(../img/_src/arrLeft.png)
-							
+
 							// left: -31px
 							// top: -3px
 							cursor: pointer
@@ -1780,7 +1894,6 @@ header
 					width: 208px
 					margin-left: 30px
 
-						
 ////////// /gallery
 .gallery
 	padding-bottom: 60px
@@ -1813,12 +1926,12 @@ header
 					position: relative
 					border-radius: 20px
 					margin-bottom: 20px
-					.gallery__imgBefore						
+					.gallery__imgBefore
 					.gallery__imgAfter
 						display: none
 					.gallery__caption
 						display: none
-					&:hover						
+					&:hover
 						.gallery__caption
 							display: block
 							position: absolute
@@ -1846,7 +1959,12 @@ header
 								color: #fff
 								padding-bottom: 40px
 //////////contacts
-.contacts	
+.contacts__breadcrumb
+	+media-breakpoint-down(xs)
+		padding: 0 25px
+.contacts
+	+media-breakpoint-down(xs)
+		padding: 0 25px
 	.container
 		.row
 			&.contacts__content
@@ -1855,20 +1973,43 @@ header
 				justify-content: space-between
 				width: 100%
 				padding-bottom: 60px
+				+media-breakpoint-down(sm)
+					width: auto
+					padding-bottom: 40px
 				.contacts__caption
 					background: #FFFFFF
 					box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 					border-radius: 20px
 					padding: 50px
 					flex-basis: 48%
+					+media-breakpoint-down(md)
+						padding: 30px 30px 40px 0
+						box-shadow: none
+						border-radius: 0
+						flex-basis: 100%
+					+media-breakpoint-down(xs)
+						padding: 0px
 					.contacts__list
 						.contacts__item
 							padding-bottom: 25px
+							+media-breakpoint-down(xs)
+								padding-bottom: 15px
+								font-size: 16px
+								line-height: 19px
+							.contacts__link
+								color: #000000
+								+media-breakpoint-down(xs)
+									font-size: 16px
+									line-height: 19px
+								&:hover
+									text-decoration: underline
 							.contacts__setiList
 								display: flex
 								align-items: flex-start
 								justify-content: flex-start
 								padding-top: 25px
+								+media-breakpoint-down(xs)
+									padding-top: 5px
 								.contacts__setiItem
 									margin-right: 20px
 									font-family: 'Roboto', sans-serif
@@ -1876,6 +2017,28 @@ header
 									font-size: 24px
 									line-height: 28px
 									color: #000000
+									.contacts__setiLink
+										svg
+											width: 60px
+											height: 60px
+											+media-breakpoint-down(sm)
+												width: 20px
+												height: 20px
+										&.vk
+											svg
+												width: 84px
+												height: 60px
+												+media-breakpoint-down(sm)
+													width: 30px
+													height: 20px
+										&.youtube
+											svg
+												width: 88px
+												height: 60px
+												+media-breakpoint-down(sm)
+													width: 28px
+													height: 20px
+
 				.contacts__containerMap
 					background-image: url(../img/_src/map.png)
 					background-position: center
@@ -1887,6 +2050,12 @@ header
 					overflow: hidden
 					max-height: 484px
 					min-height: 484px
+					+media-breakpoint-down(md)
+						flex-basis: 100%
+					+media-breakpoint-down(sm)
+						max-height: 320px
+						min-height: 320px
+
 .form
 	box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 	padding: 50px 30px 40px 50px
@@ -1953,13 +2122,13 @@ header
 					left: 0
 					top: -25px
 		.form__bottom
-				padding-top: 50px
-				display: flex
-				align-items: center
-				align-items: flex-start
-				flex-direction: column
-				+media-breakpoint-down(lg)	
-					padding-top: 0px
+			padding-top: 50px
+			display: flex
+			align-items: center
+			align-items: flex-start
+			flex-direction: column
+			+media-breakpoint-down(lg)
+				padding-top: 0px
 				.form-check
 					position: relative
 					padding-left: 44px
@@ -2024,6 +2193,8 @@ footer
 	.container
 		.footer__nav
 			border-bottom: 2px solid #fff
+			+media-breakpoint-down(lg)
+				border-bottom: none
 			.footer__list
 				display: flex
 				align-items: flex-start
@@ -2031,8 +2202,15 @@ footer
 				margin: 0
 				padding: 60px 0 40px
 				width: 100%
+				+media-breakpoint-down(sm)
+					padding: 40px 0 30px
+				+media-breakpoint-down(xs)
+					padding: 25px 25px 20px
 				.footer__elem
 					padding: 0
+					&:first-child
+						+media-breakpoint-down(lg)
+							display: none
 					.footer__title
 						font-weight: 300
 						font-size: 36px
@@ -2040,15 +2218,33 @@ footer
 						letter-spacing: 0.02em
 						color: #ffffff
 						margin-bottom: 30px
+						+media-breakpoint-down(sm)
+							font-size: 26px
+							line-height: 26px
+							margin-bottom: 20px
+						+media-breakpoint-down(xs)
+							font-size: 16px
+							line-height: 16px
+							margin-bottom: 10px
 					.footer__sublist
 						.footer__item
 							padding-bottom: 20px
+							+media-breakpoint-down(sm)
+								padding-bottom: 15px
+							+media-breakpoint-down(xs)
+								padding-bottom: 5px
 							.footer__link
 								font-weight: 300
 								font-size: 24px
 								line-height: 24px
 								text-decoration: none
 								color: #ffffff
+								+media-breakpoint-down(sm)
+									font-size: 18px
+									line-height: 20px
+								+media-breakpoint-down(xs)
+									font-size: 10px
+									line-height: 12px
 		.footer__bottom
 			padding: 60px 0
 			display: flex
@@ -2057,26 +2253,88 @@ footer
 			color: #ffffff
 			font-size: 16px
 			line-height: 19px
-			.footer__logo
-				.footer__link
-					margin: 0 auto
-			.footer__info
-				display: flex
-				align-items: flex-start
-				justify-content: center
-				flex-direction: column
-				margin-bottom: 0
-				.footer__description
-					font-weight: 300
-					font-size: 18px
-					line-height: 21px
-			.footer__seti
-				display: flex
-				align-items: center
-				justify-content: space-between
-				margin-bottom: 0
-				.footer__item
-					padding-left: 40px
+			margin-bottom: 0px
+			+media-breakpoint-down(lg)
+				padding: 0px 0 60px
+			+media-breakpoint-down(xs)
+				padding: 0px 25px 20px
+			.footer__bottomElem
+				order: 1
+				&.seti
+					+media-breakpoint-down(lg)
+						flex-basis: 100%
+						border-bottom: 2px solid #fff
+						padding-bottom: 50px
+						margin-bottom: 50px
+						order: 0
+					+media-breakpoint-down(xs)
+						padding-bottom: 20px
+						margin-bottom: 20px
+				.footer__logo
 					.footer__link
+						margin: 0 auto
+						.footer__logo
+							+media-breakpoint-down(sm)
+								display: none
+						.footer__logoMobile
+							display: none
+							+media-breakpoint-down(sm)
+								display: block
+				.footer__info
+					display: flex
+					align-items: flex-start
+					justify-content: center
+					flex-direction: column
+					margin-bottom: 0
+					+media-breakpoint-down(xs)
+						max-width: 135px
+						text-align: center
+					.footer__description
+						font-weight: 300
+						font-size: 18px
+						line-height: 21px
+						+media-breakpoint-down(sm)
+							font-size: 16px
+							line-height: 18px
+						+media-breakpoint-down(xs)
+							font-size: 8px
+							line-height: 9px
+							margin: 0 auto
+				.footer__titleSeti
+					display: none
+					+media-breakpoint-down(lg)
+						display: block
+						font-weight: 300
+						font-size: 36px
+						line-height: 36px
+						letter-spacing: 0.02em
+						color: #ffffff
+						margin-bottom: 30px
+					+media-breakpoint-down(sm)
+						font-size: 26px
+						line-height: 26px
+						margin-bottom: 20px
+					+media-breakpoint-down(xs)
+						font-size: 16px
+						line-height: 16px
+						margin-bottom: 10px
+				.footer__seti
+					display: flex
+					align-items: center
+					justify-content: space-between
+					margin-bottom: 0
+					+media-breakpoint-down(lg)
+						justify-content: flex-start
+					.footer__item
+						padding-left: 40px
+						+media-breakpoint-down(xs)
+							padding-left: 0px
+						&:first-child
+							+media-breakpoint-down(lg)
+								padding-left: 0px
+						.footer__link
+							.footer__icon
+								+media-breakpoint-down(xs)
+									width: 55%
 
 @import media
