@@ -104,6 +104,9 @@ input.error
 			line-height: 28px
 			color: #000
 			transition: .3s
+			+media-breakpoint-down(xs)
+				font-size: 18px
+				line-height: 22px
 			&:hover
 				color: #1C9DAC
 				transition: .3s
@@ -962,6 +965,8 @@ header
 				display: flex
 				align-items: flex-start
 				justify-content: space-between
+				+media-breakpoint-down(lg)
+					flex-direction: column
 				.pagenews__left
 					flex-basis: 48%
 					p
@@ -1000,13 +1005,20 @@ header
 									line-height: 16px
 									color: #000000
 //////////////license page
+.license__breadcrumb
+	+media-breakpoint-down(xs)
+		padding: 0 25px 0px
 .license
 	background-color: #fff
 	padding-bottom: 60px
+	+media-breakpoint-down(xs)
+		padding: 0 25px 40px
 	.container
 		.row
 			.title
 				margin-bottom: 30px
+				+media-breakpoint-down(xs)
+					margin-bottom: 20px
 	.container
 		.row
 			.license__list
@@ -1016,6 +1028,8 @@ header
 				flex-wrap: wrap
 				margin-bottom: 0
 				padding-bottom: 60px
+				+media-breakpoint-down(xs)
+					padding-bottom: 40px
 				.license__item
 					display: flex
 					align-items: center
@@ -1027,6 +1041,12 @@ header
 					border-radius: 20px
 					padding: 0px
 					margin-bottom: 20px
+					+media-breakpoint-down(lg)
+						flex-basis: 310px
+						max-width: 310px
+					+media-breakpoint-down(sm)
+						flex-basis: 100%
+						max-width: 100%
 					img
 						width: 100%
 					.license__link
@@ -1036,6 +1056,10 @@ header
 						line-height: 28px
 						color: #000000
 						padding: 36px 0px
+						+media-breakpoint-down(xs)
+							padding: 10px 0px
+							font-size: 18px
+							line-height: 20px
 						&:hover
 							text-decoration: underline
 //////////////cost page
@@ -1308,7 +1332,8 @@ header
 										font-size: 18px
 										line-height: 21px
 										color: #fff
-										padding: 30px 0px 40px
+										margin: 0
+										padding: 30px 24px 40px 24px
 								.specialists__description
 									font-family: 'Roboto', sans-serif
 									font-weight: 300
@@ -1325,7 +1350,8 @@ header
 										font-size: 14px
 										line-height: 16px
 										color: #fff
-										padding: 0px 0px 25px
+										margin: 0
+										padding: 0px 24px 25px 24px
 	.container
 		.row
 			&.specialists__bottom
@@ -1404,7 +1430,8 @@ header
 										font-size: 18px
 										line-height: 21px
 										color: #fff
-										padding: 30px 0px 40px
+										margin: 0
+										padding: 30px 24px 40px 24px
 								.specialists__description
 									font-family: 'Roboto', sans-serif
 									font-weight: 300
@@ -1417,7 +1444,8 @@ header
 										font-size: 14px
 										line-height: 16px
 										color: #fff
-										padding: 0px 0px 25px
+										margin: 0
+										padding: 0px 24px 25px 24px
 ///////////////Pagespecialist page
 .pagespecialist
 	background-color: #fff
