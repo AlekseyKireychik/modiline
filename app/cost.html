@@ -24,61 +24,87 @@
 </head>
 
 <body>
-	<header>		
+    <header>
 		<div class="container-fluid container__header ">
-			<div class="header row">
-				<div class="header__logo">
-					<a href="/">
-						<img class="" src="img/_src/logo.png" alt="MODY LINE">
-					</a>
-				</div>
-				<nav class="header__nav">
-					<ul class="header__list-nav">
-						<li class="header__item">
-							<a href="#" class="header__link submenu">Услуги</a>
-							<ul class="header__subList">
-								<li class="header__item"><a class="header__subLink" href="./pageservice.html">Услугa</a></li>
-								<li class="header__item"><a class="header__subLink" href="">Услугa</a></li>
-								<li class="header__item"><a class="header__subLink" href="">Услугa</a></li>
-								<li class="header__item"><a class="header__subLink" href="">Услугa</a></li>
-								<li class="header__item"><a class="header__subLink" href="">Услугa</a></li>
-							</ul>
-						</li>
-						<li class="header__item">
-							<a href="./about.html" class="header__link">О нас</a>
-						</li>
-						<li class="header__item">
-							<a href="./cost.html" class="header__link">Цены</a>
-						</li>
-						<li class="header__item">
-							<a href="./akcii.html" class="header__link">Акции</a>
-						</li>
-						<li class="header__item">
-							<a href="./specialists.html" class="header__link">Специалисты</a>
-						</li>
-						<li class="header__item">
-							<a href="./gallery.html" class="header__link">Галерея</a>
-						</li>
-						<li class="header__item">
-							<a href="./contacts.html" class="header__link">Контакты</a>
-						</li>
-					</ul>
-				</nav>	
-				<div class="header__function">
-					<a class="header__phone" href="tel:+375441111111">+375 44 111-11-11</a>
-					<a class="header__request btn register" href="#">Записаться на приём</a>
-				</div>
+		  <div class="header row">
+			<div class="header__logo">
+			  <a href="/">
+				<img class="" src="img/_src/logo.png" alt="MODY LINE" />
+			  </a>
 			</div>
-			<!-- <div class="burger-menu">
-				<a href="#" class="burger-menu__button">
-					<span class="burger-menu__lines"></span>
-				</a>
-			</div> -->			
-			<div class="burger-menu__overlay"></div>			
+			<nav class="header__nav">
+			  <ul class="header__list-nav">
+				<li class="header__item">
+				  <a class="header__phoneMobile" href="tel:+375441111111"
+					>+375 44 111-11-11</a
+				  >
+				</li>
+				<li class="header__item">
+				  <a href="#" class="header__link submenu">Услуги</a>
+				  <ul class="header__subList">
+					<li class="header__item">
+					  <a class="header__subLink" href="./pageservice.html"
+						>Услугa</a
+					  >
+					</li>
+					<li class="header__item">
+					  <a class="header__subLink" href="">Услугa</a>
+					</li>
+					<li class="header__item">
+					  <a class="header__subLink" href="">Услугa</a>
+					</li>
+					<li class="header__item">
+					  <a class="header__subLink" href="">Услугa</a>
+					</li>
+					<li class="header__item">
+					  <a class="header__subLink" href="">Услугa</a>
+					</li>
+				  </ul>
+				</li>
+				<li class="header__item">
+				  <a href="./about.html" class="header__link">О нас</a>
+				</li>
+				<li class="header__item">
+				  <a href="./cost.html" class="header__link">Цены</a>
+				</li>
+				<li class="header__item">
+				  <a href="./akcii.html" class="header__link">Акции</a>
+				</li>
+				<li class="header__item">
+				  <a href="./specialists.html" class="header__link"
+					>Специалисты</a
+				  >
+				</li>
+				<li class="header__item">
+				  <a href="./gallery.html" class="header__link">Галерея</a>
+				</li>
+				<li class="header__item">
+				  <a href="./contacts.html" class="header__link">Контакты</a>
+				</li>
+			  </ul>
+			</nav>
+			<div class="header__function">
+			  <a class="header__phone" href="tel:+375441111111"
+				>+375 44 111-11-11</a
+			  >
+			  <a class="header__request btn register" href="#"
+				>Записаться на приём</a
+			  >
+			  <a class="header__requestMobile btn register" href="#"
+				>Записаться</a
+			  >
+			</div>
+		  </div>
+		  <div class="burger-menu">
+			<a href="#" class="burger-menu__button">
+			  <span class="burger-menu__lines"></span>
+			</a>
+		  </div>
+		  <div class="burger-menu__overlay"></div>
 		</div>
-	</header>
+	  </header>
 	<main>	
-		<section>
+		<section class="cost__breadcrumb">
 			<div class="container container__breadcrumb">
 			<div class="row">
 				<nav aria-label="breadcrumb" class="nav__breadcrumb">
@@ -102,46 +128,88 @@
 				<div class="row">
 					<ul class="cost__list">
 						<li class="cost__elem">
-							<div class="cost__top">
-								<div class="cost__title">Наименование услуги</div>
-								<div class="cost__cost">Стоимость</div>
+							<div class="cost__left">
+								<div class="cost__top">
+									<div class="cost__title">Наименование услуги</div>
+								</div>
+								<ul class="cost__sublist">
+									<li class="cost__item">Услуга1</li>
+									<li class="cost__item">Услуга2</li>
+									<li class="cost__item">Услуга3</li>
+									<li class="cost__item">Услуга4</li>
+									<li class="cost__item">Услуга5</li>
+									<li class="cost__item">Услуга6</li>
+								</ul>
 							</div>
-							<ul class="cost__sublist">
-								<li class="cost__item">Услуга1</li>
-								<li class="cost__item">Услуга2</li>
-								<li class="cost__item">Услуга3</li>
-								<li class="cost__item">Услуга4</li>
-								<li class="cost__item">Услуга5</li>
-								<li class="cost__item">Услуга6</li>
-							</ul>
+							<div class="cost__right">
+								<div class="cost__top">
+									<div class="cost__cost">Стоимость</div>
+								</div>
+								<ul class="cost__sublist">
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+								</ul>
+							</div>
 						</li>
 						<li class="cost__elem">
-							<div class="cost__top">
-								<div class="cost__title">Наименование услуги</div>
-								<div class="cost__cost">Стоимость</div>
+							<div class="cost__left">
+								<div class="cost__top">
+									<div class="cost__title">Наименование услуги</div>
+								</div>
+								<ul class="cost__sublist">
+									<li class="cost__item">Услуга1</li>
+									<li class="cost__item">Услуга2</li>
+									<li class="cost__item">Услуга3</li>
+									<li class="cost__item">Услуга4</li>
+									<li class="cost__item">Услуга5</li>
+									<li class="cost__item">Услуга6</li>
+								</ul>
 							</div>
-							<ul class="cost__sublist">
-								<li class="cost__item">Услуга1</li>
-								<li class="cost__item">Услуга2</li>
-								<li class="cost__item">Услуга3</li>
-								<li class="cost__item">Услуга4</li>
-								<li class="cost__item">Услуга5</li>
-								<li class="cost__item">Услуга6</li>
-							</ul>
+							<div class="cost__right">
+								<div class="cost__top">
+									<div class="cost__cost">Стоимость</div>
+								</div>
+								<ul class="cost__sublist">
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+								</ul>
+							</div>
 						</li>
 						<li class="cost__elem">
-							<div class="cost__top">
-								<div class="cost__title">Наименование услуги</div>
-								<div class="cost__cost">Стоимость</div>
+							<div class="cost__left">
+								<div class="cost__top">
+									<div class="cost__title">Наименование услуги</div>
+								</div>
+								<ul class="cost__sublist">
+									<li class="cost__item">Услуга1</li>
+									<li class="cost__item">Услуга2</li>
+									<li class="cost__item">Услуга3</li>
+									<li class="cost__item">Услуга4</li>
+									<li class="cost__item">Услуга5</li>
+									<li class="cost__item">Услуга6</li>
+								</ul>
 							</div>
-							<ul class="cost__sublist">
-								<li class="cost__item">Услуга1</li>
-								<li class="cost__item">Услуга2</li>
-								<li class="cost__item">Услуга3</li>
-								<li class="cost__item">Услуга4</li>
-								<li class="cost__item">Услуга5</li>
-								<li class="cost__item">Услуга6</li>
-							</ul>
+							<div class="cost__right">
+								<div class="cost__top">
+									<div class="cost__cost">Стоимость</div>
+								</div>
+								<ul class="cost__sublist">
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+									<li class="cost__item">0</li>
+								</ul>
+							</div>
 						</li>
 					</ul>	
 				</div>

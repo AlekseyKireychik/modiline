@@ -235,7 +235,7 @@ header
 					align-items: center
 					padding-right: 30px
 					+media-breakpoint-down(xs)
-					  	padding-right: 50px!important
+						padding-right: 50px!important
 					.header__phone
 						font-weight: 300
 						font-size: 18px
@@ -1063,9 +1063,14 @@ header
 						&:hover
 							text-decoration: underline
 //////////////cost page
+.cost__breadcrumb
+	+media-breakpoint-down(xs)
+		padding: 0 25px 0px
 .cost
 	background-color: #fff
 	padding-bottom: 60px
+	+media-breakpoint-down(xs)
+		padding: 0 25px 40px
 	.container
 		.row
 			.title
@@ -1087,41 +1092,145 @@ header
 					display: flex
 					align-items: flex-start
 					justify-content: space-between
-					flex-direction: column
 					padding: 50px
+					+media-breakpoint-down(md)
+						padding: 40px 30px
+					+media-breakpoint-down(xs)
+						padding: 30px 15px
 					&:nth-child(even)
 						background: rgba(80, 185, 189, 0.5)
-					.cost__top
+					.cost__left
 						display: flex
-						align-items: center
+						align-items: flex-start
 						justify-content: flex-start
-						width: 100%
-						padding-bottom: 60px
-						.cost__title
-							font-family: 'Roboto', sans-serif
-							font-weight: 300
-							font-size: 36px
-							line-height: 42px
-							margin-right: 265px
-						.cost__cost
-							font-family: 'Roboto', sans-serif
-							font-weight: 300
-							font-size: 36px
-							line-height: 42px
-					.cost__sublist
-						.cost__item
-							font-family: 'Roboto', sans-serif
-							font-weight: 300
-							font-size: 24px
-							line-height: 28px
-							margin-bottom: 45px
-							&:last-child
-								margin-bottom: 0px
+						flex-direction: column
+						flex-basis: 55%
+						+media-breakpoint-down(xs)
+							padding-right: 15px
+						.cost__top
+							display: flex
+							align-items: center
+							justify-content: flex-start
+							width: 100%
+							padding-bottom: 60px
+							+media-breakpoint-down(xs)
+								padding-bottom: 20px
+							.cost__title
+								font-family: 'Roboto', sans-serif
+								font-weight: 300
+								font-size: 36px
+								line-height: 42px
+								+media-breakpoint-down(md)
+									font-size: 32px
+									line-height: 36px
+									min-height: 80px
+								+media-breakpoint-down(xs)
+									font-size: 18px
+									line-height: 20px
+									min-height: 70px
+							.cost__cost
+								font-family: 'Roboto', sans-serif
+								font-weight: 300
+								font-size: 36px
+								line-height: 42px
+								+media-breakpoint-down(md)
+									font-size: 32px
+									line-height: 36px
+									min-height: 80px
+								+media-breakpoint-down(xs)
+									font-size: 18px
+									line-height: 20px
+									min-height: 70px
+						.cost__sublist
+							display: flex
+							align-items: flex-start
+							justify-content: flex-start
+							flex-direction: column
+							.cost__item
+								font-family: 'Roboto', sans-serif
+								font-weight: 300
+								font-size: 24px
+								line-height: 28px
+								margin-bottom: 45px
+								display: flex
+								align-items: center
+								justify-content: space-between
+								+media-breakpoint-down(xs)
+									font-size: 18px
+									line-height: 20px
+									margin-bottom: 25px
+								&:last-child
+									margin-bottom: 0px
+					.cost__right
+						display: flex
+						align-items: flex-start
+						justify-content: flex-start
+						flex-direction: column
+						flex-basis: 45%
+						.cost__top
+							display: flex
+							align-items: center
+							justify-content: flex-start
+							width: 100%
+							padding-bottom: 60px
+							+media-breakpoint-down(xs)
+								padding-bottom: 20px
+							.cost__title
+								font-family: 'Roboto', sans-serif
+								font-weight: 300
+								font-size: 36px
+								line-height: 42px
+								+media-breakpoint-down(md)
+									font-size: 32px
+									line-height: 36px
+									min-height: 80px
+								+media-breakpoint-down(xs)
+									font-size: 18px
+									line-height: 20px
+									min-height: 70px
+							.cost__cost
+								font-family: 'Roboto', sans-serif
+								font-weight: 300
+								font-size: 36px
+								line-height: 42px
+								+media-breakpoint-down(md)
+									font-size: 32px
+									line-height: 36px
+									min-height: 80px
+								+media-breakpoint-down(xs)
+									font-size: 18px
+									line-height: 20px
+									min-height: 70px
+						.cost__sublist
+							display: flex
+							align-items: flex-start
+							justify-content: flex-start
+							flex-direction: column
+							.cost__item
+								font-family: 'Roboto', sans-serif
+								font-weight: 300
+								font-size: 24px
+								line-height: 28px
+								margin-bottom: 45px
+								display: flex
+								align-items: center
+								justify-content: space-between
+								+media-breakpoint-down(xs)
+									font-size: 18px
+									line-height: 20px
+									margin-bottom: 25px
+								&:last-child
+									margin-bottom: 0px
 
 ///////////////akcii page
+.akcii__breadcrumb
+	+media-breakpoint-down(xs)
+		padding: 0 25px 0px
 .akcii
 	background-color: #fff
 	padding-bottom: 60px
+	+media-breakpoint-down(xs)
+		padding: 0 25px 40px
 	.container
 		.row
 			.title
@@ -1143,45 +1252,154 @@ header
 					display: flex
 					align-items: flex-start
 					justify-content: space-between
-					flex-direction: column
 					padding: 50px
+					position: relative
+					+media-breakpoint-down(md)
+						padding: 40px 30px
+					+media-breakpoint-down(xs)
+						padding: 30px 15px
 					&:nth-child(even)
 						background: rgba(80, 185, 189, 0.5)
-					.akcii__top
+					.akcii__left
 						display: flex
-						align-items: center
+						align-items: flex-start
 						justify-content: flex-start
-						width: 100%
-						padding-bottom: 60px
-						.akcii__title
-							font-family: 'Roboto', sans-serif
-							font-weight: 300
-							font-size: 36px
-							line-height: 42px
-							margin-right: 265px
-						.akcii__cost
-							font-family: 'Roboto', sans-serif
-							font-weight: 300
-							font-size: 36px
-							line-height: 42px
-					.akcii__date
-						font-weight: 300
-						font-size: 24px
-						line-height: 24px
-						color: #FFFFFF
-						background: linear-gradient(97.18deg, #50B9BD 0%, #1C9DAC 100%)
-						border-radius: 5px
-						padding: 11px 82px
-						margin-bottom: 45px
-					.akcii__sublist
-						.akcii__item
-							font-family: 'Roboto', sans-serif
+						flex-direction: column
+						flex-basis: 55%
+						+media-breakpoint-down(xs)
+							padding-right: 15px
+						.akcii__top
+							display: flex
+							align-items: center
+							justify-content: flex-start
+							width: 100%
+							padding-bottom: 60px
+							+media-breakpoint-down(xs)
+								padding-bottom: 60px
+							.akcii__title
+								font-family: 'Roboto', sans-serif
+								font-weight: 300
+								font-size: 36px
+								line-height: 42px
+								+media-breakpoint-down(md)
+									font-size: 32px
+									line-height: 36px
+									min-height: 80px
+								+media-breakpoint-down(xs)
+									font-size: 18px
+									line-height: 20px
+									min-height: 70px
+							.akcii__cost
+								font-family: 'Roboto', sans-serif
+								font-weight: 300
+								font-size: 36px
+								line-height: 42px
+								+media-breakpoint-down(md)
+									font-size: 32px
+									line-height: 36px
+									min-height: 80px
+								+media-breakpoint-down(xs)
+									font-size: 18px
+									line-height: 20px
+									min-height: 70px
+						.akcii__date
 							font-weight: 300
 							font-size: 24px
-							line-height: 28px
+							line-height: 24px
+							color: #FFFFFF
+							background: linear-gradient(97.18deg, #50B9BD 0%, #1C9DAC 100%)
+							border-radius: 5px
+							padding: 11px 82px
 							margin-bottom: 45px
-							&:last-child
-								margin-bottom: 0px
+							+media-breakpoint-down(md)
+								padding: 10px 40px
+							+media-breakpoint-down(sm)
+								padding: 10px 10px
+							+media-breakpoint-down(sm)
+								position: absolute
+								top: 85px
+								font-size: 18px
+								line-height: 18px
+						.akcii__sublist
+							display: flex
+							align-items: flex-start
+							justify-content: flex-start
+							flex-direction: column
+							.akcii__item
+								font-family: 'Roboto', sans-serif
+								font-weight: 300
+								font-size: 24px
+								line-height: 28px
+								margin-bottom: 45px
+								display: flex
+								align-items: center
+								justify-content: space-between
+								+media-breakpoint-down(xs)
+									font-size: 18px
+									line-height: 20px
+									margin-bottom: 25px
+								&:last-child
+									margin-bottom: 0px
+					.akcii__right
+						display: flex
+						align-items: flex-start
+						justify-content: flex-start
+						flex-direction: column
+						flex-basis: 45%
+						.akcii__top
+							display: flex
+							align-items: center
+							justify-content: flex-start
+							width: 100%
+							padding-bottom: 151px
+							+media-breakpoint-down(xs)
+								padding-bottom: 60px
+							.akcii__title
+								font-family: 'Roboto', sans-serif
+								font-weight: 300
+								font-size: 36px
+								line-height: 42px
+								+media-breakpoint-down(md)
+									font-size: 32px
+									line-height: 36px
+									min-height: 80px
+								+media-breakpoint-down(xs)
+									font-size: 18px
+									line-height: 20px
+									min-height: 70px
+							.akcii__cost
+								font-family: 'Roboto', sans-serif
+								font-weight: 300
+								font-size: 36px
+								line-height: 42px
+								+media-breakpoint-down(md)
+									font-size: 32px
+									line-height: 36px
+									min-height: 80px
+								+media-breakpoint-down(xs)
+									font-size: 18px
+									line-height: 20px
+									min-height: 70px
+						.akcii__sublist
+							display: flex
+							align-items: flex-start
+							justify-content: flex-start
+							flex-direction: column
+							.akcii__item
+								font-family: 'Roboto', sans-serif
+								font-weight: 300
+								font-size: 24px
+								line-height: 28px
+								margin-bottom: 45px
+								display: flex
+								align-items: center
+								justify-content: space-between
+								+media-breakpoint-down(xs)
+									font-size: 18px
+									line-height: 20px
+									margin-bottom: 25px
+								&:last-child
+									margin-bottom: 0px
 ///////////////equipment page
 .equipment
 	background-color: #fff
@@ -1447,13 +1665,24 @@ header
 										margin: 0
 										padding: 0px 24px 25px 24px
 ///////////////Pagespecialist page
+.specialists__breadcrumb
+	+media-breakpoint-down(xs)
+		padding: 0 25px
 .pagespecialist
 	background-color: #fff
 	padding-bottom: 60px
+	+media-breakpoint-down(lg)
+		padding-bottom: 450px
+	+media-breakpoint-down(xs)
+		padding-bottom: 275px
 	.container
 		.row
 			.title
 				margin-bottom: 60px
+				+media-breakpoint-down(xs)
+					margin-bottom: 40px
+					padding-left: 25px
+					padding-right: 25px
 	.container
 		.row
 			.pagespecialist__top
@@ -1462,6 +1691,9 @@ header
 				.pagespecialist__wrapImg
 					max-width: 892px
 					height: 600px
+					+media-breakpoint-down(lg)
+						max-width: 100%
+						height: auto
 					img
 						width: 100%
 				.pagespecialist__caption
@@ -1474,6 +1706,21 @@ header
 					flex-basis: 385px
 					max-width: 385px
 					padding: 50px 30px 122px
+					+media-breakpoint-down(lg)
+						margin: 0 20px
+						top: auto
+						bottom: -60%
+						flex-basis: 100%
+						max-width: 100%
+						padding: 50px 30px 50px
+					+media-breakpoint-down(md)
+						bottom: -80%
+					+media-breakpoint-down(sm)
+						bottom: -105%
+					+media-breakpoint-down(xs)
+						margin: 0 25px
+						padding: 25px 20px 25px
+						bottom: -235px
 					.pagespecialist__description
 						font-family: 'Roboto', sans-serif
 						font-weight: 300
@@ -1481,6 +1728,12 @@ header
 						line-height: 23px
 						color: #000000
 						margin-bottom: 50px
+						+media-breakpoint-down(sm)
+							font-size: 18px
+							margin-bottom: 20px
+						+media-breakpoint-down(xs)
+							font-size: 12px
+							line-height: 14px
 					.pagespecialist__experience
 						font-family: 'Roboto', sans-serif
 						font-weight: 300
@@ -1488,23 +1741,45 @@ header
 						line-height: 23px
 						color: #000000
 						margin-bottom: 50px
+						+media-breakpoint-down(sm)
+							font-size: 18px
+							margin-bottom: 20px
+						+media-breakpoint-down(xs)
+							font-size: 12px
+							line-height: 14px
 					.pagespecialist__subtext
 						font-family: 'Roboto', sans-serif
 						font-weight: 300
 						font-size: 20px
 						line-height: 23px
 						color: #000000
+						+media-breakpoint-down(sm)
+							font-size: 18px
+						+media-breakpoint-down(xs)
+							font-size: 12px
+							line-height: 14px
 					.pagespecialist__timeList
 						font-family: 'Roboto', sans-serif
 						font-weight: 300
 						font-size: 20px
 						line-height: 23px
 						color: #000000
+						+media-breakpoint-down(sm)
+							font-size: 18px
+						+media-breakpoint-down(xs)
+							font-size: 12px
+							line-height: 14px
 						.pagespecialist__timeItem
 							margin-bottom: 5px
+							&:last-child
+								margin-bottom: 0px
 							.pagespecialist__day
 							.pagespecialist__time
 .pagespecialist__diploms
+	+media-breakpoint-down(lg)
+		padding-bottom: 60px
+	+media-breakpoint-down(xs)
+		padding-bottom: 40px
 	.container
 		.row
 			.pagespecialist__title
@@ -1514,6 +1789,13 @@ header
 				letter-spacing: 0.02em
 				color: $accent
 				margin-bottom: 30px
+				+media-breakpoint-down(sm)
+					font-size: 28px
+				+media-breakpoint-down(xs)
+					font-size: 24px
+					line-height: 26px
+					margin-bottom: 20px
+					padding: 0 25px
 	.container-fluid
 		max-width: 1400px
 		.row
@@ -1523,14 +1805,31 @@ header
 				align-items: flex-start
 				justify-content: space-between
 				flex-wrap: wrap
+				+media-breakpoint-down(lg)
+					padding: 0
+					margin-bottom: 0
+					flex-wrap: nowrap
+					overflow-x: auto
+					overflow-y: hidden				
 				.pagespecialist__item
 					flex-basis: 330px
 					max-width: 330px
 					height: 300px
 					margin-bottom: 20px
+					+media-breakpoint-down(lg)
+						margin-bottom: 0px
+					+media-breakpoint-down(xs)
+						flex-basis: 244px
+						max-width: 244px
 					.pagespecialist__link
 						img
 .pagespecialist__info
+	+media-breakpoint-down(xs)
+		padding: 0 25px
+	.container
+		.row
+			.pagespecialist__imgInfo
+				width: 100%
 	.container
 		.row
 			.pagespecialist__infoList
@@ -1538,16 +1837,21 @@ header
 				.pagespecialist__infoItem
 					margin-bottom: 60px
 					.pagespecialist__title
-						font-family: 'Roboto', sans-serif
-						font-weight: 600
+						font-weight: 500
 						font-size: 36px
 						line-height: 42px
 						color: $accent
 						margin-bottom: 50px
+						+media-breakpoint-down(sm)
+							font-size: 28px
+						+media-breakpoint-down(xs)
+							font-size: 24px
+							line-height: 26px
+							margin-bottom: 20px
 					.pagespecialist__list
 						.pagespecialist__item
 							display: flex
-							align-items: center
+							align-items: flex-start
 							justify-content: flex-start
 							margin-bottom: 20px
 							span
@@ -1556,6 +1860,8 @@ header
 								font-size: 36px
 								line-height: 42px
 								white-space: nowrap
+								+media-breakpoint-down(sm)
+									font-size: 28px
 							p
 								font-family: 'Roboto', sans-serif
 								font-weight: 300
@@ -1563,6 +1869,9 @@ header
 								line-height: 23px
 								margin-bottom: 0px
 								margin-left: 220px
+								+media-breakpoint-down(xs)
+									margin-left: 0px
+
 ///////////////About page
 .about
 	background-color: #fff
