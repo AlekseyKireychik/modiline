@@ -34,24 +34,41 @@
   </head>
 
   <body>
-    <header>		
+    <header>
       <div class="container-fluid container__header ">
         <div class="header row">
           <div class="header__logo">
             <a href="/">
-              <img class="" src="img/_src/logo.png" alt="MODY LINE">
+              <img class="" src="img/_src/logo.png" alt="MODY LINE" />
             </a>
           </div>
           <nav class="header__nav">
             <ul class="header__list-nav">
               <li class="header__item">
+                <a class="header__phoneMobile" href="tel:+375441111111"
+                  >+375 44 111-11-11</a
+                >
+              </li>
+              <li class="header__item">
                 <a href="#" class="header__link submenu">Услуги</a>
                 <ul class="header__subList">
-                  <li class="header__item"><a class="header__subLink" href="./pageservice.html">Услугa</a></li>
-                  <li class="header__item"><a class="header__subLink" href="">Услугa</a></li>
-                  <li class="header__item"><a class="header__subLink" href="">Услугa</a></li>
-                  <li class="header__item"><a class="header__subLink" href="">Услугa</a></li>
-                  <li class="header__item"><a class="header__subLink" href="">Услугa</a></li>
+                  <li class="header__item">
+                    <a class="header__subLink" href="./pageservice.html"
+                      >Услугa</a
+                    >
+                  </li>
+                  <li class="header__item">
+                    <a class="header__subLink" href="">Услугa</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__subLink" href="">Услугa</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__subLink" href="">Услугa</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__subLink" href="">Услугa</a>
+                  </li>
                 </ul>
               </li>
               <li class="header__item">
@@ -64,7 +81,7 @@
                 <a href="./akcii.html" class="header__link">Акции</a>
               </li>
               <li class="header__item">
-                <a href="./specialists.html" class="header__link">Специалисты</a>
+                <a href="./about.html" class="header__link">Специалисты</a>
               </li>
               <li class="header__item">
                 <a href="./gallery.html" class="header__link">Галерея</a>
@@ -73,22 +90,29 @@
                 <a href="./contacts.html" class="header__link">Контакты</a>
               </li>
             </ul>
-          </nav>	
+          </nav>
           <div class="header__function">
-            <a class="header__phone" href="tel:+375441111111">+375 44 111-11-11</a>
-            <a class="header__request btn register" href="#">Записаться на приём</a>
+            <a class="header__phone" href="tel:+375441111111"
+              >+375 44 111-11-11</a
+            >
+            <a class="header__request btn register" href="#"
+              >Записаться на приём</a
+            >
+            <a class="header__requestMobile btn register" href="#"
+              >Записаться</a
+            >
           </div>
         </div>
-        <!-- <div class="burger-menu">
+        <div class="burger-menu">
           <a href="#" class="burger-menu__button">
             <span class="burger-menu__lines"></span>
           </a>
-        </div> -->			
-        <div class="burger-menu__overlay"></div>			
+        </div>
+        <div class="burger-menu__overlay"></div>
       </div>
     </header>
     <main>
-      <section>
+      <section class="about__breadcrumb">
         <div class="container container__breadcrumb">
           <div class="row">
             <nav aria-label="breadcrumb" class="nav__breadcrumb">
@@ -111,8 +135,12 @@
         <div class="container">
           <div class="row">
             <div class="about__top">
-              <div class="pagespecialist__wrapImg">
-                <img src="img/_src/about.jpg" alt="Имя Фамилия Отчество" />
+              <div class="about__wrapImg">
+                <img
+                  class="about__img"
+                  src="img/_src/about.jpg"
+                  alt="Имя Фамилия Отчество"
+                />
               </div>
               <div class="about__caption">
                 <p class="about__description">
@@ -153,7 +181,11 @@
               <li class="about__item">
                 <div class="about__caption">
                   <div class="about__iconWrap">
-                    <img src="img/_src/advantages02.png" alt="Лет работы" />
+                    <img
+                      class="about__icon"
+                      src="img/_src/advantages02.png"
+                      alt="Лет работы"
+                    />
                   </div>
                   <div class="about__textWrap">
                     <span class="about__count">+15</span>
@@ -165,6 +197,7 @@
                 <div class="about__caption">
                   <div class="about__iconWrap">
                     <img
+                      class="about__icon"
                       src="img/_src/advantages03.png"
                       alt="Довольных клиентов"
                     />
@@ -179,6 +212,7 @@
                 <div class="about__caption">
                   <div class="about__iconWrap">
                     <img
+                      class="about__icon"
                       src="img/_src/advantages04.png"
                       alt="Оборудованных промещений"
                     />
@@ -193,89 +227,80 @@
           </div>
         </div>
       </section>
-      <section class="specialists">
+      <section class="about__specialists">
         <div class="container">
-          <div class="row specialists__top">
-            <h3 class="specialists__title">
-              Административно-управленческий персонал
-            </h3>
-            <ul class="specialists__listTop">
-              <li class="specialists__itemTop">
-                <a class="specialists__link" href="#">
+          <div class="row about__bottom">
+            <ul class="about__listBottom">
+              <li class="about__itemBottom">
+                <a class="about__link" href="#">
                   <img
-                    class="specialists__img"
+                    class="about__img"
                     src="img/_src/specbig.jpg"
                     alt="Имя Отчество Фамилия"
                   />
-                  <div class="specialists__info">
-                    <span class="specialists__date">Имя Отчество Фамилия</span>
-                    <span class="specialists__description"
-                      >Специализация, опыт работы</span
-                    >
-                  </div>
-                </a>
-              </li>
-              <li class="specialists__itemTop">
-                <a class="specialists__link" href="#">
-                  <img
-                    class="specialists__img"
-                    src="img/_src/spec.jpg"
-                    alt="Имя Отчество Фамилия"
-                  />
-                  <div class="specialists__info">
-                    <span class="specialists__date">Имя Отчество Фамилия</span>
-                    <span class="specialists__description"
+                  <div class="about__info">
+                    <span class="about__date">Имя Отчество Фамилия</span>
+                    <span class="about__description"
                       >Специализация, опыт работы</span
                     >
                   </div></a
                 >
               </li>
-            </ul>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row specialists__bottom">
-            <ul class="specialists__listBottom">
-              <li class="specialists__itemBottom">
-                <a class="specialists__link" href="#">
+              <li class="about__itemBottom">
+                <a class="about__link" href="#">
                   <img
-                    class="specialists__img"
+                    class="about__img"
                     src="img/_src/specbig.jpg"
                     alt="Имя Отчество Фамилия"
                   />
-                  <div class="specialists__info">
-                    <span class="specialists__date">Имя Отчество Фамилия</span>
-                    <span class="specialists__description"
+                  <div class="about__info">
+                    <span class="about__date">Имя Отчество Фамилия</span>
+                    <span class="about__description"
                       >Специализация, опыт работы</span
                     >
                   </div></a
                 >
               </li>
-              <li class="specialists__itemBottom">
-                <a class="specialists__link" href="#">
+              <li class="about__itemBottom">
+                <a class="about__link" href="#">
                   <img
-                    class="specialists__img"
-                    src="img/_src/spec.jpg"
+                    class="about__img"
+                    src="img/_src/specbig.jpg"
                     alt="Имя Отчество Фамилия"
                   />
-                  <div class="specialists__info">
-                    <span class="specialists__date">Имя Отчество Фамилия</span>
-                    <span class="specialists__description"
+                  <div class="about__info">
+                    <span class="about__date">Имя Отчество Фамилия</span>
+                    <span class="about__description"
                       >Специализация, опыт работы</span
                     >
                   </div></a
                 >
               </li>
-              <li class="specialists__itemBottom">
-                <a class="specialists__link" href="#">
+              <li class="about__itemBottom">
+                <a class="about__link" href="#">
                   <img
-                    class="specialists__img"
+                    class="about__img"
                     src="img/_src/spec.jpg"
                     alt="Имя Отчество Фамилия"
                   />
-                  <div class="specialists__info">
-                    <span class="specialists__date">Имя Отчество Фамилия</span>
-                    <span class="specialists__description"
+                  <div class="about__info">
+                    <span class="about__date">Имя Отчество Фамилия</span>
+                    <span class="about__description"
+                      >Специализация, опыт работы</span
+                    >
+                  </div></a
+                >
+              </li>
+              <li class="about__itemBottom">
+                <a class="about__link" href="#">
+                  <img
+                    class="about__img"
+                    src="img/_src/spec.jpg"
+                    alt="Имя Отчество Фамилия"
+                  />
+                  <div class="about__info">
+                    <span class="about__date">Имя Отчество Фамилия</span>
+                    <span class="about__description"
                       >Специализация, опыт работы</span
                     >
                   </div></a
@@ -300,9 +325,7 @@
                   <a class="footer__link" href="./services.html">Услуги</a>
                 </li>
                 <li class="footer__item">
-                  <a class="footer__link" href="./specialists.html"
-                    >Специалисты</a
-                  >
+                  <a class="footer__link" href="./about.html">Специалисты</a>
                 </li>
                 <li class="footer__item">
                   <a class="footer__link" href="./cost.html">Цены</a>
@@ -342,7 +365,9 @@
                   <a class="footer__link" href="./">График работы</a>
                 </li>
                 <li class="footer__item">
-                  <a class="footer__link" href="tel:+375441111111">+375 44 111-11-11</a>
+                  <a class="footer__link" href="tel:+375441111111"
+                    >+375 44 111-11-11</a
+                  >
                 </li>
                 <li class="footer__item">
                   <a class="footer__link" href="./">Почта</a>
@@ -393,7 +418,11 @@
                   rel="me nofollow"
                   target="_blank"
                 >
-                  <img class="footer__icon" src="img/_src/vk-icon-footer.svg" alt="vk" />
+                  <img
+                    class="footer__icon"
+                    src="img/_src/vk-icon-footer.svg"
+                    alt="vk"
+                  />
                 </a>
               </li>
               <li class="footer__item">
@@ -403,7 +432,11 @@
                   rel="me nofollow"
                   target="_blank"
                 >
-                  <img class="footer__icon" src="img/_src/youtube-icon-footer.svg" alt="" />
+                  <img
+                    class="footer__icon"
+                    src="img/_src/youtube-icon-footer.svg"
+                    alt=""
+                  />
                 </a>
               </li>
               <li class="footer__item">
@@ -413,7 +446,11 @@
                   rel="me nofollow"
                   target="_blank"
                 >
-                  <img class="footer__icon" src="img/_src/fb-icon-footer.svg" alt="" />
+                  <img
+                    class="footer__icon"
+                    src="img/_src/fb-icon-footer.svg"
+                    alt=""
+                  />
                 </a>
               </li>
               <li class="footer__item">
@@ -423,7 +460,11 @@
                   rel="me nofollow"
                   target="_blank"
                 >
-                  <img class="footer__icon" src="img/_src/insta-icon-footer.svg" alt="insta" />
+                  <img
+                    class="footer__icon"
+                    src="img/_src/insta-icon-footer.svg"
+                    alt="insta"
+                  />
                 </a>
               </li>
             </ul>

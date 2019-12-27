@@ -1498,7 +1498,7 @@ header
 						background: #FFFFFF
 						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 						border-radius: 20px
-						flex-basis: 548px
+						flex-basis: 588px
 						position: relative
 						+media-breakpoint-down(lg)
 							flex-basis: 458px
@@ -1664,8 +1664,9 @@ header
 										color: #fff
 										margin: 0
 										padding: 0px 24px 25px 24px
+
 ///////////////Pagespecialist page
-.specialists__breadcrumb
+.pagespecialist__breadcrumb
 	+media-breakpoint-down(xs)
 		padding: 0 25px
 .pagespecialist
@@ -1810,7 +1811,7 @@ header
 					margin-bottom: 0
 					flex-wrap: nowrap
 					overflow-x: auto
-					overflow-y: hidden				
+					overflow-y: hidden
 				.pagespecialist__item
 					flex-basis: 330px
 					max-width: 330px
@@ -1854,25 +1855,34 @@ header
 							align-items: flex-start
 							justify-content: flex-start
 							margin-bottom: 20px
+							+media-breakpoint-down(xs)
+								margin-bottom: 25px
 							span
-								font-family: 'Roboto', sans-serif
 								font-weight: bold
 								font-size: 36px
 								line-height: 42px
 								white-space: nowrap
 								+media-breakpoint-down(sm)
 									font-size: 28px
+								+media-breakpoint-down(xs)
+									font-size: 18px
+									line-height: 18px
+									font-weight: 400
 							p
-								font-family: 'Roboto', sans-serif
 								font-weight: 300
 								font-size: 20px
 								line-height: 23px
 								margin-bottom: 0px
 								margin-left: 220px
 								+media-breakpoint-down(xs)
-									margin-left: 0px
+									margin-left: 25px
+									font-size: 14px
+									line-height: 16px
 
 ///////////////About page
+.about__breadcrumb
+	+media-breakpoint-down(xs)
+		padding: 0 25px
 .about
 	background-color: #fff
 	padding-bottom: 60px
@@ -1881,14 +1891,24 @@ header
 			.title
 				margin-bottom: 60px
 				text-transform: uppercase
+				+media-breakpoint-down(xs)
+					margin-bottom: 40px
+					padding-left: 25px
+					padding-right: 25px
 	.container
 		.row
 			.about__top
 				position: relative
 				width: 100%
+				+media-breakpoint-down(lg)
+					display: flex
+					flex-direction: column-reverse
 				.about__wrapImg
 					max-width: 892px
 					height: 600px
+					+media-breakpoint-down(lg)
+						max-width: 100%
+						height: auto
 					img
 						width: 100%
 				.about__caption
@@ -1902,6 +1922,18 @@ header
 					max-width: 385px
 					min-height: 550px
 					padding: 50px 30px 122px
+					+media-breakpoint-down(lg)
+						order: 1
+						position: relative
+						flex-basis: 100%
+						max-width: 100%
+						padding: 50px 30px 50px
+						width: 100%
+						margin-top: -25px
+						margin-bottom: 85px
+					+media-breakpoint-down(xs)
+						margin: 0 25px
+						padding: 25px 20px 25px
 					.about__description
 						font-family: 'Roboto', sans-serif
 						font-weight: 300
@@ -1909,6 +1941,12 @@ header
 						line-height: 23px
 						color: #000000
 						margin-bottom: 50px
+						+media-breakpoint-down(sm)
+							font-size: 18px
+							margin-bottom: 20px
+						+media-breakpoint-down(xs)
+							font-size: 12px
+							line-height: 14px
 .about__advantages
 	.container
 		.row
@@ -1927,7 +1965,11 @@ header
 				justify-content: space-between
 				margin-bottom: 60px
 				width: 100%
+				+media-breakpoint-down(md)
+					flex-wrap: wrap
 				.about__item
+					+media-breakpoint-down(md)
+						width: 50%
 					.about__caption
 						display: flex
 						align-items: center
@@ -1939,6 +1981,12 @@ header
 							justify-content: center
 							min-height: 150px
 							margin-bottom: 60px
+							+media-breakpoint-down(md)
+								align-items: center
+								margin-bottom: 40px
+								width: 120px
+								height: 120px
+								min-height: 120px
 							.about__icon
 						.about__textWrap
 							display: flex
@@ -1957,6 +2005,187 @@ header
 								text-align: center
 								letter-spacing: 0.02em
 								max-width: 236px
+.about__specialists
+	.container
+		.row
+			&.about__bottom
+				.about__title
+					font-weight: 300
+					font-size: 36px
+					line-height: 36px
+					letter-spacing: 0.02em
+					color: $accent
+					margin-bottom: 30px
+					+media-breakpoint-down(md)
+						font-size: 26px
+						line-height: 26px
+					+media-breakpoint-down(xs)
+						font-size: 20px
+						line-height: 24px
+				.about__listBottom
+					display: flex
+					align-items: flex-start
+					justify-content: space-between
+					flex-wrap: wrap
+					width: 100%
+					+media-breakpoint-down(sm)
+						justify-content: center
+					.about__itemBottom
+						display: flex
+						align-items: flex-start
+						justify-content: flex-start
+						flex-direction: column
+						background: #FFFFFF
+						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						border-radius: 20px
+						flex-basis: 385px
+						margin-bottom: 20px
+						position: relative
+						+media-breakpoint-down(md)
+							flex-basis: 338px
+						+media-breakpoint-down(sm)
+							flex-basis: 388px
+						+media-breakpoint-down(xs)
+							flex-basis: 100%
+						.about__link
+							width: 100%
+							.about__img
+								width: 100%
+								height: 351px
+								border-radius: 20px 20px 0px 0px
+								+media-breakpoint-down(md)
+									height: 382px
+									border-radius: 20px
+							.about__info
+								width: 100%
+								display: flex
+								align-items: flex-start
+								justify-content: center
+								flex-direction: column
+								+media-breakpoint-down(md)
+									position: absolute
+									top: 0
+									left: 0
+									right: 0
+									bottom: 0
+									background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%)
+									border-radius: 20px
+									justify-content: flex-end
+								.about__date
+									font-family: 'Roboto', sans-serif
+									font-weight: 300
+									font-size: 24px
+									line-height: 28px
+									color: #000000
+									padding-top: 30px
+									padding-bottom: 15px
+									margin: 0 auto
+									+media-breakpoint-down(md)
+										color: #fff
+									+media-breakpoint-down(xs)
+										font-size: 18px
+										line-height: 21px										
+										margin: 0
+										padding: 30px 24px 40px 24px
+								.about__description
+									font-family: 'Roboto', sans-serif
+									font-weight: 300
+									font-size: 18px
+									line-height: 21px
+									color: #000000
+									padding-bottom: 115px
+									margin: 0 auto
+									+media-breakpoint-down(md)
+										padding-bottom: 55px
+										color: #fff
+									+media-breakpoint-down(xs)
+										font-size: 14px
+										line-height: 16px
+										color: #fff
+										margin: 0
+										padding: 0px 24px 25px 24px
+						&:nth-child(1), &:nth-child(2)
+							display: flex
+							align-items: flex-start
+							justify-content: flex-start
+							flex-direction: column
+							background: #FFFFFF
+							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+							border-radius: 20px
+							flex-basis: 588px
+							position: relative
+							+media-breakpoint-down(lg)
+								flex-basis: 458px
+							+media-breakpoint-down(md)
+								flex-basis: 338px
+							+media-breakpoint-down(sm)
+								flex-basis: 388px
+								margin-bottom: 20px
+							+media-breakpoint-down(xs)
+								flex-basis: 100%
+							.about__link
+								width: 100%
+								.about__img
+									width: 100%
+									height: 442px
+									border-radius: 20px 20px 0px 0px
+									+media-breakpoint-down(md)
+										height: 351px
+									+media-breakpoint-down(xs)
+										height: 382px
+										border-radius: 20px
+								.about__info
+									display: flex
+									align-items: flex-start
+									justify-content: flex-start
+									flex-direction: column
+									+media-breakpoint-down(md)
+										position: absolute
+										top: 0
+										left: 0
+										right: 0
+										bottom: 0
+										background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%)
+										border-radius: 20px
+										justify-content: flex-end
+									.about__date
+										font-family: 'Roboto', sans-serif
+										font-weight: 300
+										font-size: 36px
+										line-height: 42px
+										color: #000000
+										padding: 30px 50px 25px
+										+media-breakpoint-down(md)
+											padding: 30px 0px 15px
+											margin: 0 auto
+											font-size: 24px
+											line-height: 28px
+											color: #fff
+										+media-breakpoint-down(xs)
+											font-size: 18px
+											line-height: 21px
+											color: #fff
+											margin: 0
+											padding: 30px 24px 40px 24px
+									.about__description
+										font-family: 'Roboto', sans-serif
+										font-weight: 300
+										font-size: 24px
+										line-height: 28px
+										color: #000000
+										padding: 0px 50px 135px
+										+media-breakpoint-down(md)
+											font-size: 18px
+											line-height: 21px
+											padding: 0px 0px 55px
+											margin: 0 auto
+											color: #fff
+										+media-breakpoint-down(xs)
+											font-size: 14px
+											line-height: 16px
+											color: #fff
+											margin: 0
+											padding: 0px 24px 25px 24px
 
 /////////////////pageservice page
 .pageservice

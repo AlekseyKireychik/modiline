@@ -16,7 +16,7 @@
                 .header
                     position: relative
                     .header__nav
-                        display: none                        
+                        display: none
                         width: 100%
                         position: absolute
                         left: 50%
@@ -30,24 +30,24 @@
                             background: #FFF
                             flex-direction: column
                             padding-top: 40px
-                            border-top: 2px solid $accent                            
+                            border-top: 2px solid $accent
                             .header__item
                                 margin-bottom: 30px
                                 .header__link
                                     font-size: 24px
-                                    line-height: 24px                                    
+                                    line-height: 24px
                                     &.submenu
-                                        &.is-active      
+                                        &.is-active
                                             &:before
                                                 top: 7px
-                                                transform: rotate(180deg)    
+                                                transform: rotate(180deg)
                                     &.is-active
                                 .header__subList
                                     position: relative
                                     min-width: auto
                                     top: 0
                                     padding: 15px 20px 0px
-                                    text-align: center                                                                  
+                                    text-align: center
                                     .header__item
                                         .header__subLink
                                             font-size: 22px
@@ -56,3 +56,13 @@
                 .burger-menu
                     .burger-menu__button
                         display: block
+@media screen and (min-width: 1240px) and (max-width: 1300px)
+    .about__specialists
+        .container
+            .row
+                &.about__bottom
+                    .about__title
+                        .about__listBottom
+                        .about__itemBottom
+                            &:nth-child(1), &:nth-child(2)
+                                flex-basis: 548px
