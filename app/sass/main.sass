@@ -901,9 +901,14 @@ header
 						color: #000
 
 ///////////news page
+.news__breadcrumb
+	+media-breakpoint-down(xs)
+		padding: 0 25px 0px
 .news
 	background-color: #fff
 	padding-bottom: 60px
+	+media-breakpoint-down(xs)
+		padding: 0 25px 40px
 	.container
 		.row
 			.title
@@ -917,6 +922,8 @@ header
 				flex-wrap: wrap
 				margin-bottom: 0
 				padding-bottom: 10px
+				+media-breakpoint-down(lg)
+					justify-content: flex-start
 				.news__item
 					display: flex
 					align-items: flex-start
@@ -927,28 +934,57 @@ header
 					box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 					border-radius: 20px
 					margin-bottom: 20px
+					+media-breakpoint-down(lg)
+						margin-right: 20px
+					+media-breakpoint-down(md)
+						flex-basis: 345px
+						max-width: 345px
+					+media-breakpoint-down(sm)
+						flex-basis: 100%
+						max-width: 100%
+						margin-right: 0px
+					&:nth-child(even)
+						+media-breakpoint-down(lg)
+							margin-right: 0px
 					.news__link
 						padding: 38px
 						display: block
+						+media-breakpoint-down(md)
+							padding: 25px
 						.news__title
 							font-weight: 400
 							font-size: 18px
 							line-height: 18px
 							color: #000
 							margin-bottom: 20px
+							+media-breakpoint-down(xs)
+								font-size: 12px
+								line-height: 12px
+								margin-bottom: 10px
 						.news__date
 							font-size: 14px
 							line-height: 16px
 							color: #000
 							margin-bottom: 20px
+							+media-breakpoint-down(xs)
+								font-size: 10px
+								line-height: 12px
+								margin-bottom: 15px
 						.news__text
 							font-size: 14px
 							line-height: 16px
 							color: #000
+							+media-breakpoint-down(xs)
+								font-size: 8px
+								line-height: 9px
 ///////////pagenews page
+.pagenews__breadcrumb
+	+media-breakpoint-down(xs)
+		padding: 0 25px 0px
 .pagenews
 	background-color: #fff
 	padding-bottom: 60px
+	+media-breakpoint-down(lg)
 	.container
 		.row
 			.title
@@ -967,8 +1003,14 @@ header
 				justify-content: space-between
 				+media-breakpoint-down(lg)
 					flex-direction: column
+				+media-breakpoint-down(md)
+					padding-top: 40px
 				.pagenews__left
-					flex-basis: 48%
+					width: 48%
+					+media-breakpoint-down(lg)
+						flex-basis: auto
+						width: 100%
+						margin-bottom: 60px
 					p
 						text-indent: 15px
 						&:first-child
@@ -976,13 +1018,30 @@ header
 						&:last-child
 							margin-bottom: 0
 				.pagenews__right
-					flex-basis: 48%
+					width: 48%
+					+media-breakpoint-down(lg)
+						flex-basis: auto
+						width: 100%
+						overflow: hidden
 					.pagenews__list
+						+media-breakpoint-down(lg)
+							display: flex
+							align-items: flex-start
+							justify-content: flex-start	
+							margin-bottom: 0	
+							flex-wrap: nowrap
+							overflow-y: auto			
 						.pagenews__item
 							background: #FFFFFF
 							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 							border-radius: 20px
 							margin-bottom: 20px
+							+media-breakpoint-down(lg)
+								margin-right: 20px
+								min-width: 305px
+							&:last-child
+								+media-breakpoint-down(lg)
+									margin-right: 0px
 							.pagenews__link
 								padding: 50px
 								display: block
@@ -1401,13 +1460,20 @@ header
 								&:last-child
 									margin-bottom: 0px
 ///////////////equipment page
+.equipment__breadcrumb
+	+media-breakpoint-down(xs)
+		padding: 0 25px 0px
 .equipment
 	background-color: #fff
 	padding-bottom: 60px
+	+media-breakpoint-down(xs)
+		padding: 0 25px 40px
 	.container
 		.row
 			.title
 				margin-bottom: 60px
+				+media-breakpoint-down(md)
+					margin-bottom: 40px
 	.container
 		.row
 			.equipment__list
@@ -1416,12 +1482,16 @@ header
 				justify-content: flex-start
 				flex-direction: column
 				width: 100%
+				+media-breakpoint-down(md)
+					margin-bottom: 0px
 				.equipment__item
 					display: flex
 					align-items: flex-start
 					justify-content: flex-start
 					flex-direction: column
 					margin-bottom: 60px
+					+media-breakpoint-down(md)
+						margin-bottom: 25px
 					&:last-child
 						margin-bottom: 0px
 
@@ -1431,19 +1501,34 @@ header
 						letter-spacing: 0.02em
 						color: $accent
 						margin-bottom: 30px
+						+media-breakpoint-down(xs)
+							font-size: 24px
+							line-height: 24px
+							margin-bottom: 20px
 					.equipment__content
 						display: flex
 						align-items: flex-start
 						justify-content: flex-start
+						+media-breakpoint-down(md)
+							flex-direction: column
 						.equipment__imgWrap
 							margin-right: 40px
+							+media-breakpoint-down(md)
+								margin-right: 0px
+								margin-bottom: 40px
 							.equipment__img
 								box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 								border-radius: 20px
+								+media-breakpoint-down(xs)
+									width: 100%
 						.equipment__text
 							font-size: 18px
 							line-height: 25px
 							letter-spacing: 0.02em
+							+media-breakpoint-down(xs)
+								font-size: 14px
+								line-height: 19px
+							
 ///////////////Specialists page
 .specialists__breadcrumb
 	+media-breakpoint-down(xs)
@@ -1807,7 +1892,7 @@ header
 				justify-content: space-between
 				flex-wrap: wrap
 				+media-breakpoint-down(lg)
-					padding: 0
+					padding: 0 0 0 25px
 					margin-bottom: 0
 					flex-wrap: nowrap
 					overflow-x: auto
@@ -1818,12 +1903,23 @@ header
 					height: 300px
 					margin-bottom: 20px
 					+media-breakpoint-down(lg)
+						height: auto
 						margin-bottom: 0px
+						margin-right: 20px
 					+media-breakpoint-down(xs)
 						flex-basis: 244px
 						max-width: 244px
+					&:last-child
+						.pagespecialist__link
+							img	
+								+media-breakpoint-down(lg)
+									margin-right: 20px
 					.pagespecialist__link
-						img
+						img							
+							width: auto
+							max-width: 385px
+							+media-breakpoint-down(xs)
+								max-width: 244px
 .pagespecialist__info
 	+media-breakpoint-down(xs)
 		padding: 0 25px
@@ -1886,13 +1982,17 @@ header
 .about
 	background-color: #fff
 	padding-bottom: 60px
+	+media-breakpoint-down(xs)
+		padding-bottom: 40px
 	.container
 		.row
 			.title
 				margin-bottom: 60px
 				text-transform: uppercase
-				+media-breakpoint-down(xs)
+				+media-breakpoint-down(sm)
 					margin-bottom: 40px
+				+media-breakpoint-down(xs)
+					margin-bottom: 20px
 					padding-left: 25px
 					padding-right: 25px
 	.container
@@ -1903,12 +2003,16 @@ header
 				+media-breakpoint-down(lg)
 					display: flex
 					flex-direction: column-reverse
+				+media-breakpoint-down(xs)
+					padding: 0 25px
 				.about__wrapImg
 					max-width: 892px
 					height: 600px
 					+media-breakpoint-down(lg)
 						max-width: 100%
 						height: auto
+					+media-breakpoint-down(xs)
+						display: none
 					img
 						width: 100%
 				.about__caption
@@ -1931,9 +2035,11 @@ header
 						width: 100%
 						margin-top: -25px
 						margin-bottom: 85px
-					+media-breakpoint-down(xs)
-						margin: 0 25px
-						padding: 25px 20px 25px
+					+media-breakpoint-down(sm)
+						margin: -25px 0 65px
+					+media-breakpoint-down(xs)	
+						min-height: 400px					
+						padding: 20px 
 					.about__description
 						font-family: 'Roboto', sans-serif
 						font-weight: 300
@@ -1947,7 +2053,17 @@ header
 						+media-breakpoint-down(xs)
 							font-size: 12px
 							line-height: 14px
+			.about__wrapImgPhone
+				display: none
+				+media-breakpoint-down(xs)
+					display: block
+					max-width: 100%
+					height: auto
+				.about__imgPhone
+					width: 100%
 .about__advantages
+	+media-breakpoint-down(xs)
+		padding: 0 25px
 	.container
 		.row
 			.about__title
@@ -1957,6 +2073,10 @@ header
 				letter-spacing: 0.02em
 				margin-bottom: 45px
 				color: $accent
+				+media-breakpoint-down(xs)
+					font-size: 24px
+					line-height: 24px
+					margin-bottom: 20px
 	.container
 		.row
 			.about__list
@@ -1967,9 +2087,15 @@ header
 				width: 100%
 				+media-breakpoint-down(md)
 					flex-wrap: wrap
+				+media-breakpoint-down(xs)
+					margin-bottom: 15px
 				.about__item
 					+media-breakpoint-down(md)
 						width: 50%
+					+media-breakpoint-down(sm)
+						margin-bottom: 45px
+					+media-breakpoint-down(xs)
+						margin-bottom: 25px
 					.about__caption
 						display: flex
 						align-items: center
@@ -1987,25 +2113,46 @@ header
 								width: 120px
 								height: 120px
 								min-height: 120px
+							+media-breakpoint-down(xs)
+								margin-bottom: 15px
+								width: auto
+								height: 80px
+								min-height: 80px
 							.about__icon
+								+media-breakpoint-down(xs)
+									width: auto
+									height: 80px
 						.about__textWrap
 							display: flex
 							align-items: center
 							justify-content: flex-start
 							flex-direction: column
 							min-height: 135px
+							+media-breakpoint-down(sm)
+								min-height: auto 
+							+media-breakpoint-down(xs)
+								max-width: 145px
 							.about__count
 								font-size: 64px
-								line-height: 63px
+								line-height: 64px
 								text-align: center
 								margin-bottom: 25px
+								+media-breakpoint-down(xs)
+									font-size: 36px
+									line-height: 36px
+									margin-bottom: 15px
 							.about__text
 								font-size: 24px
 								line-height: 24px
 								text-align: center
 								letter-spacing: 0.02em
 								max-width: 236px
+								+media-breakpoint-down(xs)
+									font-size: 18px
+									line-height: 18px
 .about__specialists
+	+media-breakpoint-down(xs)
+		padding: 0 0 0 25px
 	.container
 		.row
 			&.about__bottom
@@ -2028,8 +2175,11 @@ header
 					justify-content: space-between
 					flex-wrap: wrap
 					width: 100%
-					+media-breakpoint-down(sm)
-						justify-content: center
+					+media-breakpoint-down(md)
+						justify-content: flex-start
+						flex-wrap: nowrap
+						margin-bottom: 40px
+						overflow-y: auto
 					.about__itemBottom
 						display: flex
 						align-items: flex-start
@@ -2039,14 +2189,26 @@ header
 						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 						border-radius: 20px
 						flex-basis: 385px
+						width: 385px
 						margin-bottom: 20px
 						position: relative
 						+media-breakpoint-down(md)
 							flex-basis: 338px
+							min-width: 335px
+							margin-bottom: 0px
+							margin-right: 20px
 						+media-breakpoint-down(sm)
 							flex-basis: 388px
+							min-width: 388px
 						+media-breakpoint-down(xs)
-							flex-basis: 100%
+							flex-basis: 244px
+							min-width: 244px
+						&:last-child
+							+media-breakpoint-down(md)
+								margin-right: 0px
+								.about__link
+									.about__img
+										margin-right: 25px
 						.about__link
 							width: 100%
 							.about__img
@@ -2056,6 +2218,8 @@ header
 								+media-breakpoint-down(md)
 									height: 382px
 									border-radius: 20px
+								+media-breakpoint-down(xs)
+									height: 300px
 							.about__info
 								width: 100%
 								display: flex
@@ -2103,7 +2267,8 @@ header
 										line-height: 16px
 										color: #fff
 										margin: 0
-										padding: 0px 24px 25px 24px
+										padding: 0px 24px 25px 24px					
+
 						&:nth-child(1), &:nth-child(2)
 							display: flex
 							align-items: flex-start
@@ -2113,27 +2278,30 @@ header
 							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 							border-radius: 20px
 							flex-basis: 588px
+							width: 588px
 							position: relative
-							+media-breakpoint-down(lg)
-								flex-basis: 458px
 							+media-breakpoint-down(md)
 								flex-basis: 338px
+								min-width: 335px
+								margin-bottom: 0px
+								margin-right: 20px
 							+media-breakpoint-down(sm)
 								flex-basis: 388px
-								margin-bottom: 20px
+								min-width: 388px
 							+media-breakpoint-down(xs)
-								flex-basis: 100%
+								flex-basis: 244px
+								min-width: 244px
 							.about__link
 								width: 100%
 								.about__img
 									width: 100%
-									height: 442px
+									height: 351px
 									border-radius: 20px 20px 0px 0px
 									+media-breakpoint-down(md)
-										height: 351px
-									+media-breakpoint-down(xs)
 										height: 382px
 										border-radius: 20px
+									+media-breakpoint-down(xs)
+										height: 300px
 								.about__info
 									display: flex
 									align-items: flex-start
@@ -2362,6 +2530,9 @@ header
 										padding-bottom: 30px
 					.pageservice__form
 ////////reviews
+.reviews__breadcrumb
+	+media-breakpoint-down(xs)
+		padding: 0 25px
 .reviews
 	padding-bottom: 135px
 	.container
@@ -2387,10 +2558,16 @@ header
 					margin: 0 auto
 					padding-top: 168px
 					padding-bottom: 190px
+					+media-breakpoint-down(md)
+						max-width: 540px
+						padding-top: 130px
+						padding-bottom: 150px
 					.reviews__item
 						.reviews__caption
 							max-width: 780px
 							text-align: center
+							+media-breakpoint-down(md)
+								max-width: 540px
 							.reviews__description
 								font-family: 'HelveticaNeueCyr', sans-serif
 								font-style: italic
@@ -2399,6 +2576,9 @@ header
 								line-height: 29px
 								color: #000
 								margin-bottom: 40px
+								+media-breakpoint-down(md)
+									font-size: 18px
+									line-height: 22px
 							.reviews__name
 								font-family: 'HelveticaNeueCyr', sans-serif
 								font-style: italic
@@ -2406,11 +2586,16 @@ header
 								font-size: 24px
 								line-height: 29px
 								color: #000
+								+media-breakpoint-down(md)
+									font-size: 18px
+									line-height: 22px
 					.slick-prev
 						top: 45%
 						left: -25%
 						width: 40px
 						height: 60px
+						+media-breakpoint-down(lg)
+							left: -10%
 						&::before
 							content: url(../img/_src/arrLeft.png)
 
@@ -2422,10 +2607,14 @@ header
 						right: -25%
 						width: 40px
 						height: 60px
+						+media-breakpoint-down(lg)
+							right: -10%
 						&::before
 							content: url(../img/_src/arrRight.png)
 							cursor: pointer
 					.slick-dots
+						+media-breakpoint-down(md)
+							bottom: 30px
 						li
 							width: 25px
 							height: 25px
@@ -2450,12 +2639,16 @@ header
 			&.reviews__caption
 				align-items: center
 				justify-content: flex-start
+				+media-breakpoint-down(lg)
+					justify-content: center
 				.title
 					font-weight: 300
 					font-size: 48px
 					line-height: 47px
 					letter-spacing: 0.02em
 					margin-bottom: 0
+					+media-breakpoint-down(lg)
+						margin-bottom: 25px
 				.btn
 					width: 208px
 					margin-left: 30px
