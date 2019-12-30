@@ -1,6 +1,5 @@
 //BackForm input-file
 
-
 jQuery.each(jQuery("textarea[data-autoresize]"), function() {
   var offset = this.offsetHeight - this.clientHeight;
 
@@ -17,7 +16,6 @@ jQuery.each(jQuery("textarea[data-autoresize]"), function() {
 });
 
 $(document).ready(function() {
- 
   //vacancies
   $(".vacancies__btn").on("click", function(event) {
     event.preventDefault();
@@ -88,7 +86,29 @@ $(document).ready(function() {
         return false; //disable key press
     }
   }
+  //gallery
 
+  $(".gallery__link").on("click", function() {
+    event.preventDefault();
+    $(this)
+      .closest(".gallery__item")
+      .children(".gallery__imgBefore")
+      .toggleClass("is-active");
+    $(this)
+      .closest(".gallery__item")
+      .children(".gallery__imgAfter")
+      .toggleClass("is-active");
+    $(this)
+      .closest(".gallery__item")      
+      .children(".gallery__caption")
+      .children(".gallery__descriptiongAfter")
+      .toggleClass("is-active");
+    $(this)
+      .closest(".gallery__item")
+      .children(".gallery__caption")
+      .children(".gallery__descriptionBefore")
+      .toggleClass("is-active");
+  });
   //nav-menu
 
   $(".burger-menu").on("click", function(event) {
@@ -101,6 +121,7 @@ $(document).ready(function() {
   //sub-menu
 
   $(".submenu").on("click", function() {
+    event.preventDefault();
     $(".submenu").toggleClass("is-active");
     $(".header__subList").toggleClass("is-active");
   });
@@ -114,5 +135,4 @@ $(document).ready(function() {
     focusOnSelect: true,
     variableWidth: true
   });
-
 });

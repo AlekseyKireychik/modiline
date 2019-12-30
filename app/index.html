@@ -24,13 +24,14 @@
 </head>
 
 <body>
+	<!-- 
 	<header class="header__home">		
 		<div class="container-fluid container__header ">
 			<div class="header row">
 				<div class="header__logo">
 					<a href="/">
-						<!-- <img class="" src="img/_src/logo.png" alt="MODY LINE"> -->
-						<img class="" src="img/_src/logo-footer.png" alt="MODY LINE">
+						 <img class="" src="img/_src/logo.png" alt="MODY LINE"> -->
+						<!--<img class="" src="img/_src/logo-footer.png" alt="MODY LINE">
 					</a>
 				</div>
 				<nav class="header__nav">
@@ -70,16 +71,89 @@
 					<a class="header__request btn register" href="#">Записаться на приём</a>
 				</div>
 			</div>
-			<!-- <div class="burger-menu">
-				<a href="#" class="burger-menu__button">
-					<span class="burger-menu__lines"></span>
-				</a>
-			</div> -->			
 			<div class="burger-menu__overlay"></div>			
 		</div>
-	</header>
+	</header> -->
+	
+    <header>
+		<div class="container-fluid container__header ">
+		  <div class="header row">
+			<div class="header__logo">
+			  <a href="/">
+				<img class="" src="img/_src/logo.png" alt="MODY LINE" />
+			  </a>
+			</div>
+			<nav class="header__nav">
+			  <ul class="header__list-nav">
+				<li class="header__item">
+				  <a class="header__phoneMobile" href="tel:+375441111111"
+					>+375 44 111-11-11</a
+				  >
+				</li>
+				<li class="header__item">
+				  <a href="#" class="header__link submenu">Услуги</a>
+				  <ul class="header__subList">
+					<li class="header__item">
+					  <a class="header__subLink" href="./pageservice.html"
+						>Услугa</a
+					  >
+					</li>
+					<li class="header__item">
+					  <a class="header__subLink" href="">Услугa</a>
+					</li>
+					<li class="header__item">
+					  <a class="header__subLink" href="">Услугa</a>
+					</li>
+					<li class="header__item">
+					  <a class="header__subLink" href="">Услугa</a>
+					</li>
+					<li class="header__item">
+					  <a class="header__subLink" href="">Услугa</a>
+					</li>
+				  </ul>
+				</li>
+				<li class="header__item">
+				  <a href="./about.html" class="header__link">О нас</a>
+				</li>
+				<li class="header__item">
+				  <a href="./cost.html" class="header__link">Цены</a>
+				</li>
+				<li class="header__item">
+				  <a href="./akcii.html" class="header__link">Акции</a>
+				</li>
+				<li class="header__item">
+				  <a href="./about.html" class="header__link">Специалисты</a>
+				</li>
+				<li class="header__item">
+				  <a href="./gallery.html" class="header__link">Галерея</a>
+				</li>
+				<li class="header__item">
+				  <a href="./contacts.html" class="header__link">Контакты</a>
+				</li>
+			  </ul>
+			</nav>
+			<div class="header__function">
+			  <a class="header__phone" href="tel:+375441111111"
+				>+375 44 111-11-11</a
+			  >
+			  <a class="header__request btn register" href="#"
+				>Записаться на приём</a
+			  >
+			  <a class="header__requestMobile btn register" href="#"
+				>Записаться</a
+			  >
+			</div>
+		  </div>
+		  <div class="burger-menu">
+			<a href="#" class="burger-menu__button">
+			  <span class="burger-menu__lines"></span>
+			</a>
+		  </div>
+		  <div class="burger-menu__overlay"></div>
+		</div>
+	  </header>
 	<main class="home">		
-		<section class="home__baner">
+		<!-- <section class="home__baner">
 			<div class="container">
 				<div class="row">
 					<div class="caption">
@@ -87,13 +161,8 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<section class="services__home">
-			<div class="container">
-				<div class="row">
-					<h2 class="title">Услуги клиники</h2>
-				</div>
-			</div>
 			<div class="container services__wrapper">
 				<div class="row">				
 					<ul class="services__list">
@@ -132,24 +201,9 @@
 				</div>
 			</div>
 			<div class="container">
-				<div class="row specialists__top">
-					<ul class="specialists__listTop">
-						<li class="specialists__itemTop">
-							<a class="specialists__link" href="./pagespecialist.html">
-							<img
-								class="specialists__img"
-								src="img/_src/specbig.jpg"
-								alt="Имя Отчество Фамилия"
-							/>
-							<div class="specialists__info">
-								<span class="specialists__date">Имя Отчество Фамилия</span>
-								<span class="specialists__description"
-								>Специализация, опыт работы</span
-								>
-							</div>
-							</a>
-						</li>
-						<li class="specialists__itemTop">
+				<div class="row specialists__profile">
+					<ul class="specialists__listBottom">
+						<li class="specialists__itemBottom">
 							<a class="specialists__link" href="./pagespecialist.html">
 							<img
 								class="specialists__img"
@@ -164,12 +218,21 @@
 							</div></a
 							>
 						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row specialists__bottom">
-					<ul class="specialists__listBottom">
+						<li class="specialists__itemBottom">
+							<a class="specialists__link" href="./pagespecialist.html">
+							<img
+								class="specialists__img"
+								src="img/_src/specbig.jpg"
+								alt="Имя Отчество Фамилия"
+							/>
+							<div class="specialists__info">
+								<span class="specialists__date">Имя Отчество Фамилия</span>
+								<span class="specialists__description"
+								>Специализация, опыт работы</span
+								>
+							</div></a
+							>
+						</li>
 						<li class="specialists__itemBottom">
 							<a class="specialists__link" href="./pagespecialist.html">
 							<img
@@ -232,58 +295,64 @@
 				<div class="row">
 					<ul class="advantages__list">
 						<li class="advantages__item">
-							<div class="advantages__caption">
+						  <div class="advantages__caption">
 							<div class="advantages__iconWrap">
-								<img
+							  <img
 								class="advantages__icon"
 								src="img/_src/advantages01.png"
 								alt="Специалистов"
-								/>
+							  />
 							</div>
 							<div class="advantages__textWrap">
-								<span class="advantages__count">+70</span>
-								<span class="advantages__text">Специалистов</span>
+							  <span class="advantages__count">+70</span>
+							  <span class="advantages__text">Специалистов</span>
 							</div>
-							</div>
+						  </div>
 						</li>
 						<li class="advantages__item">
-							<div class="advantages__caption">
+						  <div class="advantages__caption">
 							<div class="advantages__iconWrap">
-								<img src="img/_src/advantages02.png" alt="Лет работы" />
+							  <img
+								class="advantages__icon"
+								src="img/_src/advantages02.png"
+								alt="Лет работы"
+							  />
 							</div>
 							<div class="advantages__textWrap">
-								<span class="advantages__count">+15</span>
-								<span class="advantages__text">Лет работы</span>
+							  <span class="advantages__count">+15</span>
+							  <span class="advantages__text">Лет работы</span>
 							</div>
-							</div>
+						  </div>
 						</li>
 						<li class="advantages__item">
-							<div class="advantages__caption">
+						  <div class="advantages__caption">
 							<div class="advantages__iconWrap">
-								<img
+							  <img
+								class="advantages__icon"
 								src="img/_src/advantages03.png"
 								alt="Довольных клиентов"
-								/>
+							  />
 							</div>
 							<div class="advantages__textWrap">
-								<span class="advantages__count">+500</span>
-								<span class="advantages__text">Довольных клиентов</span>
+							  <span class="advantages__count">+500</span>
+							  <span class="advantages__text">Довольных клиентов</span>
 							</div>
-							</div>
+						  </div>
 						</li>
 						<li class="advantages__item">
-							<div class="advantages__caption">
+						  <div class="advantages__caption">
 							<div class="advantages__iconWrap">
-								<img
+							  <img
+								class="advantages__icon"
 								src="img/_src/advantages04.png"
 								alt="Оборудованных промещений"
-								/>
+							  />
 							</div>
 							<div class="advantages__textWrap">
-								<span class="advantages__count">+25</span>
-								<span class="advantages__text">Оборудованных промещений</span>
+							  <span class="advantages__count">+25</span>
+							  <span class="advantages__text">Оборудованных промещений</span>
 							</div>
-							</div>
+						  </div>
 						</li>
 					</ul>
 				</div>
