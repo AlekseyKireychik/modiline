@@ -56,12 +56,14 @@ body
 	line-height: 16px
 	padding: 16px 32px 16px 32px
 	color: #FFFFFF
+	transition: .3s
 	&:focus
 		box-shadow: none
 	&:hover
 		color: #FFFFFF
 		background: linear-gradient(180deg, #21979b 0%, #18828e 100%)
 		text-decoration: none
+		transition: .3s
 .title
 	font-size: 48px
 	line-height: 47px
@@ -650,9 +652,10 @@ header
 					flex-direction: column
 					background: #fff
 					border-radius: 20px
-					box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 					padding: 30px 38px 20px
 					width: 183px
+					border: 1px solid rgba(28, 157, 172, 0.5)
+					transition: .2s	
 					+media-breakpoint-down(lg)
 						margin-bottom: 10px
 						padding: 10px 18px 10px
@@ -666,7 +669,11 @@ header
 						margin-right: 20px
 						min-width: 30%
 					+media-breakpoint-down(xs)
-						margin-right: auto
+						margin-right: auto	
+					&:hover
+						border: 1px solid rgba(28, 157, 172, 0.1)
+						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)	
+						transition: .2s				
 					&:nth-child(3n)
 						margin-right: 0px
 						+media-breakpoint-down(xs)
@@ -777,13 +784,14 @@ header
 						align-items: flex-start
 						justify-content: flex-start
 						flex-direction: column
-						background: #FFFFFF
-						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						background: #FFFFFF						
 						border-radius: 20px
 						flex-basis: 385px
 						width: 385px
 						margin-bottom: 20px
 						position: relative
+						transition: .2s
+						border: 1px solid rgba(28, 157, 172, 0.5)
 						+media-breakpoint-down(lg)
 							flex-basis: 338px
 							min-width: 335px
@@ -795,6 +803,10 @@ header
 						+media-breakpoint-down(xs)
 							flex-basis: 244px
 							min-width: 244px
+						&:hover
+							border: 1px solid rgba(28, 157, 172, 0.2)
+							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+							transition: .2s
 						&:first-child
 							+media-breakpoint-down(lg)
 								margin-left: calc(( 100vw - 960px ) / 2 )
@@ -873,8 +885,6 @@ header
 							align-items: flex-start
 							justify-content: flex-start
 							flex-direction: column
-							background: #FFFFFF
-							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 							border-radius: 20px
 							flex-basis: 588px
 							width: 588px
@@ -967,10 +977,13 @@ header
 						color: $accent
 						background: #FFFFFF
 						border: 2px solid #1C9DAC
-						border-radius: 4px
-						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						border-radius: 4px	
+						transition: .3s					
 						+media-breakpoint-down(xs)
 							margin-left: 15px
+						&:hover
+							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+							transition: .3s
 .advantages__home
 	+media-breakpoint-down(xs)
 		padding: 0 25px
@@ -1091,15 +1104,18 @@ header
 					line-height: 24px
 			.order__btn
 				background: #FFFFFF
-				box-shadow: 0px 4px 30px #B7E1E3
 				color: $accent
 				border-radius: 4px
 				margin-left: 30px
 				padding: 16px 32px
 				font-size: 14px
 				line-height: 16px
+				transition: .3s
 				+media-breakpoint-down(lg)
 					margin-left: 0px
+				&:hover
+					transition: .3s
+					box-shadow: 0px 4px 30px #B7E1E3
 .news__home
 	overflow: hidden
 	.container
@@ -1137,10 +1153,11 @@ header
 					flex-direction: column
 					flex-basis: 385px
 					max-width: 385px
-					box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+					border: 1px solid rgba(28, 157, 172, 0.5)
 					border-radius: 20px
 					padding: 38px
 					margin-bottom: 20px
+					transition: .3s
 					+media-breakpoint-down(lg)
 						margin-right: 20px
 						min-width: 385px
@@ -1148,6 +1165,10 @@ header
 						padding: 25px
 						flex-basis: 244px
 						min-width: 244px
+					&:hover
+						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						border: 1px solid rgba(28, 157, 172, 0.1)
+						transition: .3s
 					&:first-child
 						+media-breakpoint-down(lg)
 							margin-left: calc(( 100vw - 960px ) / 2 )
@@ -1215,7 +1236,8 @@ header
 					flex-direction: column
 					flex-basis: 385px
 					max-width: 385px
-					box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+					border: 1px solid rgba(28, 157, 172, 0.5)
+					transition: .3s
 					border-radius: 20px
 					margin-bottom: 20px
 					+media-breakpoint-down(lg)
@@ -1227,6 +1249,10 @@ header
 						flex-basis: 100%
 						max-width: 100%
 						margin-right: 0px
+					&:hover
+						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						border: 1px solid rgba(28, 157, 172, 0.1)
+						transition: .3s
 					&:nth-child(even)
 						+media-breakpoint-down(lg)
 							margin-right: 0px
@@ -1329,7 +1355,8 @@ header
 						padding: 20px 25px 0
 					.pagenews__item
 						background: #FFFFFF
-						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						border: 1px solid rgba(28, 157, 172, 0.5)
+						transition: .3s
 						border-radius: 20px
 						margin-bottom: 20px
 						+media-breakpoint-down(lg)
@@ -1340,6 +1367,10 @@ header
 						&:last-child
 							+media-breakpoint-down(lg)
 								margin-right: 0px
+						&:hover
+							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+							border: 1px solid rgba(28, 157, 172, 0.1)
+							transition: .3s
 						.pagenews__link
 							padding: 50px
 							display: block
@@ -1994,7 +2025,8 @@ header
 						justify-content: flex-start
 						flex-direction: column
 						background: #FFFFFF
-						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						transition: .2s
+						border: 1px solid rgba(28, 157, 172, 0.5)
 						border-radius: 20px
 						flex-basis: 385px
 						margin-bottom: 20px
@@ -2005,6 +2037,10 @@ header
 							flex-basis: 388px
 						+media-breakpoint-down(xs)
 							flex-basis: 100%
+						&:hover
+							border: 1px solid rgba(28, 157, 172, 0.2)
+							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+							transition: .2s
 						.specialists__link
 							width: 100%
 							.specialists__img
@@ -2495,13 +2531,14 @@ header
 						align-items: flex-start
 						justify-content: flex-start
 						flex-direction: column
-						background: #FFFFFF
-						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						background: #FFFFFF						
 						border-radius: 20px
 						flex-basis: 385px
 						width: 385px
 						margin-bottom: 20px
 						position: relative
+						border: 1px solid rgba(28, 157, 172, 0.5)
+						transition: .3s
 						+media-breakpoint-down(md)
 							flex-basis: 338px
 							min-width: 335px
@@ -2513,6 +2550,10 @@ header
 						+media-breakpoint-down(xs)
 							flex-basis: 244px
 							min-width: 244px
+						&:hover
+							border: 1px solid rgba(28, 157, 172, 0.1)
+							transition: .3s
+							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 						&:last-child
 							+media-breakpoint-down(md)
 								margin-right: 0px
@@ -2583,8 +2624,6 @@ header
 							align-items: flex-start
 							justify-content: flex-start
 							flex-direction: column
-							background: #FFFFFF
-							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 							border-radius: 20px
 							flex-basis: 588px
 							width: 588px
