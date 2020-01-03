@@ -23,64 +23,14 @@
 
 </head>
 
-<body>
-	<!-- 
-	<header class="header__home">		
-		<div class="container-fluid container__header ">
-			<div class="header row">
-				<div class="header__logo">
-					<a href="/">
-						 <img class="" src="img/_src/logo.png" alt="MODY LINE"> -->
-						<!--<img class="" src="img/_src/logo-footer.png" alt="MODY LINE">
-					</a>
-				</div>
-				<nav class="header__nav">
-					<ul class="header__list-nav">
-						<li class="header__item">
-							<a href="#" class="header__link submenu">Услуги</a>
-							<ul class="header__subList">
-								<li class="header__item"><a class="header__subLink" href="./pageservice.html">Услугa</a></li>
-								<li class="header__item"><a class="header__subLink" href="">Услугa</a></li>
-								<li class="header__item"><a class="header__subLink" href="">Услугa</a></li>
-								<li class="header__item"><a class="header__subLink" href="">Услугa</a></li>
-								<li class="header__item"><a class="header__subLink" href="">Услугa</a></li>
-							</ul>
-						</li>
-						<li class="header__item">
-							<a href="./about.html" class="header__link">О нас</a>
-						</li>
-						<li class="header__item">
-							<a href="./cost.html" class="header__link">Цены</a>
-						</li>
-						<li class="header__item">
-							<a href="./akcii.html" class="header__link">Акции</a>
-						</li>
-						<li class="header__item">
-							<a href="./specialists.html" class="header__link">Специалисты</a>
-						</li>
-						<li class="header__item">
-							<a href="./gallery.html" class="header__link">Галерея</a>
-						</li>
-						<li class="header__item">
-							<a href="./contacts.html" class="header__link">Контакты</a>
-						</li>
-					</ul>
-				</nav>	
-				<div class="header__function">
-					<a class="header__phone" href="tel:+375441111111">+375 44 111-11-11</a>
-					<a class="header__request btn register" href="#">Записаться на приём</a>
-				</div>
-			</div>
-			<div class="burger-menu__overlay"></div>			
-		</div>
-	</header> -->
-	
-    <header>
-		<div class="container-fluid container__header ">
+<body>	
+    <header class="header__home">
+		<div class="container-fluid header__home container__header fixed-top">
 		  <div class="header row">
 			<div class="header__logo">
 			  <a href="/">
-				<img class="" src="img/_src/logo.png" alt="MODY LINE" />
+				<img class="black" src="img/_src/logo.png" alt="MODY LINE">
+				<img class="white" src="img/_src/logo-white.png" alt="MODY LINE">
 			  </a>
 			</div>
 			<nav class="header__nav">
@@ -151,9 +101,10 @@
 		  </div>
 		  <div class="burger-menu__overlay"></div>
 		</div>
-	  </header>
-	<main class="home">		
-		<!-- <section class="home__baner">
+	</header>
+	<main class="home">	
+		<div class="decoration"></div>	
+		<section class="home__baner">
 			<div class="container">
 				<div class="row">
 					<div class="caption">
@@ -161,7 +112,8 @@
 					</div>
 				</div>
 			</div>
-		</section> -->
+			<div class="wrapbg"><img class="services__img" src="img/_src/bggirl.png" alt="Косметология"></div>
+		</section>
 		<section class="services__home">
 			<div class="container services__wrapper">
 				<div class="row">				
@@ -200,7 +152,7 @@
 					<h2 class="title">Специалисты</h2>
 				</div>
 			</div>
-			<div class="container">
+			<div class="main__container">
 				<div class="row specialists__profile">
 					<ul class="specialists__listBottom">
 						<li class="specialists__itemBottom">
@@ -280,7 +232,7 @@
 						</li>
 					</ul>
 					<div class="specialists__wrappBtn">
-						<a class="specialists__btn" href="">Подробнее о специалистах</a>
+						<a class="specialists__btn" href="./specialists.html">Подробнее о специалистах</a>
 					</div>
 				</div>
 			</div>
@@ -362,7 +314,7 @@
 			<div class="container">
 				<div class="order__caption row">
 					<h2 class="title">Запишитесь на приём прямо сейчас!</h2>
-					<a class="order__btn btn" href="#">Записаться на приём</a>
+					<a class="order__btn btn register" href="#">Записаться на приём</a>
 				</div>
 			</div>
 		</section> 
@@ -372,7 +324,7 @@
 					<h2 class="title">Новости</h2>
 				</div>
 			</div>
-			<div class="container">
+			<div class="main__container">
 				<div class="row">
 					<ul class="news__list">
 						<li class="news__item">
@@ -439,6 +391,59 @@
 				</div>
 			</div>		
 		</section>
+		<div class="overlay"></div>
+		<div class="main__form">
+			<form id="form" class="form">
+				<div class="form__btnCloseWrap">
+					<div class="form__btnClose">
+						<span class="form__line"></span>
+					</div>
+				</div>
+				<div class="form__top">
+				  <h3 class="form__title">Запись на прием</h3>                      
+				  <p class="form__description">Мы перезвоним вам в течение 10 минут для подтверждения записи.</p>				  
+				</div>
+				<div class="form__content">
+				  <div class="mainform__group group-01">							
+					<input type="text" placeholder="Введите Ваше Имя" class="mainform__control" name="name" id="name" placeholder="" >
+					<label for="name"  class="mainform__label">Имя</label>
+				  </div>
+				  <div class="mainform__group group-01">							
+					<input type="tel" placeholder="Введите Ваш контактный телефон" class="mainform__control" name="tel" id="tel" placeholder="">
+					<label for="tel" class="mainform__label">Контактный телефон</label>
+				  </div>
+				  <div class="mainform__group group-01">							
+					<input type="email" placeholder="Введите Ваш e-mail" class="mainform__control" name="email" id="email" placeholder="">
+					<label for="email" class="mainform__label">E-mail</label>
+				  </div>
+				  <div class="mainform__group comment">							
+					<textarea
+						name="comment"
+						id="comment"
+						coll="5"
+						class="mainform__control"
+						placeholder="Введите Ваше сообщение"
+						>
+					</textarea>
+					<label for="comment" class="mainform__label">Сообщение</label>
+				  </div>
+				  
+				  <input type="hidden" name="culturecode">
+				  <input type="hidden" name="url">
+				  <div class="form__bottom">
+					<div class="mainform__group form-check">  
+					  <input class="form__check-input" placeholder=" " required type="checkbox" id="check1">  
+					  <label class="form__check-label" for="check1">Я даю свое согласие на обработку данных в соответствии с политикой конфиденциальности.</label>  
+					</div> 
+					<div class="form__box">
+					  <button type="submit" id="btn" class="btn submit">
+						Отправить заявку
+					  </button>
+					</div>
+				  </div>					
+				</div>
+			  </form>
+		</div>
 	</main>
     <footer>
 		<div class="container">

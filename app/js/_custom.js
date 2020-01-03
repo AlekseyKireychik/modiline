@@ -109,6 +109,17 @@ $(document).ready(function() {
       .children(".gallery__descriptionBefore")
       .toggleClass("is-active");
   });
+  //header sticky
+  if ($(document).scrollTop() > $(".fixed-top").height()) {
+    $(".fixed-top").toggleClass("scrolled");
+  }
+
+  $(window).on("scroll", function() {
+    $(".container__header").toggleClass(
+      "scrolled",
+      $(this).scrollTop() > $(".container__header").height()/2
+    );
+  });
   //nav-menu
 
   $(".burger-menu").on("click", function(event) {

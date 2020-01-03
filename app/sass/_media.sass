@@ -9,6 +9,9 @@
                     .specialists__listTop
                         .specialists__itemTop
                             flex-basis: 588px
+@media screen and (min-width: 1200px) 
+    .main__container
+        max-width: 1196px
 @media screen and (max-width: 1340px)
     header
         .container-fluid
@@ -26,7 +29,7 @@
                         &.is-active
                             display: block
                         .header__list-nav
-                            height: calc(100vh - 150px)
+                            // height: calc(100vh - 150px)
                             background: #FFF
                             flex-direction: column
                             padding-top: 40px
@@ -51,6 +54,7 @@
                                     .header__item
                                         .header__subLink
                                             font-size: 22px
+                
                     .header__function
                         padding-right: 70px
                 .burger-menu
@@ -66,3 +70,11 @@
                         .about__itemBottom
                             &:nth-child(1), &:nth-child(2)
                                 flex-basis: 548px
+@media screen and (max-width: 320px)
+    .services__home
+        .services__wrapper
+            .row
+                .services__list
+                    .services__item
+                        width: 80px
+                        height: 90px

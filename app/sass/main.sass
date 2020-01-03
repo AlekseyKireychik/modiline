@@ -56,6 +56,8 @@ body
 	line-height: 16px
 	padding: 16px 32px 16px 32px
 	color: #FFFFFF
+	&:focus
+		box-shadow: none
 	&:hover
 		color: #FFFFFF
 		background: linear-gradient(180deg, #21979b 0%, #18828e 100%)
@@ -132,6 +134,10 @@ input.error
 						color: #000
 						+media-breakpoint-down(xs)
 							word-wrap: normal
+main
+	margin-top: 150px
+	+media-breakpoint-down(xs)
+		margin-top: 95px
 header
 	+media-breakpoint-down(md)
 		box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.15)
@@ -146,7 +152,6 @@ header
 				+media-breakpoint-down(xs)
 					padding: 30px 20px
 				.header__logo
-					padding: 50px 0px 50px 40px
 					+media-breakpoint-down(xs)
 						padding: 0
 					img
@@ -196,10 +201,11 @@ header
 								transition: .3s
 								position: relative
 								&.submenu
+									padding: 0 30px 10px 15px
 									&::before
 										position: absolute
 										content: url(../img/_src/arrowDown.svg)
-										right: -3px
+										right: 10px
 										top: 0px
 								&.is-active
 									color: $accent
@@ -243,7 +249,7 @@ header
 						text-align: center
 						color: $text
 						margin-right: 30px
-						padding-left: 35px
+						padding-left: 25px
 						position: relative
 						+media-breakpoint-down(sm)
 							display: none
@@ -356,76 +362,53 @@ header
 								line-height: 34px
 								color: $accentTwo
 								font-weight: normal
+		&.fixed-top
+			position: fixed
+			top: 0
+			right: 0
+			left: 0
+			z-index: 1030
+			background-color: #fff
+			.header__logo
+				padding: 50px 0px 50px 40px
+		&.scrolled
+			border-bottom: 2px solid #f2f2f2
+			.header__logo
+				padding: 15px 0px 15px 40px
+			.burger-menu
+				top: 30px
+				+media-breakpoint-down(xs)
+					top: 5px
+			.header
+				padding: 10px 0px
+				+media-breakpoint-down(xs)
+					padding: 10px 20px
+				.header-nav
+					top: 100px
+
 //home page
 header
 	&.header__home
 		.container-fluid
-			&.container__header
-				position: relative
+			&.fixed-top
+				background-color: transparent
 				.header
-					position: fixed
-					display: flex
-					justify-content: space-between
-					align-items: center
-					padding: 0px
-					+media-breakpoint-down(xs)
-						padding: 30px 20px
 					.header__logo
-						padding: 50px 0px 50px 40px
-						+media-breakpoint-down(xs)
-							padding: 0
-						img
-							+media-breakpoint-down(xs)
-								max-width: 130px
+						.black
+							display: none
+						.white
+							display: block
 					.header__nav
-						z-index: 991
-						+media-breakpoint-down(xs)
-							padding: 0 20px!important
-							top: 95px!important
 						.header__list-nav
-							display: flex
-							justify-content: space-between
-							align-items: center
-							margin: 0
-							&.is-active
-								height: auto
-								display: flex
-								transition: .3s
-								z-index: 1000
 							.header__item
-								margin: 0
-								position: relative
 								.header__phoneMobile
-									display: none
-									font-size: 24px
-									line-height: 24px
-									color: $text
-									position: relative
-									margin-left: 60px
-									&::before
-										position: absolute
-										content: url(../img/_src/phone-icon.png)
-										left: -60px
-										top: -8px
-
-									+media-breakpoint-down(sm)
-										display: block
 								.header__link
-									font-weight: 300
-									font-size: 18px
-									line-height: 18px
-									text-align: center
 									color: #fff
-									text-decoration: none
-									padding: 0 15px 10px
-									transition: .3s
-									position: relative
+									transition: .2s
 									&.submenu
 										&::before
-											position: absolute
 											content: url(../img/_src/arrowDownWhite.svg)
-											right: -3px
-											top: 0px
+											transition: .2s
 									&.is-active
 										color: $accent
 										transition: .3s
@@ -466,8 +449,9 @@ header
 							text-align: center
 							color: #fff
 							margin-right: 30px
-							padding-left: 35px
+							padding-left: 25px
 							position: relative
+							transition: .2s
 							+media-breakpoint-down(sm)
 								display: none
 						.header__request
@@ -578,13 +562,44 @@ header
 									line-height: 34px
 									color: $accentTwo
 									font-weight: normal
+			&.scrolled
+				background-color: #fff
+				.header
+					.header__logo
+						.black
+							display: block
+						.white
+							display: none
+					.header__nav
+						.header__list-nav
+							.header__item
+								.header__phoneMobile
+								.header__link
+									color: #000
+									transition: .2s
+									&.submenu
+										&::before
+											content: url(../img/_src/arrowDown.svg)
+											transition: .2s
+					.header__function
+						.header__phone
+							color: #000
+							transition: .2s
+
 .home
+	.decoration
+		height: 150px
+		width: 100%
+		background: #8ECED6
+		box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+		margin-top: -150px
 	.home__baner
-		background-image: url(../img/_src/bannerbg.jpg)
-		background-position: center
-		background-repeat: no-repeat
-		background-size: cover
-		height: 1080px
+		height: 505px
+		position: relative
+		.wrapbg
+			position: absolute
+			right: 0
+			top: -150px
 		.container
 			.row
 				.caption
@@ -645,6 +660,17 @@ header
 					+media-breakpoint-down(md)
 						width: 110px
 						height: 130px
+					+media-breakpoint-down(sm)
+						width: 90px
+						height: 100px
+						margin-right: 20px
+						min-width: 30%
+					+media-breakpoint-down(xs)
+						margin-right: auto
+					&:nth-child(3n)
+						margin-right: 0px
+						+media-breakpoint-down(xs)
+							margin-right: auto
 					.services__img
 						margin-bottom: 30px
 						+media-breakpoint-down(lg)
@@ -655,6 +681,10 @@ header
 							width: auto
 							margin-bottom: 10px
 							height: 80px
+						+media-breakpoint-down(sm)
+							height: 60px
+						+media-breakpoint-down(xs)
+							height: 50px
 					.services__description
 						font-weight: 300
 						font-size: 18px
@@ -663,6 +693,9 @@ header
 						+media-breakpoint-down(md)
 							font-size: 14px
 							line-height: 18px
+						+media-breakpoint-down(sm)
+							font-size: 10px
+							line-height: 12px
 				.programs__item
 					background-position: center
 					background-repeat: no-repeat
@@ -695,7 +728,22 @@ header
 						flex-basis: calc(100vw - 50px)
 						width: calc(100vw - 50px)
 .specialists__home
+	overflow: hidden
 	.container
+		.row
+			.title
+				+media-breakpoint-down(lg)
+					margin-bottom: 15px
+				+media-breakpoint-down(xs)
+					padding: 0 25px
+	.main__container
+		width: 100%
+		padding-right: 15px
+		padding-left: 15px
+		margin-right: auto
+		margin-left: auto
+		+media-breakpoint-down(lg)
+			padding-left: 0px
 		.row
 			&.specialists__profile
 				.specialists__title
@@ -718,11 +766,12 @@ header
 					flex-wrap: wrap
 					width: 100%
 					margin-bottom: 30px
-					+media-breakpoint-down(md)
+					+media-breakpoint-down(lg)
 						justify-content: flex-start
 						flex-wrap: nowrap
 						margin-bottom: 40px
 						overflow-y: auto
+						padding: 25px 0
 					.specialists__itemBottom
 						display: flex
 						align-items: flex-start
@@ -735,7 +784,7 @@ header
 						width: 385px
 						margin-bottom: 20px
 						position: relative
-						+media-breakpoint-down(md)
+						+media-breakpoint-down(lg)
 							flex-basis: 338px
 							min-width: 335px
 							margin-bottom: 0px
@@ -746,8 +795,17 @@ header
 						+media-breakpoint-down(xs)
 							flex-basis: 244px
 							min-width: 244px
-						&:last-child
+						&:first-child
+							+media-breakpoint-down(lg)
+								margin-left: calc(( 100vw - 960px ) / 2 )
 							+media-breakpoint-down(md)
+								margin-left: calc(( 100vw - 720px ) / 2 )
+							+media-breakpoint-down(sm)
+								margin-left: calc(( 100vw - 540px ) / 2 )
+							+media-breakpoint-down(xs)
+								margin-left: 40px
+						&:last-child
+							+media-breakpoint-down(lg)
 								margin-right: 0px
 								.specialists__link
 									.specialists__img
@@ -758,7 +816,7 @@ header
 								width: 100%
 								height: 351px
 								border-radius: 20px 20px 0px 0px
-								+media-breakpoint-down(md)
+								+media-breakpoint-down(lg)
 									height: 382px
 									border-radius: 20px
 								+media-breakpoint-down(xs)
@@ -769,7 +827,7 @@ header
 								align-items: flex-start
 								justify-content: center
 								flex-direction: column
-								+media-breakpoint-down(md)
+								+media-breakpoint-down(lg)
 									position: absolute
 									top: 0
 									left: 0
@@ -787,7 +845,7 @@ header
 									padding-top: 30px
 									padding-bottom: 15px
 									margin: 0 auto
-									+media-breakpoint-down(md)
+									+media-breakpoint-down(lg)
 										color: #fff
 									+media-breakpoint-down(xs)
 										font-size: 18px
@@ -802,7 +860,7 @@ header
 									color: #000000
 									padding-bottom: 115px
 									margin: 0 auto
-									+media-breakpoint-down(md)
+									+media-breakpoint-down(lg)
 										padding-bottom: 55px
 										color: #fff
 									+media-breakpoint-down(xs)
@@ -821,7 +879,7 @@ header
 							flex-basis: 588px
 							width: 588px
 							position: relative
-							+media-breakpoint-down(md)
+							+media-breakpoint-down(lg)
 								flex-basis: 338px
 								min-width: 335px
 								margin-bottom: 0px
@@ -838,7 +896,7 @@ header
 									width: 100%
 									height: 351px
 									border-radius: 20px 20px 0px 0px
-									+media-breakpoint-down(md)
+									+media-breakpoint-down(lg)
 										height: 382px
 										border-radius: 20px
 									+media-breakpoint-down(xs)
@@ -848,7 +906,7 @@ header
 									align-items: flex-start
 									justify-content: flex-start
 									flex-direction: column
-									+media-breakpoint-down(md)
+									+media-breakpoint-down(lg)
 										position: absolute
 										top: 0
 										left: 0
@@ -864,7 +922,8 @@ header
 										line-height: 42px
 										color: #000000
 										padding: 30px 50px 25px
-										+media-breakpoint-down(md)
+										margin: 0
+										+media-breakpoint-down(lg)
 											padding: 30px 0px 15px
 											margin: 0 auto
 											font-size: 24px
@@ -883,7 +942,8 @@ header
 										line-height: 28px
 										color: #000000
 										padding: 0px 50px 135px
-										+media-breakpoint-down(md)
+										margin: 0
+										+media-breakpoint-down(lg)
 											font-size: 18px
 											line-height: 21px
 											padding: 0px 0px 55px
@@ -909,6 +969,8 @@ header
 						border: 2px solid #1C9DAC
 						border-radius: 4px
 						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						+media-breakpoint-down(xs)
+							margin-left: 15px
 .advantages__home
 	+media-breakpoint-down(xs)
 		padding: 0 25px
@@ -1003,6 +1065,11 @@ header
 	background: linear-gradient(285.83deg, #1C9DAC 0%, #50B9BD 99.48%)
 	padding: 125px 0
 	margin-bottom: 60px
+	+media-breakpoint-down(md)
+		margin-bottom: 40px
+		padding: 80px 0
+	+media-breakpoint-down(xs)
+		padding: 30px 0 25px
 	.container
 		.order__caption
 			+media-breakpoint-down(lg)
@@ -1015,6 +1082,13 @@ header
 				+media-breakpoint-down(lg)
 					margin-bottom: 25px
 					text-align: center
+				+media-breakpoint-down(md)
+					font-size: 36px
+					line-height: 36px
+				+media-breakpoint-down(xs)
+					max-width: 350px
+					font-size: 24px
+					line-height: 24px
 			.order__btn
 				background: #FFFFFF
 				box-shadow: 0px 4px 30px #B7E1E3
@@ -1024,8 +1098,23 @@ header
 				padding: 16px 32px
 				font-size: 14px
 				line-height: 16px
+				+media-breakpoint-down(lg)
+					margin-left: 0px
 .news__home
+	overflow: hidden
 	.container
+		.row
+			.title
+				+media-breakpoint-down(xs)
+					padding: 0 25px
+	.main__container
+		width: 100%
+		padding-right: 15px
+		padding-left: 15px
+		margin-right: auto
+		margin-left: auto
+		+media-breakpoint-down(lg)
+			padding-left: 0px
 		.row
 			.news__list
 				display: flex
@@ -1039,7 +1128,7 @@ header
 					justify-content: flex-start
 					flex-wrap: nowrap
 					overflow-y: auto
-					padding: 20px 25px 20px
+					padding: 20px 25px 20px 15px
 				.news__item
 					background: #FFFFFF
 					display: flex
@@ -1055,21 +1144,45 @@ header
 					+media-breakpoint-down(lg)
 						margin-right: 20px
 						min-width: 385px
+					+media-breakpoint-down(sm)
+						padding: 25px
+						flex-basis: 244px
+						min-width: 244px
+					&:first-child
+						+media-breakpoint-down(lg)
+							margin-left: calc(( 100vw - 960px ) / 2 )
+						+media-breakpoint-down(md)
+							margin-left: calc(( 100vw - 720px ) / 2 )
+						+media-breakpoint-down(sm)
+							margin-left: calc(( 100vw - 540px ) / 2 )
+						+media-breakpoint-down(xs)
+							margin-left: 25px
 					.news__title
 						font-weight: 400
 						font-size: 18px
 						line-height: 18px
 						color: #000
 						margin-bottom: 20px
+						+media-breakpoint-down(sm)
+							font-size: 12px
+							line-height: 12px
+							margin-bottom: 10px
 					.news__date
 						font-size: 14px
 						line-height: 16px
 						color: #000
 						margin-bottom: 20px
+						+media-breakpoint-down(sm)
+							font-size: 10px
+							line-height: 12px
+							margin-bottom: 15px
 					.news__text
 						font-size: 14px
 						line-height: 16px
 						color: #000
+						+media-breakpoint-down(sm)
+							font-size: 8px
+							line-height: 9px
 
 ///////////news page
 .news__breadcrumb
@@ -2371,6 +2484,7 @@ header
 					justify-content: space-between
 					flex-wrap: wrap
 					width: 100%
+					margin-bottom: 50px
 					+media-breakpoint-down(md)
 						justify-content: flex-start
 						flex-wrap: nowrap
@@ -2518,6 +2632,7 @@ header
 										line-height: 42px
 										color: #000000
 										padding: 30px 50px 25px
+										margin: 0
 										+media-breakpoint-down(md)
 											padding: 30px 0px 15px
 											margin: 0 auto
@@ -2537,6 +2652,7 @@ header
 										line-height: 28px
 										color: #000000
 										padding: 0px 50px 135px
+										margin: 0
 										+media-breakpoint-down(md)
 											font-size: 18px
 											line-height: 21px
@@ -3234,6 +3350,67 @@ header
 					+media-breakpoint-down(sm)
 						max-height: 320px
 						min-height: 320px
+
+body
+	position: relative
+.overlay
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 999
+	background-color: rgba(0, 0, 0, 0.8)
+	display: none
+	&.is-active
+		display: block
+.main__form
+	position: fixed
+	left: 50%
+	top: 3%
+	bottom: 3%
+	transform: translate(-50%, 0%)
+	z-index: 1000
+	background-color: #fff
+	max-width: 588px
+	border-radius: 20px
+	display: none
+	&.is-active
+		display: block
+	.form
+		position: relative
+		.form__btnCloseWrap
+			position: absolute
+			right: 50px
+			top: 50px
+			.form__btnClose
+				position: relative
+				cursor: pointer
+				padding: 15px
+				.form__line
+					position: absolute
+					width: 24px
+					height: 2px
+					top: 47%
+					right: 50%
+					transform: translate(50%)
+					background-color: transparent
+					&:before
+						content: ""
+						position: absolute
+						width: 24px
+						height: 2px
+						background-color: #000
+						top: 0px
+						transform: rotate(45deg)
+					&:after
+						content: ""
+						position: absolute
+						width: 24px
+						height: 2px
+						background-color: #000
+						top: 0px
+						transform: rotate(-45deg)
 
 .form
 	box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
