@@ -60,6 +60,61 @@
                 .burger-menu
                     .burger-menu__button
                         display: block
+        &.header__home
+            .container-fluid
+                &.container__header
+                    .header
+                        position: relative
+                        .header__nav
+                            display: none
+                            width: 100%
+                            position: absolute
+                            left: 50%
+                            top: 150px
+                            transform: translate(-50%, 0px)
+                            padding: 0 30px
+                            &.is-active
+                                display: block
+                            .header__list-nav
+                                // height: calc(100vh - 150px)
+                                background: #FFF
+                                flex-direction: column
+                                padding-top: 40px
+                                border-top: 2px solid $accent
+                                .header__item
+                                    margin-bottom: 30px
+                                    .header__link
+                                        font-size: 24px
+                                        line-height: 24px
+                                        &.submenu
+                                            &.is-active
+                                                &:before
+                                                    top: 7px
+                                                    transform: rotate(180deg)
+                                        &.is-active
+                                    .header__subList
+                                        position: relative
+                                        min-width: auto
+                                        top: 0
+                                        padding: 15px 20px 0px
+                                        text-align: center
+                                        .header__item
+                                            .header__subLink
+                                                font-size: 22px
+                    
+                        .header__function
+                            padding-right: 70px
+                    .burger-menu
+                        .burger-menu__button
+                            display: block
+                        &.is-active
+                            .burger-menu__button
+                                 .burger-menu__lines
+                                     background-color: transparent
+
+                                    
+
+            
 @media screen and (min-width: 1240px) and (max-width: 1300px)
     .about__specialists
         .container
@@ -72,6 +127,7 @@
                                 flex-basis: 548px
 @media screen and (max-width: 320px)
     .services__home
+        margin-top: -80px
         .services__wrapper
             .row
                 .services__list

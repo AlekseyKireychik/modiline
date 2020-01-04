@@ -56,14 +56,14 @@ body
 	line-height: 16px
 	padding: 16px 32px 16px 32px
 	color: #FFFFFF
-	transition: .3s
+	transition: .2s
 	&:focus
 		box-shadow: none
 	&:hover
 		color: #FFFFFF
-		background: linear-gradient(180deg, #21979b 0%, #18828e 100%)
 		text-decoration: none
-		transition: .3s
+		box-shadow: 0px 4px 30px #B7E1E3
+		transition: .2s
 .title
 	font-size: 48px
 	line-height: 47px
@@ -457,14 +457,11 @@ header
 							+media-breakpoint-down(sm)
 								display: none
 						.header__request
-							+media-breakpoint-down(xs)
+							+media-breakpoint-down(lg)
 								display: none
 						.header__requestMobile
-							+media-breakpoint-down(xs)
-								display: block
-								padding: 5px 10px 5px 10px
-								font-size: 12px
-								line-height: 16px
+							+media-breakpoint-down(lg)
+								display: none
 
 				.burger-menu
 					position: absolute
@@ -488,21 +485,21 @@ header
 							height: 3.6px
 							top: 47%
 							right: 50%
-							transform: translate(50%)
-							background-color: $accent
+							transform: translate(50%)							
+							background-color: #fff
 							&::after
 								content: ""
 								position: absolute
 								width: 20px
 								height: 3.6px
-								background-color: $accent
+								background-color: #fff
 								top: -7.2px
 							&::before
 								content: ""
 								position: absolute
 								width: 20px
 								height: 3.6px
-								background-color: $accent
+								background-color: #fff
 								top: 7.2px
 					&.is-active
 						.burger-menu__lines
@@ -587,21 +584,51 @@ header
 						.header__phone
 							color: #000
 							transition: .2s
+				.burger-menu
+					top: 28px
+					+media-breakpoint-down(xs)
+						top: 24px
+						right: 24px
+					.burger-menu__button
+						.burger-menu__lines					
+							background-color: $accent
+							&::after
+								background-color: $accent
+							&::before
+								background-color: $accent
 
 .home
+	+media-breakpoint-down(lg)
+		margin-top: 0
 	.decoration
 		height: 150px
 		width: 100%
 		background: #8ECED6
 		box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 		margin-top: -150px
+		+media-breakpoint-down(lg)
+			display: none
 	.home__baner
 		height: 505px
 		position: relative
+		+media-breakpoint-down(lg)
+			height: 655px
+			background: linear-gradient(150.06deg, #50B9BD 0%, #1D9DAC 100%)
+		+media-breakpoint-down(md)
+			height: 590px
+		+media-breakpoint-down(sm)
+			height: 540px
+		+media-breakpoint-down(xs)
+			height: 400px
 		.wrapbg
 			position: absolute
 			right: 0
 			top: -150px
+			max-width: 55%
+			+media-breakpoint-down(lg)
+				display: none
+			.services__img
+				width: 100%
 		.container
 			.row
 				.caption
@@ -612,6 +639,11 @@ header
 					bottom: 50%
 					transform: translateY(50%)
 					max-width: 516px
+					+media-breakpoint-down(lg)
+						padding: 25px 25px 25px 0
+					+media-breakpoint-down(xs)
+						max-width: 400px
+						padding: 0px 25px 25px 25px
 					.caption__title
 						font-weight: 300
 						font-size: 72px
@@ -619,10 +651,41 @@ header
 						letter-spacing: 0.03em
 						text-align: left
 						color: $accent
+						+media-breakpoint-down(lg)
+							color: #fff
+							margin-bottom: 20px
+						+media-breakpoint-down(md)
+							font-weight: 200
+							font-size: 54px
+							line-height: 56px
+						+media-breakpoint-down(xs)							
+							font-size: 36px
+							line-height: 36px
+					.requests__wrappBtn
+						display: none
+						+media-breakpoint-down(lg)
+							display: block
+							text-align: left
+						.request__btn
+							background: #FFFFFF
+							border-radius: 4px
+							color: $accent
+							transition: .2s
+							&:hover
+								transition: .2s
+								box-shadow: 0px 4px 30px #B7E1E3
 .services__home
 	padding-top: 60px
 	padding-bottom: 60px
 	overflow: hidden
+	+media-breakpoint-down(lg)
+		padding-top: 0px
+		margin-top: -130px
+	+media-breakpoint-down(md)
+		margin-top: -120px
+		padding-bottom: 40px
+	+media-breakpoint-down(sm)
+		margin-top: -90px
 	+media-breakpoint-down(xs)
 		padding-left: 25px
 		padding-right: 25px
@@ -676,8 +739,6 @@ header
 						transition: .2s				
 					&:nth-child(3n)
 						margin-right: 0px
-						+media-breakpoint-down(xs)
-							margin-right: auto
 					.services__img
 						margin-bottom: 30px
 						+media-breakpoint-down(lg)
@@ -791,7 +852,6 @@ header
 						margin-bottom: 20px
 						position: relative
 						transition: .2s
-						border: 1px solid rgba(28, 157, 172, 0.5)
 						+media-breakpoint-down(lg)
 							flex-basis: 338px
 							min-width: 335px
@@ -804,9 +864,14 @@ header
 							flex-basis: 244px
 							min-width: 244px
 						&:hover
-							border: 1px solid rgba(28, 157, 172, 0.2)
 							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 							transition: .2s
+							.specialists__link
+								.specialists__info
+									border-bottom: 1px solid rgba(28, 157, 172, 0.1)
+									border-left: 1px solid rgba(28, 157, 172, 0.1)
+									border-right: 1px solid rgba(28, 157, 172, 0.1)
+									transition: .2s
 						&:first-child
 							+media-breakpoint-down(lg)
 								margin-left: calc(( 100vw - 960px ) / 2 )
@@ -839,6 +904,11 @@ header
 								align-items: flex-start
 								justify-content: center
 								flex-direction: column
+								transition: .2s
+								border-radius: 0 0 20px 20px
+								border-bottom: 1px solid rgba(28, 157, 172, 0.5)
+								border-left: 1px solid rgba(28, 157, 172, 0.5)
+								border-right: 1px solid rgba(28, 157, 172, 0.5)
 								+media-breakpoint-down(lg)
 									position: absolute
 									top: 0
@@ -1436,18 +1506,24 @@ header
 					flex-direction: column
 					flex-basis: 385px
 					max-width: 385px
-					box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 					border-radius: 20px
 					padding: 0px
 					margin-bottom: 20px
+					transition: .2s
+					border: 1px solid rgba(28, 157, 172, 0.5)
 					+media-breakpoint-down(lg)
 						flex-basis: 310px
 						max-width: 310px
 					+media-breakpoint-down(sm)
 						flex-basis: 100%
 						max-width: 100%
+					&:hover
+						transition: .2s
+						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						border: 1px solid rgba(28, 157, 172, 0.1)
 					img
 						width: 100%
+						border-radius: 20px
 					.license__link
 						font-family: 'Roboto', sans-serif
 						font-weight: 300
@@ -1921,10 +1997,10 @@ header
 						justify-content: flex-start
 						flex-direction: column
 						background: #FFFFFF
-						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 						border-radius: 20px
 						flex-basis: 588px
 						position: relative
+						transition: .2s
 						+media-breakpoint-down(lg)
 							flex-basis: 458px
 						+media-breakpoint-down(md)
@@ -1934,6 +2010,15 @@ header
 							margin-bottom: 20px
 						+media-breakpoint-down(xs)
 							flex-basis: 100%
+						&:hover
+							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+							transition: .2s
+							.specialists__link
+								.specialists__info
+									border-bottom: 1px solid rgba(28, 157, 172, 0.1)
+									border-left: 1px solid rgba(28, 157, 172, 0.1)
+									border-right: 1px solid rgba(28, 157, 172, 0.1)
+									transition: .2s
 						.specialists__link
 							width: 100%
 							.specialists__img
@@ -1950,6 +2035,11 @@ header
 								align-items: flex-start
 								justify-content: flex-start
 								flex-direction: column
+								transition: .2s
+								border-radius: 0 0 20px 20px
+								border-bottom: 1px solid rgba(28, 157, 172, 0.5)
+								border-left: 1px solid rgba(28, 157, 172, 0.5)
+								border-right: 1px solid rgba(28, 157, 172, 0.5)
 								+media-breakpoint-down(xs)
 									position: absolute
 									top: 0
@@ -2025,12 +2115,11 @@ header
 						justify-content: flex-start
 						flex-direction: column
 						background: #FFFFFF
-						transition: .2s
-						border: 1px solid rgba(28, 157, 172, 0.5)
 						border-radius: 20px
 						flex-basis: 385px
 						margin-bottom: 20px
 						position: relative
+						transition: .2s
 						+media-breakpoint-down(md)
 							flex-basis: 338px
 						+media-breakpoint-down(sm)
@@ -2038,9 +2127,14 @@ header
 						+media-breakpoint-down(xs)
 							flex-basis: 100%
 						&:hover
-							border: 1px solid rgba(28, 157, 172, 0.2)
 							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 							transition: .2s
+							.specialists__link
+								.specialists__info
+									border-bottom: 1px solid rgba(28, 157, 172, 0.1)
+									border-left: 1px solid rgba(28, 157, 172, 0.1)
+									border-right: 1px solid rgba(28, 157, 172, 0.1)
+									transition: .2s
 						.specialists__link
 							width: 100%
 							.specialists__img
@@ -2056,6 +2150,11 @@ header
 								align-items: flex-start
 								justify-content: center
 								flex-direction: column
+								transition: .2s
+								border-radius: 0 0 20px 20px
+								border-bottom: 1px solid rgba(28, 157, 172, 0.5)
+								border-left: 1px solid rgba(28, 157, 172, 0.5)
+								border-right: 1px solid rgba(28, 157, 172, 0.5)
 								+media-breakpoint-down(xs)
 									position: absolute
 									top: 0
@@ -2537,8 +2636,7 @@ header
 						width: 385px
 						margin-bottom: 20px
 						position: relative
-						border: 1px solid rgba(28, 157, 172, 0.5)
-						transition: .3s
+						transition: .2s
 						+media-breakpoint-down(md)
 							flex-basis: 338px
 							min-width: 335px
@@ -2551,9 +2649,14 @@ header
 							flex-basis: 244px
 							min-width: 244px
 						&:hover
-							border: 1px solid rgba(28, 157, 172, 0.1)
-							transition: .3s
 							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+							transition: .2s
+							.about__link
+								.about__info
+									border-bottom: 1px solid rgba(28, 157, 172, 0.1)
+									border-left: 1px solid rgba(28, 157, 172, 0.1)
+									border-right: 1px solid rgba(28, 157, 172, 0.1)
+									transition: .2s
 						&:last-child
 							+media-breakpoint-down(md)
 								margin-right: 0px
@@ -2577,6 +2680,11 @@ header
 								align-items: flex-start
 								justify-content: center
 								flex-direction: column
+								transition: .2s
+								border-radius: 0 0 20px 20px
+								border-bottom: 1px solid rgba(28, 157, 172, 0.5)
+								border-left: 1px solid rgba(28, 157, 172, 0.5)
+								border-right: 1px solid rgba(28, 157, 172, 0.5)
 								+media-breakpoint-down(md)
 									position: absolute
 									top: 0
@@ -2881,7 +2989,7 @@ header
 									line-height: 19px
 					.pageservice__relatedService
 						background: #FFFFFF
-						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.2)
+						
 						border-radius: 20px
 						padding: 50px
 						margin-bottom: 20px
@@ -2890,6 +2998,12 @@ header
 						align-items: flex-start
 						justify-content: space-between
 						flex-direction: column
+						transition: .2s
+						border: 1px solid rgba(28, 157, 172, 0.5)
+						&:hover
+							transition: .2s
+							border: 1px solid rgba(28, 157, 172, 0.1)
+							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.2)
 						&:last-child
 							margin-bottom: 0
 						.pageservice__relatedServiceTitle
@@ -2935,14 +3049,23 @@ header
 							justify-content: flex-start
 							flex-direction: column
 							background: #FFFFFF
-							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 							border-radius: 20px
 							flex-basis: 588px
 							min-height: 700px
 							margin-bottom: 20px
 							position: relative
+							transition: .2s
 							+media-breakpoint-down(sm)
 								min-height: auto
+							&:hover
+								box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+								transition: .2s
+								.specialists__link
+									.specialists__info
+										border-bottom: 1px solid rgba(28, 157, 172, 0.1)
+										border-left: 1px solid rgba(28, 157, 172, 0.1)
+										border-right: 1px solid rgba(28, 157, 172, 0.1)
+										transition: .2s
 							.specialists__link
 								width: 100%
 								.specialists__img
@@ -2958,6 +3081,11 @@ header
 									justify-content: center
 									flex-direction: column
 									padding-left: 50px
+									transition: .2s
+									border-radius: 0 0 20px 20px
+									border-bottom: 1px solid rgba(28, 157, 172, 0.5)
+									border-left: 1px solid rgba(28, 157, 172, 0.5)
+									border-right: 1px solid rgba(28, 157, 172, 0.5)
 									+media-breakpoint-down(sm)
 										position: absolute
 										top: 0
@@ -3162,7 +3290,7 @@ header
 					width: 208px
 					margin-left: 30px
 					+media-breakpoint-down(lg)
-						margin-left: 0px
+						margin-left: 0px					
 
 ////////// /gallery
 .gallery__breadcrumb
@@ -3452,7 +3580,7 @@ body
 						transform: rotate(-45deg)
 
 .form
-	box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+	border: 1px solid rgba(28, 157, 172, 0.5)
 	padding: 50px 30px 40px 50px
 	flex-basis: 588px
 	border-radius: 20px
