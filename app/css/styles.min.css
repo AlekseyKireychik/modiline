@@ -332,6 +332,15 @@ template {
   display: none !important;
 }
 
+@media screen and (min-width: 1341px) {
+  header.header__home .container-fluid.fixed-top .header .header__nav .header__list-nav .header__item .header__link {
+    color: #fff;
+  }
+  header.header__home .container-fluid.scrolled .header .header__nav .header__list-nav .header__item .header__link {
+    color: #000;
+  }
+}
+
 @media screen and (min-width: 1300px) {
   .container {
     max-width: 1196px;
@@ -406,6 +415,9 @@ template {
   header .container-fluid.container__header .burger-menu .burger-menu__button {
     display: block;
   }
+  header .container-fluid.scrolled .header .header__nav {
+    top: 102px;
+  }
   header.header__home .container-fluid.container__header .header {
     position: relative;
   }
@@ -414,7 +426,6 @@ template {
     width: 100%;
     position: absolute;
     left: 50%;
-    top: 150px;
     -webkit-transform: translate(-50%, 0px);
         -ms-transform: translate(-50%, 0px);
             transform: translate(-50%, 0px);
@@ -812,7 +823,7 @@ header .container-fluid.container__header .header .header__nav {
 
 @media (max-width: 575.98px) {
   header .container-fluid.container__header .header .header__nav {
-    padding: 0 20px !important;
+    padding: 0 !important;
     top: 95px !important;
   }
 }
@@ -1190,12 +1201,11 @@ header .container-fluid.scrolled {
   border-bottom: 2px solid #f2f2f2;
 }
 
-header .container-fluid.scrolled .header__logo {
-  padding: 15px 0px 15px 40px;
-}
-
 header .container-fluid.scrolled .burger-menu {
   top: 30px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 @media (max-width: 575.98px) {
@@ -1205,6 +1215,9 @@ header .container-fluid.scrolled .burger-menu {
 }
 
 header .container-fluid.scrolled .header {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
   padding: 10px 0px;
 }
 
@@ -1214,8 +1227,17 @@ header .container-fluid.scrolled .header {
   }
 }
 
-header .container-fluid.scrolled .header .header-nav {
+header .container-fluid.scrolled .header .header__nav {
   top: 100px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+@media (max-width: 575.98px) {
+  header .container-fluid.scrolled .header .header__nav {
+    top: 58px !important;
+  }
 }
 
 header.header__home .container-fluid.fixed-top {
@@ -1231,7 +1253,6 @@ header.header__home .container-fluid.fixed-top .header .header__logo .white {
 }
 
 header.header__home .container-fluid.fixed-top .header .header__nav .header__list-nav .header__item .header__link {
-  color: #fff;
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
@@ -1549,7 +1570,7 @@ header.header__home .container-fluid.scrolled .burger-menu {
 
 @media (max-width: 575.98px) {
   header.header__home .container-fluid.scrolled .burger-menu {
-    top: 24px;
+    top: 5px;
     right: 24px;
   }
 }
@@ -8300,6 +8321,15 @@ footer .container .footer__bottom .footer__bottomElem .footer__seti .footer__ite
   }
 }
 
+@media screen and (min-width: 1341px) {
+  header.header__home .container-fluid.fixed-top .header .header__nav .header__list-nav .header__item .header__link {
+    color: #fff;
+  }
+  header.header__home .container-fluid.scrolled .header .header__nav .header__list-nav .header__item .header__link {
+    color: #000;
+  }
+}
+
 @media screen and (min-width: 1300px) {
   .container {
     max-width: 1196px;
@@ -8374,6 +8404,9 @@ footer .container .footer__bottom .footer__bottomElem .footer__seti .footer__ite
   header .container-fluid.container__header .burger-menu .burger-menu__button {
     display: block;
   }
+  header .container-fluid.scrolled .header .header__nav {
+    top: 102px;
+  }
   header.header__home .container-fluid.container__header .header {
     position: relative;
   }
@@ -8382,7 +8415,6 @@ footer .container .footer__bottom .footer__bottomElem .footer__seti .footer__ite
     width: 100%;
     position: absolute;
     left: 50%;
-    top: 150px;
     -webkit-transform: translate(-50%, 0px);
         -ms-transform: translate(-50%, 0px);
             transform: translate(-50%, 0px);

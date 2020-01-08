@@ -162,7 +162,7 @@ header
 				.header__nav
 					z-index: 991
 					+media-breakpoint-down(xs)
-						padding: 0 20px!important
+						padding: 0!important
 						top: 95px!important
 					.header__list-nav
 						display: flex
@@ -371,22 +371,26 @@ header
 			left: 0
 			z-index: 1030
 			background-color: #fff
-			.header__logo
+			.header__logo				
 				padding: 50px 0px 50px 40px
 		&.scrolled
 			border-bottom: 2px solid #f2f2f2
-			.header__logo
-				padding: 15px 0px 15px 40px
 			.burger-menu
 				top: 30px
+				transition: .3s
 				+media-breakpoint-down(xs)
 					top: 5px
 			.header
+				transition: .3s
 				padding: 10px 0px
 				+media-breakpoint-down(xs)
 					padding: 10px 20px
-				.header-nav
+				.header__logo
+				.header__nav
 					top: 100px
+					transition: .3s
+					+media-breakpoint-down(xs)
+						top: 58px!important
 
 //home page
 header
@@ -405,7 +409,7 @@ header
 							.header__item
 								.header__phoneMobile
 								.header__link
-									color: #fff
+									// color: #fff
 									transition: .2s
 									&.submenu
 										&::before
@@ -587,7 +591,7 @@ header
 				.burger-menu
 					top: 28px
 					+media-breakpoint-down(xs)
-						top: 24px
+						top: 5px
 						right: 24px
 					.burger-menu__button
 						.burger-menu__lines					

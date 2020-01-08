@@ -1,4 +1,23 @@
-
+@media screen and (min-width: 1341px)
+    header
+        &.header__home
+            .container-fluid
+                &.fixed-top
+                    .header
+                        .header__nav
+                            .header__list-nav
+                                .header__item
+                                    .header__phoneMobile
+                                    .header__link
+                                        color: #fff
+                &.scrolled
+                    .header
+                        .header__nav
+                            .header__list-nav
+                                .header__item
+                                    .header__phoneMobile
+                                    .header__link
+                                        color: #000
 @media screen and (min-width: 1300px)
     .container
         max-width: 1196px
@@ -14,7 +33,7 @@
         max-width: 1196px
 @media screen and (max-width: 1340px)
     header
-        .container-fluid
+        .container-fluid            
             &.container__header
                 .header
                     position: relative
@@ -60,6 +79,11 @@
                 .burger-menu
                     .burger-menu__button
                         display: block
+            &.scrolled
+                .header
+                    .header__nav
+                        top: 102px
+            
         &.header__home
             .container-fluid
                 &.container__header
@@ -70,7 +94,6 @@
                             width: 100%
                             position: absolute
                             left: 50%
-                            top: 150px
                             transform: translate(-50%, 0px)
                             padding: 0 30px
                             &.is-active
