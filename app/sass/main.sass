@@ -377,8 +377,10 @@ header
 			border-bottom: 2px solid #f2f2f2
 			.burger-menu
 				top: 30px
-				transition: .3s
+				+media-breakpoint-down(lg)
+					top: 14px
 				+media-breakpoint-down(xs)
+					transition: .3s
 					top: 5px
 			.header
 				transition: .3s
@@ -386,6 +388,9 @@ header
 				+media-breakpoint-down(xs)
 					padding: 10px 20px
 				.header__logo
+					padding: 0px 0px 0px 40px
+					+media-breakpoint-down(xs)
+						padding: 0px 
 				.header__nav
 					top: 100px
 					transition: .3s
@@ -590,7 +595,10 @@ header
 							transition: .2s
 				.burger-menu
 					top: 28px
+					+media-breakpoint-down(lg)
+						top: 14px
 					+media-breakpoint-down(xs)
+						transition: .3s
 						top: 5px
 						right: 24px
 					.burger-menu__button
@@ -3530,7 +3538,7 @@ body
 	bottom: 0
 	left: 0
 	right: 0
-	z-index: 999
+	z-index: 1031
 	background-color: rgba(0, 0, 0, 0.8)
 	display: none
 	&.is-active
@@ -3541,11 +3549,12 @@ body
 	top: 3%
 	bottom: 3%
 	transform: translate(-50%, 0%)
-	z-index: 1000
+	z-index: 1032
 	background-color: #fff
 	max-width: 588px
 	border-radius: 20px
 	display: none
+	overflow-y: auto
 	&.is-active
 		display: block
 	.form
@@ -3587,7 +3596,9 @@ body
 	border: 1px solid rgba(28, 157, 172, 0.5)
 	padding: 50px 30px 40px 50px
 	flex-basis: 588px
+	height: 790px
 	border-radius: 20px
+	background-color: #fff
 	+media-breakpoint-down(xs)
 		padding: 40px 20px 30px 20px
 	.form__top
