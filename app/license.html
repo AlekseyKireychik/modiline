@@ -198,6 +198,59 @@
           </div>
         </div>
       </section>
+      <div class="overlay"></div>
+		<div class="main__form">
+			<form id="form" class="form">
+				<div class="form__btnCloseWrap">
+					<div class="form__btnClose">
+						<span class="form__line"></span>
+					</div>
+				</div>
+				<div class="form__top">
+				  <h3 class="form__title">Запись на прием</h3>                      
+				  <p class="form__description">Мы перезвоним вам в течение 10 минут для подтверждения записи.</p>				  
+				</div>
+				<div class="form__content">
+				  <div class="mainform__group group-01">							
+					<input type="text" placeholder="Введите Ваше Имя" class="mainform__control" name="name" id="name" placeholder="" >
+					<label for="name"  class="mainform__label">Имя</label>
+				  </div>
+				  <div class="mainform__group group-01">							
+					<input type="tel" placeholder="Введите Ваш контактный телефон" class="mainform__control" name="tel" id="tel" placeholder="">
+					<label for="tel" class="mainform__label">Контактный телефон</label>
+				  </div>
+				  <div class="mainform__group group-01">							
+					<input type="email" placeholder="Введите Ваш e-mail" class="mainform__control" name="email" id="email" placeholder="">
+					<label for="email" class="mainform__label">E-mail</label>
+				  </div>
+				  <div class="mainform__group comment">							
+					<textarea
+						name="comment"
+						id="comment"
+						coll="5"
+						rows="5"
+						class="mainform__control"
+						placeholder="Введите Ваше сообщение"
+						></textarea>
+					<label for="comment" class="mainform__label">Сообщение</label>
+				  </div>
+				  
+				  <input type="hidden" name="culturecode">
+				  <input type="hidden" name="url">
+				  <div class="form__bottom">
+					<div class="mainform__group form-check">  
+					  <input class="form__check-input" placeholder=" " required type="checkbox" id="check1">  
+					  <label class="form__check-label" for="check1">Я даю свое согласие на обработку данных в соответствии с политикой конфиденциальности.</label>  
+					</div> 
+					<div class="form__box">
+					  <button type="submit" id="btn" class="btn submit">
+						Отправить заявку
+					  </button>
+					</div>
+				  </div>					
+				</div>
+			  </form>
+		</div>
     </main>
     <footer>
       <div class="container">

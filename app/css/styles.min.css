@@ -641,6 +641,7 @@ body {
 }
 
 .title {
+  font-family: 'HelveticaNeueCyr', sans-serif;
   font-size: 48px;
   line-height: 47px;
   letter-spacing: 0.02em;
@@ -747,6 +748,7 @@ input.error {
   font-weight: 300;
   font-size: 18px;
   line-height: 18px;
+  letter-spacing: 0.02em;
   padding: 15px 15px 60px 0px;
   margin-bottom: 0;
 }
@@ -763,16 +765,21 @@ input.error {
 
 .container__breadcrumb .nav__breadcrumb .breadcrumb .breadcrumb-item::before {
   color: #000;
+  padding-right: 0;
 }
 
-.container__breadcrumb .nav__breadcrumb .breadcrumb .breadcrumb-item::before .breadcrumb-item.active {
+.container__breadcrumb .nav__breadcrumb .breadcrumb .breadcrumb-item .breadcrumb-item.active {
   color: #000;
 }
 
 @media (max-width: 575.98px) {
-  .container__breadcrumb .nav__breadcrumb .breadcrumb .breadcrumb-item::before .breadcrumb-item.active {
+  .container__breadcrumb .nav__breadcrumb .breadcrumb .breadcrumb-item .breadcrumb-item.active {
     word-wrap: normal;
   }
+}
+
+.container__breadcrumb .nav__breadcrumb .breadcrumb .breadcrumb-item.active {
+  color: #000;
 }
 
 main {
@@ -1722,6 +1729,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .home .home__baner .container .row .caption .caption__title {
+  font-family: 'HelveticaNeueCyr', sans-serif;
   font-weight: 300;
   font-size: 72px;
   line-height: 70px;
@@ -1839,6 +1847,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
+  margin-bottom: 0px;
 }
 
 @media (max-width: 1199.98px) {
@@ -1869,7 +1878,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
           flex-direction: column;
   background: #fff;
   border-radius: 20px;
-  padding: 30px 38px 20px;
+  padding: 32px 38px 24px;
   width: 183px;
   border: 1px solid rgba(28, 157, 172, 0.5);
   -webkit-transition: .2s;
@@ -1921,7 +1930,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .services__home .services__wrapper .row .services__list .services__item .services__img {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 @media (max-width: 1199.98px) {
@@ -1953,6 +1962,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .services__home .services__wrapper .row .services__list .services__item .services__description {
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 18px;
   line-height: 21px;
@@ -2238,7 +2248,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 
 .specialists__home .main__container .row.specialists__profile .specialists__listBottom .specialists__itemBottom .specialists__link .specialists__img {
   width: 100%;
-  height: 351px;
+  height: 350px;
   border-radius: 20px 20px 0px 0px;
 }
 
@@ -2333,7 +2343,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  padding-bottom: 115px;
+  padding-bottom: 105px;
   margin: 0 auto;
 }
 
@@ -2414,7 +2424,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 
 .specialists__home .main__container .row.specialists__profile .specialists__listBottom .specialists__itemBottom:nth-child(1) .specialists__link .specialists__img, .specialists__home .main__container .row.specialists__profile .specialists__listBottom .specialists__itemBottom:nth-child(2) .specialists__link .specialists__img {
   width: 100%;
-  height: 351px;
+  height: 442px;
   border-radius: 20px 20px 0px 0px;
 }
 
@@ -2505,7 +2515,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   font-size: 24px;
   line-height: 28px;
   color: #000000;
-  padding: 0px 50px 135px;
+  padding: 0px 50px 132px;
   margin: 0;
 }
 
@@ -2534,6 +2544,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .specialists__home .main__container .row.specialists__profile .specialists__wrappBtn .specialists__btn {
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
@@ -2571,11 +2582,18 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 
 .advantages__home .container .row .advantages__title {
   font-weight: 300;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 48px;
+  line-height: 47px;
   letter-spacing: 0.02em;
   margin-bottom: 45px;
   color: #1C9DAC;
+}
+
+@media (max-width: 991.98px) {
+  .advantages__home .container .row .advantages__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -2735,8 +2753,9 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .advantages__home .container .row .advantages__list .advantages__item .advantages__caption .advantages__textWrap .advantages__count {
+  font-family: 'HelveticaNeueCyr', sans-serif;
   font-size: 64px;
-  line-height: 64px;
+  line-height: 63px;
   text-align: center;
   margin-bottom: 25px;
 }
@@ -2796,7 +2815,6 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 .order__home .container .order__caption .title {
   color: #fff;
   font-size: 48px;
-  line-height: 48px;
   margin-bottom: 0px;
 }
 
@@ -2810,7 +2828,6 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 @media (max-width: 991.98px) {
   .order__home .container .order__caption .title {
     font-size: 36px;
-    line-height: 36px;
   }
 }
 
@@ -2818,7 +2835,6 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   .order__home .container .order__caption .title {
     max-width: 350px;
     font-size: 24px;
-    line-height: 24px;
   }
 }
 
@@ -2826,7 +2842,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   background: #FFFFFF;
   color: #1C9DAC;
   border-radius: 4px;
-  margin-left: 30px;
+  margin-left: 70px;
   padding: 16px 32px;
   font-size: 14px;
   line-height: 16px;
@@ -2853,8 +2869,19 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   overflow: hidden;
 }
 
+.news__home .container .row .title {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1199.98px) {
+  .news__home .container .row .title {
+    margin-bottom: 30px;
+  }
+}
+
 @media (max-width: 575.98px) {
   .news__home .container .row .title {
+    margin-bottom: 10px;
     padding: 0 25px;
   }
 }
@@ -3007,10 +3034,13 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .news__home .main__container .row .news__list .news__item .news__date {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   font-size: 14px;
   line-height: 16px;
   color: #000;
   margin-bottom: 20px;
+  display: block;
 }
 
 @media (max-width: 767.98px) {
@@ -3022,6 +3052,8 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .news__home .main__container .row .news__list .news__item .news__text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   font-size: 14px;
   line-height: 16px;
   color: #000;
@@ -3234,6 +3266,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 
 .pagenews .container .row .title {
   margin-bottom: 30px;
+  font-weight: 300;
 }
 
 @media (max-width: 575.98px) {
@@ -3289,6 +3322,12 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 
 .pagenews .container .row .pagenews__wrap .pagenews__left {
   width: 48%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+.pagenews .container .row .pagenews__wrap .pagenews__left b {
+  font-weight: 700;
 }
 
 @media (max-width: 1199.98px) {
@@ -3306,7 +3345,11 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .pagenews .container .row .pagenews__wrap .pagenews__left p {
+  font-family: "Open Sans", sans-serif;
   text-indent: 15px;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 575.98px) {
@@ -3413,6 +3456,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   font-size: 24px;
   line-height: 28px;
   color: #000000;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 575.98px) {
@@ -3423,11 +3467,13 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .pagenews .container .row .pagenews__wrap .pagenews__list .pagenews__item .pagenews__link .pagenews__date {
+  display: block;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
   color: #000000;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 575.98px) {
@@ -4541,7 +4587,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 
 .specialists {
   background-color: #fff;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 767.98px) {
@@ -4814,7 +4860,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   font-size: 24px;
   line-height: 28px;
   color: #000000;
-  padding: 0px 50px 135px;
+  padding: 0px 50px 132px;
 }
 
 @media (max-width: 991.98px) {
@@ -4876,6 +4922,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   width: 100%;
+  margin-bottom: 0px;
 }
 
 @media (max-width: 767.98px) {
@@ -4964,7 +5011,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 
 .specialists .container .row.specialists__bottom .specialists__listBottom .specialists__itemBottom .specialists__link .specialists__img {
   width: 100%;
-  height: 351px;
+  height: 350px;
   border-radius: 20px 20px 0px 0px;
 }
 
@@ -5048,7 +5095,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  padding-bottom: 115px;
+  padding-bottom: 105px;
   margin: 0 auto;
 }
 
@@ -5086,12 +5133,11 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .pagespecialist .container .row .title {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 575.98px) {
   .pagespecialist .container .row .title {
-    margin-bottom: 40px;
     padding-left: 25px;
     padding-right: 25px;
   }
@@ -5121,7 +5167,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 .pagespecialist .container .row .pagespecialist__top .pagespecialist__caption {
   position: absolute;
   right: 0;
-  top: 15px;
+  top: 25px;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25);
           box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25);
@@ -5130,7 +5176,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
       -ms-flex-preferred-size: 385px;
           flex-basis: 385px;
   max-width: 385px;
-  padding: 50px 30px 122px;
+  padding: 50px 30px 95px;
 }
 
 @media (max-width: 1199.98px) {
@@ -5334,6 +5380,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .pagespecialist__diploms .container-fluid .row .pagespecialist__list .pagespecialist__item {
+  font-family: 'Roboto', sans-serif;
   -webkit-flex-basis: 330px;
       -ms-flex-preferred-size: 330px;
           flex-basis: 330px;
@@ -5417,6 +5464,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .pagespecialist__info .container .row .pagespecialist__infoList .pagespecialist__infoItem .pagespecialist__list .pagespecialist__item {
+  font-family: 'Roboto', sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7675,7 +7723,7 @@ body {
 
 .overlay {
   position: absolute;
-  top: 0;
+  top: -160px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -8366,6 +8414,7 @@ footer .container .footer__nav .footer__list .footer__elem .footer__sublist .foo
   line-height: 24px;
   text-decoration: none;
   color: #ffffff;
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 767.98px) {
@@ -8492,6 +8541,7 @@ footer .container .footer__bottom .footer__bottomElem .footer__info {
 }
 
 footer .container .footer__bottom .footer__bottomElem .footer__info .footer__description {
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 18px;
   line-height: 21px;
