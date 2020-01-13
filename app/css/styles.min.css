@@ -7738,18 +7738,22 @@ body {
 
 .main__form {
   position: fixed;
-  left: 50%;
+  left: calc((100vw - 588px)/2);
   top: 3%;
   bottom: 3%;
-  -webkit-transform: translate(-50%, 0%);
-      -ms-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
   z-index: 1032;
   background-color: #fff;
   max-width: 588px;
   border-radius: 20px;
   display: none;
   overflow-y: auto;
+}
+
+@media (max-width: 575.98px) {
+  .main__form {
+    left: calc((100vw - 320px)/2);
+    max-width: 320px;
+  }
 }
 
 .main__form.is-active {
@@ -7764,6 +7768,13 @@ body {
   position: absolute;
   right: 50px;
   top: 50px;
+}
+
+@media (max-width: 575.98px) {
+  .main__form .form .form__btnCloseWrap {
+    right: 20px;
+    top: 20px;
+  }
 }
 
 .main__form .form .form__btnCloseWrap .form__btnClose {
