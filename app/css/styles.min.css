@@ -642,6 +642,7 @@ body {
 
 .title {
   font-family: 'HelveticaNeueCyr', sans-serif;
+  font-weight: 300;
   font-size: 48px;
   line-height: 47px;
   letter-spacing: 0.02em;
@@ -3452,7 +3453,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 
 .pagenews .container .row .pagenews__wrap .pagenews__list .pagenews__item .pagenews__link .pagenews__title {
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 24px;
   line-height: 28px;
   color: #000000;
@@ -5442,6 +5443,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .pagespecialist__info .container .row .pagespecialist__infoList .pagespecialist__infoItem .pagespecialist__title {
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 36px;
   line-height: 42px;
@@ -5655,18 +5657,12 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 
 .about .container .row .about__top .about__caption .about__description {
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 23px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
   color: #000000;
   margin-bottom: 50px;
-}
-
-@media (max-width: 767.98px) {
-  .about .container .row .about__top .about__caption .about__description {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
 }
 
 @media (max-width: 575.98px) {
@@ -5700,11 +5696,18 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 
 .about__advantages .container .row .about__title {
   font-weight: 300;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 48px;
+  line-height: 47px;
   letter-spacing: 0.02em;
   margin-bottom: 45px;
   color: #1C9DAC;
+}
+
+@media (max-width: 767.98px) {
+  .about__advantages .container .row .about__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -6143,7 +6146,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  padding-bottom: 115px;
+  padding-bottom: 105px;
   margin: 0 auto;
 }
 
@@ -6800,7 +6803,6 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   -webkit-flex-basis: 588px;
       -ms-flex-preferred-size: 588px;
           flex-basis: 588px;
-  min-height: 700px;
   margin-bottom: 20px;
   position: relative;
   -webkit-transition: .2s;
@@ -6904,8 +6906,8 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 .pageservice__bottom .container .row.pageservice__content .pageservice__right .pageservice__specialist .specialists__itemTop .specialists__link .specialists__info .specialists__date {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 36px;
+  line-height: 42px;
   color: #000000;
   padding-top: 30px;
   padding-bottom: 25px;
@@ -6913,6 +6915,8 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 
 @media (max-width: 767.98px) {
   .pageservice__bottom .container .row.pageservice__content .pageservice__right .pageservice__specialist .specialists__itemTop .specialists__link .specialists__info .specialists__date {
+    font-size: 24px;
+    line-height: 28px;
     color: #fff;
   }
 }
@@ -6929,14 +6933,16 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 .pageservice__bottom .container .row.pageservice__content .pageservice__right .pageservice__specialist .specialists__itemTop .specialists__link .specialists__info .specialists__description {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 24px;
+  line-height: 28px;
   color: #000000;
-  padding-bottom: 30px;
+  padding-bottom: 132px;
 }
 
 @media (max-width: 767.98px) {
   .pageservice__bottom .container .row.pageservice__content .pageservice__right .pageservice__specialist .specialists__itemTop .specialists__link .specialists__info .specialists__description {
+    font-size: 18px;
+    line-height: 21px;
     padding-bottom: 55px;
     color: #fff;
   }
@@ -7352,10 +7358,12 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 767.98px) {
   .gallery .container .row .gallery__list {
+    margin-bottom: 10px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -7592,7 +7600,15 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   }
 }
 
+.contacts .container .row.contacts__content .contacts__caption .contacts__list {
+  margin-bottom: 0px;
+}
+
 .contacts .container .row.contacts__content .contacts__caption .contacts__list .contacts__item {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
   padding-bottom: 25px;
 }
 
@@ -7632,7 +7648,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-top: 25px;
+  padding-top: 35px;
 }
 
 @media (max-width: 575.98px) {
@@ -7651,8 +7667,8 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .contacts .container .row.contacts__content .contacts__caption .contacts__list .contacts__item .contacts__setiList .contacts__setiItem .contacts__setiLink svg {
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
 }
 
 @media (max-width: 767.98px) {
@@ -7663,8 +7679,8 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .contacts .container .row.contacts__content .contacts__caption .contacts__list .contacts__item .contacts__setiList .contacts__setiItem .contacts__setiLink.vk svg {
-  width: 84px;
-  height: 60px;
+  width: 68px;
+  height: 45px;
 }
 
 @media (max-width: 767.98px) {
@@ -7675,8 +7691,8 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .contacts .container .row.contacts__content .contacts__caption .contacts__list .contacts__item .contacts__setiList .contacts__setiItem .contacts__setiLink.youtube svg {
-  width: 88px;
-  height: 60px;
+  width: 62px;
+  height: 45px;
 }
 
 @media (max-width: 767.98px) {
@@ -7684,6 +7700,10 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
     width: 28px;
     height: 20px;
   }
+}
+
+.contacts .container .row.contacts__content .contacts__caption .contacts__list .contacts__item:last-child {
+  padding-bottom: 0px;
 }
 
 .contacts .container .row.contacts__content .contacts__containerMap {
@@ -7698,8 +7718,8 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
           box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25);
   border-radius: 20px;
   overflow: hidden;
-  max-height: 484px;
-  min-height: 484px;
+  max-height: 445px;
+  min-height: 445px;
 }
 
 @media (max-width: 991.98px) {
@@ -8046,6 +8066,7 @@ body {
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
+  letter-spacing: 0.5px;
 }
 
 .form {
@@ -8258,13 +8279,13 @@ body {
   opacity: 0;
   position: absolute;
   left: 0;
-  top: 18px;
+  top: 0px;
 }
 
 .form .form__content .form__bottom .form-check .form__check-input + label::before {
   position: absolute;
-  left: -35px;
-  bottom: 7px;
+  left: -42px;
+  top: 0px;
   height: 18px;
   width: 18px;
   content: "";
@@ -8298,15 +8319,15 @@ body {
   display: none;
   position: absolute;
   content: url(../img/_src/check.svg);
-  left: -33px;
-  bottom: 8px;
+  left: -40px;
+  top: 2px;
   cursor: pointer;
 }
 
 @media (max-width: 575.98px) {
   .form .form__content .form__bottom .form-check .form__check-label::after {
     bottom: auto;
-    top: 5px;
+    top: 0px;
   }
 }
 

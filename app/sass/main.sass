@@ -1,5 +1,4 @@
 @import vars
-@import fonts
 @import libs
 @import media
 
@@ -67,6 +66,7 @@ body
 		transition: .2s
 .title
 	font-family: 'HelveticaNeueCyr', sans-serif
+	font-weight: 300
 	font-size: 48px
 	line-height: 47px
 	letter-spacing: 0.02em
@@ -1491,7 +1491,7 @@ header
 								padding: 25px
 							.pagenews__title
 								font-family: 'Roboto', sans-serif
-								font-weight: 300
+								font-weight: 400
 								font-size: 24px
 								line-height: 28px
 								color: #000000
@@ -2425,6 +2425,7 @@ header
 				.pagespecialist__infoItem
 					margin-bottom: 60px
 					.pagespecialist__title
+						font-family: 'Roboto', sans-serif
 						font-weight: 500
 						font-size: 36px
 						line-height: 42px
@@ -2534,14 +2535,12 @@ header
 						padding: 20px
 					.about__description
 						font-family: 'Roboto', sans-serif
-						font-weight: 300
-						font-size: 20px
-						line-height: 23px
+						font-weight: 400
+						font-size: 18px
+						line-height: 21px
+						text-align: center
 						color: #000000
 						margin-bottom: 50px
-						+media-breakpoint-down(sm)
-							font-size: 18px
-							margin-bottom: 20px
 						+media-breakpoint-down(xs)
 							font-size: 12px
 							line-height: 14px
@@ -2560,11 +2559,14 @@ header
 		.row
 			.about__title
 				font-weight: 300
-				font-size: 36px
-				line-height: 36px
+				font-size: 48px
+				line-height: 47px
 				letter-spacing: 0.02em
 				margin-bottom: 45px
 				color: $accent
+				+media-breakpoint-down(sm)
+					font-size: 36px
+					line-height: 36px
 				+media-breakpoint-down(xs)
 					font-size: 24px
 					line-height: 24px
@@ -2764,7 +2766,7 @@ header
 									font-size: 18px
 									line-height: 21px
 									color: #000000
-									padding-bottom: 115px
+									padding-bottom: 105px
 									margin: 0 auto
 									+media-breakpoint-down(md)
 										padding-bottom: 55px
@@ -3099,7 +3101,6 @@ header
 							background: #FFFFFF
 							border-radius: 20px
 							flex-basis: 588px
-							min-height: 700px
 							margin-bottom: 20px
 							position: relative
 							transition: .2s
@@ -3114,6 +3115,7 @@ header
 										border-left: 1px solid rgba(28, 157, 172, 0.1)
 										border-right: 1px solid rgba(28, 157, 172, 0.1)
 										transition: .2s
+										
 							.specialists__link
 								width: 100%
 								.specialists__img
@@ -3149,12 +3151,14 @@ header
 									.specialists__date
 										font-family: 'Roboto', sans-serif
 										font-weight: 300
-										font-size: 24px
-										line-height: 28px
+										font-size: 36px
+										line-height: 42px
 										color: #000000
 										padding-top: 30px
 										padding-bottom: 25px
 										+media-breakpoint-down(sm)
+											font-size: 24px
+											line-height: 28px
 											color: #fff
 										+media-breakpoint-down(xs)
 											font-size: 18px
@@ -3164,11 +3168,13 @@ header
 									.specialists__description
 										font-family: 'Roboto', sans-serif
 										font-weight: 300
-										font-size: 18px
-										line-height: 21px
+										font-size: 24px
+										line-height: 28px
 										color: #000000
-										padding-bottom: 30px
+										padding-bottom: 132px
 										+media-breakpoint-down(sm)
+											font-size: 18px
+											line-height: 21px
 											padding-bottom: 55px
 											color: #fff
 										+media-breakpoint-down(xs)
@@ -3380,7 +3386,9 @@ header
 				align-items: flex-start
 				justify-content: flex-start
 				flex-wrap: wrap
+				margin-bottom: 30px
 				+media-breakpoint-down(sm)
+					margin-bottom: 10px
 					justify-content: center
 				.gallery__item
 					flex-basis: 385px
@@ -3500,8 +3508,13 @@ header
 					+media-breakpoint-down(xs)
 						padding: 0px
 					.contacts__list
+						margin-bottom: 0px
 						.contacts__item
-							padding-bottom: 25px
+							font-family: 'Roboto', sans-serif
+							font-weight: 300
+							font-size: 24px
+							line-height: 28px
+							padding-bottom: 25px							
 							+media-breakpoint-down(xs)
 								padding-bottom: 15px
 								font-size: 16px
@@ -3517,7 +3530,7 @@ header
 								display: flex
 								align-items: flex-start
 								justify-content: flex-start
-								padding-top: 25px
+								padding-top: 35px
 								+media-breakpoint-down(xs)
 									padding-top: 5px
 								.contacts__setiItem
@@ -3529,26 +3542,27 @@ header
 									color: #000000
 									.contacts__setiLink
 										svg
-											width: 60px
-											height: 60px
+											width: 45px
+											height: 45px
 											+media-breakpoint-down(sm)
 												width: 20px
 												height: 20px
 										&.vk
 											svg
-												width: 84px
-												height: 60px
+												width: 68px
+												height: 45px
 												+media-breakpoint-down(sm)
 													width: 30px
 													height: 20px
 										&.youtube
 											svg
-												width: 88px
-												height: 60px
+												width: 62px
+												height: 45px
 												+media-breakpoint-down(sm)
 													width: 28px
 													height: 20px
-
+							&:last-child
+								padding-bottom: 0px
 				.contacts__containerMap
 					background-image: url(../img/_src/map.png)
 					background-position: center
@@ -3558,8 +3572,8 @@ header
 					box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 					border-radius: 20px
 					overflow: hidden
-					max-height: 484px
-					min-height: 484px
+					max-height: 445px
+					min-height: 445px
 					+media-breakpoint-down(md)
 						flex-basis: 100%
 					+media-breakpoint-down(sm)
@@ -3766,6 +3780,7 @@ body
 						font-weight: 600
 						font-size: 14px
 						line-height: 16px
+						letter-spacing: 0.5px
 .form
 	border: 1px solid rgba(28, 157, 172, 0.5)
 	padding: 50px 30px 40px 50px
@@ -3860,11 +3875,11 @@ body
 					opacity: 0
 					position: absolute
 					left: 0
-					top: 18px
+					top: 0px
 				.form__check-input + label::before
 					position: absolute
-					left: -35px
-					bottom: 7px
+					left: -42px
+					top: 0px
 					height: 18px
 					width: 18px
 					content: ""
@@ -3890,12 +3905,12 @@ body
 						display: none
 						position: absolute
 						content: url(../img/_src/check.svg)
-						left: -33px
-						bottom: 8px
+						left: -40px
+						top: 2px
 						cursor: pointer
 						+media-breakpoint-down(xs)
 							bottom: auto
-							top: 5px
+							top: 0px
 				.form__check-input:checked + label::after
 					display: block
 
