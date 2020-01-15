@@ -258,7 +258,7 @@ header
 						text-align: center
 						color: $text
 						margin-right: 30px
-						padding-left: 25px
+						padding-left: 10px
 						position: relative
 						+media-breakpoint-down(sm)
 							display: none
@@ -414,8 +414,12 @@ header
 					.header__logo
 						.black
 							display: none
+							+media-breakpoint-down(lg)
+								display: block
 						.white
 							display: block
+							+media-breakpoint-down(lg)
+								display: none
 					.header__nav
 						.header__list-nav
 							.header__item
@@ -468,7 +472,7 @@ header
 							text-align: center
 							color: #fff
 							margin-right: 30px
-							padding-left: 25px
+							padding-left: 10px
 							position: relative
 							transition: .2s
 							+media-breakpoint-down(sm)

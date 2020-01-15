@@ -334,7 +334,7 @@ template {
 
 @media screen and (min-width: 1400px) {
   header .container-fluid.fixed-top .header .header__nav {
-    margin-left: 30px;
+    margin-left: 45px;
   }
 }
 
@@ -349,7 +349,7 @@ template {
 
 @media screen and (min-width: 1320px) and (max-width: 1359px) {
   header .container-fluid.fixed-top .header .header__nav {
-    margin-left: 5px;
+    margin-left: 15px;
   }
 }
 
@@ -1007,7 +1007,7 @@ header .container-fluid.container__header .header .header__function .header__pho
   text-align: center;
   color: #000000;
   margin-right: 30px;
-  padding-left: 25px;
+  padding-left: 10px;
   position: relative;
 }
 
@@ -1286,8 +1286,20 @@ header.header__home .container-fluid.fixed-top .header .header__logo .black {
   display: none;
 }
 
+@media (max-width: 1199.98px) {
+  header.header__home .container-fluid.fixed-top .header .header__logo .black {
+    display: block;
+  }
+}
+
 header.header__home .container-fluid.fixed-top .header .header__logo .white {
   display: block;
+}
+
+@media (max-width: 1199.98px) {
+  header.header__home .container-fluid.fixed-top .header .header__logo .white {
+    display: none;
+  }
 }
 
 header.header__home .container-fluid.fixed-top .header .header__nav .header__list-nav .header__item .header__link {
@@ -1375,7 +1387,7 @@ header.header__home .container-fluid.fixed-top .header .header__function .header
   text-align: center;
   color: #fff;
   margin-right: 30px;
-  padding-left: 25px;
+  padding-left: 10px;
   position: relative;
   -webkit-transition: .2s;
   -o-transition: .2s;
@@ -8675,7 +8687,7 @@ footer .container .footer__bottom .footer__bottomElem .footer__seti .footer__ite
 
 @media screen and (min-width: 1400px) {
   header .container-fluid.fixed-top .header .header__nav {
-    margin-left: 30px;
+    margin-left: 45px;
   }
 }
 
@@ -8690,7 +8702,7 @@ footer .container .footer__bottom .footer__bottomElem .footer__seti .footer__ite
 
 @media screen and (min-width: 1320px) and (max-width: 1359px) {
   header .container-fluid.fixed-top .header .header__nav {
-    margin-left: 5px;
+    margin-left: 15px;
   }
 }
 
