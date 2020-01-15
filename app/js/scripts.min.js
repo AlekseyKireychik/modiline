@@ -54,14 +54,17 @@ $(document).ready(function() {
   $(".register").on("click", function(event) {
     event.preventDefault();
     $(".main__form").addClass("is-active");
+    $("body").addClass("is-active");
     $(".overlay").addClass("is-active");
     $(".overlay").on("click", function(event) {
       $(this).removeClass("is-active");
       $(".main__form").removeClass("is-active");
+      $("body").removeClass("is-active");
     });
     $(".form__btnClose").on("click", function(event) {
       $(".overlay").removeClass("is-active");
       $(".main__form").removeClass("is-active");
+      $("body").removeClass("is-active");
     });
   });
 
@@ -127,6 +130,7 @@ $(document).ready(function() {
     $(".header__nav").toggleClass("is-active");
     $(".burger-menu").toggleClass("is-active");
     $(".header__subList").removeClass("is-active");
+    $("body").toggleClass("is-active");
   });
 
   //sub-menu
