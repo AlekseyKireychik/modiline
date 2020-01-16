@@ -499,6 +499,9 @@ template {
 }
 
 @media screen and (max-width: 320px) {
+  header.header__home .container-fluid.fixed-top .header .header__nav .header__list-nav .header__item {
+    margin-bottom: 20px;
+  }
   .services__home {
     margin-top: -80px;
   }
@@ -905,6 +908,12 @@ header .container-fluid.container__header .header .header__nav .header__list-nav
 @media (max-width: 767.98px) {
   header .container-fluid.container__header .header .header__nav .header__list-nav .header__item .header__phoneMobile {
     display: block;
+  }
+}
+
+@media (max-width: 767.98px) {
+  header .container-fluid.container__header .header .header__nav .header__list-nav .header__item:first-child .header__phoneMobile {
+    padding-bottom: 10px;
   }
 }
 
@@ -8992,6 +9001,9 @@ footer .container .footer__bottom .footer__bottomElem .footer__seti .footer__ite
 }
 
 @media screen and (max-width: 320px) {
+  header.header__home .container-fluid.fixed-top .header .header__nav .header__list-nav .header__item {
+    margin-bottom: 20px;
+  }
   .services__home {
     margin-top: -80px;
   }
