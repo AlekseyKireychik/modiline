@@ -162,10 +162,12 @@ header
 				padding: 0px
 				+media-breakpoint-down(xs)
 					padding: 30px 20px
-				.header__logo
+				.header__logo					
 					+media-breakpoint-down(xs)
 						padding: 0
 					img
+						max-width: 176px
+						width: 100%
 						+media-breakpoint-down(xs)
 							max-width: 130px
 				.header__nav
@@ -186,6 +188,10 @@ header
 						.header__item
 							margin: 0
 							position: relative
+							+media-breakpoint-down(xs)
+								width: 100%
+								max-width: 270px
+								text-align: center
 							.header__phoneMobile
 								display: none
 								font-size: 24px
@@ -195,7 +201,7 @@ header
 								margin-left: 60px
 								&::before
 									position: absolute
-									content: url(../img/_src/phone-icon.png)
+									content: url(../img/_src/phone-icon.svg)
 									left: -60px
 									top: -8px
 
@@ -231,25 +237,47 @@ header
 							.header__subList
 								display: none
 								position: absolute
-								padding: 50px 20px 10px
+								padding: 20px
 								background-color: #fff
+								box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+								border-radius: 15px
 								top: 35px
 								left: 0
 								min-width: 240px
+								+media-breakpoint-down(xs)
+									box-shadow: none
+									border-radius: 0px
 								&.is-active
 									display: block
 								.header__item
-									margin-bottom: 10px
+									margin-bottom: 25px
+									+media-breakpoint-down(xs)
+										margin-bottom: 20px
+									&:last-child
+										margin-bottom: 0px
 									.header__subLink
 										white-space: nowrap
 										font-weight: 300
-										font-size: 18px
-										line-height: 18px
-										text-align: center
+										font-size: 16px
+										line-height: 16px
+										text-align: left
 										color: $text
+										width: 100%
+										display: block
+										position: relative
+										transition: .3s
+										&::before
+											position: absolute
+											content: url(../img/_src/arrMenuRight.png)
+											right: 0
+											top: 2px 
+											transition: .3s
 										&:hover
 											color: $accent
 											transition: .3s
+											&::before
+												content: url(../img/_src/arrMenuRightActive.png)
+												transition: .3s
 				.header__function
 					display: flex
 					justify-content: space-between
@@ -273,12 +301,14 @@ header
 						+media-breakpoint-down(xs)
 							display: none
 					.header__requestMobile
+						
 						display: none
 						+media-breakpoint-down(xs)
 							display: block
 							padding: 5px 10px 5px 10px
 							font-size: 12px
 							line-height: 16px
+						
 
 			.burger-menu
 				position: absolute
@@ -390,7 +420,7 @@ header
 			.header__logo				
 				padding: 50px 0px 50px 40px
 		&.scrolled
-			border-bottom: 2px solid #f2f2f2
+			box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 			.burger-menu
 				top: 30px
 				+media-breakpoint-down(lg)
@@ -411,7 +441,7 @@ header
 					top: 100px
 					transition: .3s
 					+media-breakpoint-down(xs)
-						top: 58px!important
+						top: 54px!important
 
 //home page
 header
@@ -421,6 +451,16 @@ header
 				background-color: transparent
 				+media-breakpoint-down(lg)
 					box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.15)
+				&.is-active
+					background-color: rgb(255, 255, 255)
+					.burger-menu
+						.burger-menu__button
+							.burger-menu__lines						
+								background-color: $accent
+								&::after
+									background-color: $accent
+								&::before
+									background-color: $accent
 				.header
 					.header__logo
 						.black
@@ -451,25 +491,48 @@ header
 								.header__subList
 									display: none
 									position: absolute
-									padding: 50px 20px 10px
+									padding: 20px
+									margin-bottom: 0px
 									background-color: #fff
+									box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+									border-radius: 15px
 									top: 35px
 									left: 0
 									min-width: 240px
+									+media-breakpoint-down(xs)
+										box-shadow: none
+										border-radius: 0px
 									&.is-active
 										display: block
 									.header__item
-										margin-bottom: 10px
+										margin-bottom: 25px
+										+media-breakpoint-down(xs)
+											margin-bottom: 20px
+										&:last-child
+											margin-bottom: 0px
 										.header__subLink
 											white-space: nowrap
 											font-weight: 300
-											font-size: 18px
-											line-height: 18px
-											text-align: center
+											font-size: 16px
+											line-height: 16px
+											text-align: left
 											color: $text
+											width: 100%
+											display: block
+											position: relative
+											transition: .3s
+											&::before
+												position: absolute
+												content: url(../img/_src/arrMenuRight.png)
+												right: 0
+												top: 2px 
+												transition: .3s
 											&:hover
 												color: $accent
 												transition: .3s
+												&::before
+													content: url(../img/_src/arrMenuRightActive.png)
+													transition: .3s
 					.header__function
 						display: flex
 						justify-content: space-between
@@ -493,6 +556,8 @@ header
 								display: none
 						.header__requestMobile
 							+media-breakpoint-down(lg)
+								&.is-active
+									display: block
 								display: none
 
 				.burger-menu
@@ -634,7 +699,7 @@ header
 								background-color: $accent
 							&::before
 								background-color: $accent
-
+		
 .home
 	+media-breakpoint-down(lg)
 		margin-top: 0
@@ -1198,7 +1263,7 @@ header
 								text-align: center
 								letter-spacing: 0.02em
 								max-width: 236px
-								font-weight: 400
+								font-weight: 300
 								+media-breakpoint-down(xs)
 									font-size: 18px
 									line-height: 18px
@@ -2487,10 +2552,14 @@ header
 		.row
 			.pagespecialist__imgInfo
 				width: 100%
+				+media-breakpoint-down(xs)
+					display: none
 	.container
 		.row
 			.pagespecialist__infoList
 				margin-top: 60px
+				+media-breakpoint-down(xs)
+					margin-top: 0px
 				.pagespecialist__infoItem
 					margin-bottom: 60px
 					.pagespecialist__title
@@ -2611,7 +2680,7 @@ header
 						color: #000000
 						margin-bottom: 50px
 						+media-breakpoint-down(xs)
-							font-size: 12px
+							font-size: 14px
 							line-height: 14px
 			.about__wrapImgPhone
 				display: none
@@ -2707,6 +2776,7 @@ header
 							.about__text
 								font-size: 24px
 								line-height: 24px
+								font-weight: 300
 								text-align: center
 								letter-spacing: 0.02em
 								max-width: 236px
@@ -2776,6 +2846,7 @@ header
 									border-left: 1px solid rgba(28, 157, 172, 0.1)
 									border-right: 1px solid rgba(28, 157, 172, 0.1)
 									transition: .2s
+									
 						&:last-child
 							+media-breakpoint-down(md)
 								margin-right: 0px
@@ -2813,6 +2884,8 @@ header
 									background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%)
 									border-radius: 20px
 									justify-content: flex-end
+								+media-breakpoint-down(xs)
+									border: none
 								.about__date
 									font-family: 'Roboto', sans-serif
 									font-weight: 300
@@ -3582,6 +3655,8 @@ header
 						padding: 0px
 					.contacts__list
 						margin-bottom: 0px
+						+media-breakpoint-down(xs)
+							margin-bottom: 40px
 						.contacts__item
 							font-family: 'Roboto', sans-serif
 							font-weight: 300
@@ -3607,33 +3682,36 @@ header
 								+media-breakpoint-down(xs)
 									padding-top: 5px
 								.contacts__setiItem
-									margin-right: 20px
+									margin-right: 25px
 									font-family: 'Roboto', sans-serif
 									font-weight: 300
 									font-size: 24px
 									line-height: 28px
 									color: #000000
-									.contacts__setiLink
-										svg
-											width: 45px
-											height: 45px
-											+media-breakpoint-down(sm)
-												width: 20px
-												height: 20px
-										&.vk
-											svg
-												width: 68px
-												height: 45px
+									&:nth-child(1)	
+										.contacts__setiLink
+											img									
+												max-width: 68px
 												+media-breakpoint-down(sm)
-													width: 30px
-													height: 20px
-										&.youtube
-											svg
-												width: 62px
-												height: 45px
+													max-width: 30px
+									&:nth-child(2)
+										.contacts__setiLink
+											img									
+												max-width: 62px
 												+media-breakpoint-down(sm)
-													width: 28px
-													height: 20px
+													max-width: 28px
+									&:nth-child(3)
+										.contacts__setiLink
+											img									
+												max-width: 23.5px
+												+media-breakpoint-down(sm)
+													max-width: 8.5px
+									&:nth-child(4)
+										.contacts__setiLink
+											img								
+												max-width: 44.5px
+												+media-breakpoint-down(sm)
+													max-width: 19.5px
 							&:last-child
 								padding-bottom: 0px
 				.contacts__containerMap
@@ -3670,7 +3748,8 @@ body
 	position: fixed
 	left: calc((100vw - 588px)/2)
 	top: 3%
-	bottom: 3%
+	bottom: auto
+	margin-bottom: 10px
 	z-index: 1032
 	background-color: #fff
 	max-width: 588px
@@ -3793,7 +3872,7 @@ body
 				align-items: flex-start
 				flex-direction: column
 				+media-breakpoint-down(lg)
-					padding-top: 0px
+					padding-top: 0px				
 				.form-check
 					position: relative
 					padding-left: 44px
@@ -3862,6 +3941,7 @@ body
 	border-radius: 20px
 	background-color: #fff
 	+media-breakpoint-down(xs)
+		height: 710px
 		padding: 40px 20px 30px 20px
 	.form__top
 		.form__title
@@ -3934,6 +4014,8 @@ body
 			flex-direction: column
 			+media-breakpoint-down(lg)
 				padding-top: 0px
+			+media-breakpoint-down(xs)
+				padding-top: 20px
 			.form-check
 				position: relative
 				padding-left: 44px
@@ -3963,7 +4045,7 @@ body
 					border-radius: 2px
 					+media-breakpoint-down(xs)
 						bottom: auto
-						top: 5px
+						top: 0px
 				.form__check-label
 					font-family: 'Roboto', sans-serif
 					font-weight: 300
@@ -4078,6 +4160,7 @@ footer
 						padding-bottom: 20px
 						margin-bottom: 20px
 				.footer__logo
+					max-width: 210px
 					.footer__link
 						margin: 0 auto
 						.footer__logo
@@ -4085,6 +4168,7 @@ footer
 								display: none
 						.footer__logoMobile
 							display: none
+							max-width: 130px
 							+media-breakpoint-down(sm)
 								display: block
 				.footer__info
@@ -4135,14 +4219,38 @@ footer
 						justify-content: flex-start
 					.footer__item
 						padding-left: 40px
+						+media-breakpoint-down(sm)
+							margin-right: 20px
 						+media-breakpoint-down(xs)
 							padding-left: 0px
 						&:first-child
 							+media-breakpoint-down(lg)
 								padding-left: 0px
-						.footer__link
-							.footer__icon
-								+media-breakpoint-down(xs)
-									width: 55%
+						&:nth-child(1)	
+							.footer__link
+								.footer__icon								
+									max-width: 68px
+									+media-breakpoint-down(sm)
+										max-width: 30px
+						&:nth-child(2)
+							.footer__link
+								.footer__icon	
+									max-width: 60px		
+									+media-breakpoint-down(sm)
+										max-width: 28px
+						&:nth-child(3)
+							.footer__link
+								.footer__icon								
+									max-width: 23.5px
+									+media-breakpoint-down(sm)
+										max-width: 9.5px
+						&:nth-child(4)
+							.footer__link
+								.footer__icon								
+									max-width: 44.5px
+									+media-breakpoint-down(sm)
+										max-width: 20.5px
+								
+
 
 @import media

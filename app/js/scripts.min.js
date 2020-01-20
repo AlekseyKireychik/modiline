@@ -33,23 +33,6 @@ $(document).ready(function() {
     }
   });
 
-  //news
-  $(".news__btn").on("click", function(event) {
-    event.preventDefault();
-    if ($(this).hasClass("is-active")) {
-      $(".news__btn").removeClass("is-active");
-      $(this).removeClass("is-active");
-    } else {
-      $(".news__btn").removeClass("is-active");
-      $(this).addClass("is-active");
-    }
-  });
-
-  $(".news__selectValue").on("click", function(event) {
-    event.preventDefault();
-    $(".news__nav").toggleClass("is-active");
-  });
-
   //form
   $(".register").on("click", function(event) {
     event.preventDefault();
@@ -120,7 +103,7 @@ $(document).ready(function() {
   $(window).on("scroll", function() {
     $(".container__header").toggleClass(
       "scrolled",
-      $(this).scrollTop() > $(".container__header").height()/2
+      $(this).scrollTop() > $(".container__header").height()/3
     );
   });
   //nav-menu
@@ -131,6 +114,9 @@ $(document).ready(function() {
     $(".burger-menu").toggleClass("is-active");
     $(".header__subList").removeClass("is-active");
     $("body").toggleClass("is-active");
+    $(".header__home").toggleClass("is-active");
+    $(".header__requestMobile").toggleClass("is-active");
+    
   });
 
   //sub-menu
