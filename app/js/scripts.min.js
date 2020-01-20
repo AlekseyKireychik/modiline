@@ -73,9 +73,14 @@ $(document).ready(function() {
     }
   }
   //gallery
-
+  $(".gallery__item").on("click", function() {
+    event.preventDefault();
+    $(".gallery__item").removeClass("is-active");
+    $(this).toggleClass("is-active");
+   });
   $(".gallery__link").on("click", function() {
     event.preventDefault();
+    
     $(this)
       .closest(".gallery__item")
       .children(".gallery__imgBefore")

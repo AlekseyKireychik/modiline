@@ -89,11 +89,11 @@ input.error
 
 .overlay
 	position: absolute
-	top: 0
-	right: 0
+	top: -160px
 	bottom: 0
 	left: 0
-	z-index: 999
+	right: 0
+	z-index: 1031
 	background-color: rgba(0, 0, 0, 0.8)
 	display: none
 	&.is-active
@@ -451,8 +451,11 @@ header
 
 //home page
 header
-	&.header__home
+	&.header__home		
 		.container-fluid
+			&.header__home
+				+media-breakpoint-down(lg)
+					position: absolute
 			&.fixed-top
 				background-color: transparent
 				+media-breakpoint-down(lg)
@@ -671,6 +674,8 @@ header
 									font-weight: normal
 			&.scrolled
 				background-color: #fff
+				+media-breakpoint-down(lg)
+					position: fixed
 				.header
 					.header__logo
 						.black
@@ -960,7 +965,7 @@ header
 						flex-wrap: nowrap
 						overflow-y: auto
 						padding: 25px 0 30px
-						margin-bottom: -10px
+						margin-bottom: -20px
 					.specialists__itemBottom
 						display: flex
 						align-items: flex-start
@@ -1358,8 +1363,8 @@ header
 					justify-content: flex-start
 					flex-wrap: nowrap
 					overflow-y: auto
-					padding: 20px 25px 30px 15px
-					margin-bottom: -10px
+					padding: 20px 25px 40px 15px
+					margin-bottom: -20px
 				.news__itemLast
 					display: none
 					+media-breakpoint-down(sm)
@@ -1598,7 +1603,8 @@ header
 						padding: 20px
 						overflow-y: auto
 					+media-breakpoint-down(xs)
-						padding: 20px 25px 0
+						padding: 20px 25px 40px
+						margin-bottom: -40px
 					.pagenews__item
 						background: #FFFFFF
 						border: 1px solid rgba(28, 157, 172, 0.5)
@@ -2531,6 +2537,9 @@ header
 	.container-fluid
 		max-width: 1400px
 		.row
+			+media-breakpoint-down(lg)
+				padding-bottom: 30px
+				overflow: hidden
 			.pagespecialist__list
 				padding: 0 30px 60px
 				display: flex
@@ -2538,8 +2547,8 @@ header
 				justify-content: space-between
 				flex-wrap: wrap
 				+media-breakpoint-down(lg)
-					padding: 0 0 0 25px
-					margin-bottom: 0
+					padding: 0 0 30px 25px
+					margin-bottom: -60px
 					flex-wrap: nowrap
 					overflow-x: auto
 					overflow-y: hidden
@@ -2811,6 +2820,8 @@ header
 	.container
 		.row
 			&.about__bottom
+				overflow: hidden
+				padding-bottom: 50px
 				.about__title
 					font-weight: 300
 					font-size: 36px
@@ -2834,7 +2845,8 @@ header
 					+media-breakpoint-down(md)
 						justify-content: flex-start
 						flex-wrap: nowrap
-						margin-bottom: 40px
+						margin-bottom: -70px
+						padding-bottom: 60px
 						overflow-y: auto
 					.about__itemBottom
 						display: flex
@@ -3596,6 +3608,54 @@ header
 							display: block
 					.gallery__caption
 						display: none
+					&.is-active						
+						.gallery__caption
+							+media-breakpoint-down(md)
+								display: flex
+								position: absolute
+								z-index: 999
+								top: 0
+								bottom: 0
+								left: 0
+								text-align: center
+								background-color: rgba(0, 0, 0, 0.8)
+								border-radius: 20px
+								align-items: center
+								justify-content: center
+								flex-direction: column
+								.gallery__descriptiongAfter, .gallery__descriptionBefore
+									font-family: 'Roboto', sans-serif
+									font-weight: 400
+									font-size: 24px
+									line-height: 28px
+									color: #fff
+									text-align: center
+									margin-bottom: 0px
+									+media-breakpoint-down(md)
+										padding: 140px 44px 120px
+									+media-breakpoint-down(xs)
+										padding: 120px 20px 110px
+										font-size: 20px
+										line-height: 26px
+								.gallery__descriptionBefore
+									display: none
+									&.is-active
+										display: block
+								.gallery__descriptiongAfter
+									display: block
+									&.is-active
+										display: none
+								.gallery__link
+									display: block
+									font-family: 'Roboto', sans-serif
+									font-weight: 400
+									font-size: 24px
+									line-height: 28px
+									color: #fff
+									padding-bottom: 40px
+									+media-breakpoint-down(xs)
+										font-size: 20px
+										line-height: 26px
 					&:hover
 						.gallery__caption
 							display: flex
@@ -3610,6 +3670,8 @@ header
 							align-items: center
 							justify-content: center
 							flex-direction: column
+							+media-breakpoint-down(md)
+								display: none
 							.gallery__descriptiongAfter, .gallery__descriptionBefore
 								font-family: 'Roboto', sans-serif
 								font-weight: 400
