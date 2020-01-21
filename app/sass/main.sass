@@ -40,8 +40,11 @@ body
 	overflow-x: hidden
 	color: $text
 	&.is-active
+		height: 100%
+		width: 100%
+		position: fixed
 		overflow: hidden
-		height: 100vh
+
 
 
 .container
@@ -490,18 +493,27 @@ header
 							.header__item
 								.header__phoneMobile
 								.header__link
-									// color: #fff
-									transition: .2s
+									transition: .3s
 									&.submenu
 										&::before
 											content: url(../img/_src/arrowDownWhite.svg)
-											transition: .2s
+											transition: .4s
+											+media-breakpoint-down(lg)
+												content: url(../img/_src/arrowDown.svg)
 									&.is-active
 										color: $accent
 										transition: .3s
+										&.submenu
+											&::before
+												content: url(../img/_src/arrowDownBlue.svg)	
+												transition: .4s
 									&:hover
 										color: $accent
-										transition: .3s
+										transition: .3s	
+										&.submenu
+											&::before
+												content: url(../img/_src/arrowDownBlue.svg)	
+												transition: .4s
 								.header__subList
 									display: none
 									position: absolute
@@ -695,11 +707,11 @@ header
 								.header__phoneMobile
 								.header__link
 									color: #000
-									transition: .2s
+									transition: .3s
 									&.submenu
 										&::before
 											content: url(../img/_src/arrowDown.svg)
-											transition: .2s
+											transition: .3s
 					.header__function
 						.header__phone
 							color: #000
