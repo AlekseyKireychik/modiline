@@ -63,14 +63,14 @@ body
 	line-height: 16px
 	padding: 16px 32px 16px 32px
 	color: #FFFFFF
-	transition: .2s
+	transition: 0.2s all linear
 	&:focus
 		box-shadow: none
 	&:hover
 		color: #FFFFFF
 		text-decoration: none
 		box-shadow: 0px 4px 30px #B7E1E3
-		transition: .2s
+		transition: 0.2s all linear
 .title
 	font-family: 'HelveticaNeueCyr', sans-serif
 	font-weight: 300
@@ -116,13 +116,13 @@ input.error
 			font-size: 24px
 			line-height: 28px
 			color: #000
-			transition: .3s
+			transition: 0.2s all linear
 			+media-breakpoint-down(xs)
 				font-size: 18px
 				line-height: 22px
 			&:hover
 				color: #1C9DAC
-				transition: .3s
+				transition: 0.2s all linear
 .container__breadcrumb
 	padding-top: 30px
 	.nav__breadcrumb
@@ -189,7 +189,7 @@ header
 						&.is-active
 							height: auto
 							display: flex
-							transition: .3s
+							transition: 0.2s all linear
 							z-index: 1000
 						.header__item
 							margin: 0
@@ -225,7 +225,7 @@ header
 								color: $text
 								text-decoration: none
 								padding: 0 15px 10px
-								transition: .3s
+								transition: 0.2s all linear
 								position: relative
 								&.submenu
 									padding: 0 30px 10px 15px
@@ -236,10 +236,10 @@ header
 										top: 0px
 								&.is-active
 									color: $accent
-									transition: .3s
+									transition: 0.2s all linear
 								&:hover
 									color: $accent
-									transition: .3s
+									transition: 0.2s all linear
 							.header__subList
 								display: none
 								position: absolute
@@ -276,19 +276,19 @@ header
 										width: 100%
 										display: block
 										position: relative
-										transition: .3s
+										transition: 0.2s all linear
 										&::before
 											position: absolute
 											content: url(../img/_src/arrMenuRight.png)
 											right: 0
 											top: 2px 
-											transition: .3s
+											transition: 0.2s all linear
 										&:hover
 											color: $accent
-											transition: .3s
+											transition: 0.2s all linear
 											&::before
 												content: url(../img/_src/arrMenuRightActive.png)
-												transition: .3s
+												transition: 0.2s all linear
 				.header__function
 					display: flex
 					justify-content: space-between
@@ -439,10 +439,10 @@ header
 				+media-breakpoint-down(lg)
 					top: 14px
 				+media-breakpoint-down(xs)
-					transition: .3s
+					transition: 0.2s all linear
 					top: 5px
 			.header
-				transition: .3s
+				transition: 0.2s all linear
 				padding: 10px 0px
 				+media-breakpoint-down(xs)
 					padding: 10px 20px
@@ -452,7 +452,7 @@ header
 						padding: 0px 
 				.header__nav
 					top: 100px
-					transition: .3s
+					transition: 0.2s all linear
 					+media-breakpoint-down(xs)
 						top: 54px!important
 
@@ -493,7 +493,7 @@ header
 							.header__item
 								.header__phoneMobile
 								.header__link
-									transition: .3s
+									transition: 0.2s all linear
 									&.submenu
 										&::before
 											content: url(../img/_src/arrowDownWhite.svg)
@@ -502,18 +502,18 @@ header
 												content: url(../img/_src/arrowDown.svg)
 									&.is-active
 										color: $accent
-										transition: .3s
+										transition: 0.2s all linear
 										&.submenu
 											&::before
 												content: url(../img/_src/arrowDownBlue.svg)	
-												transition: .4s
+												transition: 0.2s all linear
 									&:hover
 										color: $accent
-										transition: .3s	
+										transition: 0.2s all linear	
 										&.submenu
 											&::before
 												content: url(../img/_src/arrowDownBlue.svg)	
-												transition: .4s
+												transition: 0.2s all linear
 								.header__subList
 									display: none
 									position: absolute
@@ -551,19 +551,19 @@ header
 											width: 100%
 											display: block
 											position: relative
-											transition: .3s
+											transition: 0.2s all linear
 											&::before
 												position: absolute
 												content: url(../img/_src/arrMenuRight.png)
 												right: 0
 												top: 2px 
-												transition: .3s
+												transition: 0.2s all linear
 											&:hover
 												color: $accent
-												transition: .3s
+												transition: 0.2s all linear
 												&::before
 													content: url(../img/_src/arrMenuRightActive.png)
-													transition: .3s
+													transition: 0.2s all linear
 					.header__function
 						display: flex
 						justify-content: space-between
@@ -707,11 +707,11 @@ header
 								.header__phoneMobile
 								.header__link
 									color: #000
-									transition: .3s
+									transition: 0.2s all linear
 									&.submenu
 										&::before
 											content: url(../img/_src/arrowDown.svg)
-											transition: .3s
+											transition: 0.2s all linear
 					.header__function
 						.header__phone
 							color: #000
@@ -724,7 +724,7 @@ header
 					+media-breakpoint-down(lg)
 						top: 14px
 					+media-breakpoint-down(xs)
-						transition: .3s
+						transition: 0.2s all linear
 						top: 5px
 						right: 24px
 					.burger-menu__button
@@ -809,11 +809,11 @@ header
 							background: #FFFFFF
 							border-radius: 4px
 							color: $accent
-							transition: .2s
-							+media-breakpoint-down(sm)
+							transition: 0.2s all linear
+							+media-breakpoint-down(md)
 								box-shadow: 0px 4px 30px #B7E1E3
 							&:hover
-								transition: .2s
+								transition: 0.2s all linear
 								box-shadow: 0px 4px 30px #B7E1E3
 .services__home
 	padding-top: 60px
@@ -823,7 +823,7 @@ header
 		padding-top: 0px
 		margin-top: -130px
 	+media-breakpoint-down(md)
-		margin-top: -120px
+		margin-top: -80px
 		padding-bottom: 40px
 	+media-breakpoint-down(sm)
 		margin-top: -90px
@@ -860,7 +860,7 @@ header
 					padding: 32px 38px 24px
 					width: 183px
 					border: 1px solid rgba(28, 157, 172, 0.5)
-					transition: .2s	
+					transition: 0.2s all linear
 					+media-breakpoint-down(lg)
 						margin-bottom: 10px
 						padding: 10px 18px 10px
@@ -868,19 +868,19 @@ header
 					+media-breakpoint-down(md)
 						width: 110px
 						height: 130px
+						border: 1px solid rgba(28, 157, 172, 0.1)
+						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 					+media-breakpoint-down(sm)
 						width: 90px
 						height: 100px
 						margin-right: 20px
-						min-width: 30%
-						border: 1px solid rgba(28, 157, 172, 0.1)
-						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						min-width: 30%						
 					+media-breakpoint-down(xs)
 						margin-right: auto	
 					&:hover
 						border: 1px solid rgba(28, 157, 172, 0.1)
 						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)	
-						transition: .2s				
+						transition: 0.2s all linear			
 					&:nth-child(3n)
 						margin-right: 0px
 					.services__img
@@ -1002,10 +1002,11 @@ header
 							min-width: 335px
 							margin-bottom: 0px
 							margin-right: 20px
+						+media-breakpoint-down(md)
+							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 						+media-breakpoint-down(sm)
 							flex-basis: 388px
 							min-width: 388px
-							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 						+media-breakpoint-down(xs)
 							flex-basis: 244px
 							min-width: 244px
@@ -1018,6 +1019,10 @@ header
 									border-left: 1px solid rgba(28, 157, 172, 0.1)
 									border-right: 1px solid rgba(28, 157, 172, 0.1)									
 									transition: .2s
+									+media-breakpoint-down(md)
+										border-bottom: 1px solid transparent
+										border-left: 1px solid transparent
+										border-right: 1px solid transparent
 										
 						&:first-child
 							+media-breakpoint-down(lg)
@@ -1065,7 +1070,7 @@ header
 									background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%)
 									border-radius: 20px
 									justify-content: flex-end
-								+media-breakpoint-down(sm)
+								+media-breakpoint-down(md)
 									border-bottom: 1px solid transparent
 									border-left: 1px solid transparent
 									border-right: 1px solid transparent	
@@ -1202,13 +1207,15 @@ header
 						background: #FFFFFF
 						border: 2px solid #1C9DAC
 						border-radius: 4px	
-						transition: .3s					
+						transition: 0.2s all linear				
 						+media-breakpoint-down(xs)
 							margin-left: 15px
 						&:hover
 							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
-							transition: .3s
+							transition: 0.2s all linear
 .advantages__home
+	+media-breakpoint-down(md)
+		padding-top: 40px
 	+media-breakpoint-down(xs)
 		padding: 40px 25px 0
 	.container
@@ -1339,16 +1346,16 @@ header
 				padding: 16px 32px
 				font-size: 14px
 				line-height: 16px
-				transition: .3s
+				transition: 0.2s all linear
 				+media-breakpoint-down(lg)
 					margin-left: 0px
-				+media-breakpoint-down(sm)
+				+media-breakpoint-down(md)
 					box-shadow: 0px 4px 30px #B7E1E3
 				+media-breakpoint-down(xs)
 					max-width: 210px
 					margin: 0 auto
 				&:hover
-					transition: .3s
+					transition: 0.2s all linear
 					box-shadow: 0px 4px 30px #B7E1E3
 .news__home
 	overflow: hidden
@@ -1384,9 +1391,15 @@ header
 					overflow-y: auto
 					padding: 20px 25px 40px 15px
 					margin-bottom: -20px
+				+media-breakpoint-down(md)
+					&:after
+						content: ""
+						width: 25px
+						display: block
+						flex-shrink: 0
 				.news__itemLast
 					display: none
-					+media-breakpoint-down(sm)
+					+media-breakpoint-down(md)
 						display: flex
 						padding: 5px
 
@@ -1402,20 +1415,21 @@ header
 					border-radius: 20px
 					padding: 38px
 					margin-bottom: 20px
-					transition: .3s
+					transition: 0.2s all linear
 					+media-breakpoint-down(lg)
 						margin-right: 20px
 						min-width: 385px
+					+media-breakpoint-down(md)
+						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						border: 1px solid transparent
 					+media-breakpoint-down(sm)
 						padding: 25px
 						flex-basis: 244px
-						min-width: 244px
-						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
-						border: 1px solid transparent
+						min-width: 244px						
 					&:hover
 						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 						border: 1px solid rgba(28, 157, 172, 0.1)
-						transition: .3s
+						transition: 0.2s all linear
 					&:first-child
 						+media-breakpoint-down(lg)
 							margin-left: calc(( 100vw - 960px ) / 2 )
@@ -1489,7 +1503,7 @@ header
 					flex-basis: 385px
 					max-width: 385px
 					border: 1px solid rgba(28, 157, 172, 0.5)
-					transition: .3s
+					transition: 0.2s all linear
 					border-radius: 20px
 					margin-bottom: 20px
 					+media-breakpoint-down(lg)
@@ -1497,16 +1511,16 @@ header
 					+media-breakpoint-down(md)
 						flex-basis: 345px
 						max-width: 345px
+						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						border: 1px solid transparent
 					+media-breakpoint-down(sm)
 						flex-basis: 100%
 						max-width: 100%
 						margin-right: 0px
-						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
-						border: 1px solid transparent
 					&:hover
 						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 						border: 1px solid rgba(28, 157, 172, 0.1)
-						transition: .3s
+						transition: 0.2s all linear
 					&:nth-child(even)
 						+media-breakpoint-down(lg)
 							margin-right: 0px
@@ -1583,6 +1597,7 @@ header
 				+media-breakpoint-down(lg)
 					flex-direction: column
 					width: 100%
+					overflow: hidden
 				+media-breakpoint-down(md)
 					padding-top: 40px
 				.pagenews__left
@@ -1619,31 +1634,34 @@ header
 						justify-content: flex-start
 						margin-bottom: 0
 						flex-wrap: nowrap
-						padding: 20px
+						padding: 20px 20px 35px
+						margin-bottom: -20px
 						overflow-y: auto
+
 					+media-breakpoint-down(xs)
 						padding: 20px 25px 40px
 						margin-bottom: -40px
 					.pagenews__item
 						background: #FFFFFF
 						border: 1px solid rgba(28, 157, 172, 0.5)
-						transition: .3s
+						transition: 0.2s all linear
 						border-radius: 20px
 						margin-bottom: 20px
 						+media-breakpoint-down(lg)
 							margin-right: 20px
-							min-width: 305px
-						+media-breakpoint-down(xs)
-							min-width: 244px
+							min-width: 385px
 							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 							border: 1px solid transparent
+						+media-breakpoint-down(xs)
+							min-width: 244px
+							
 						&:last-child
 							+media-breakpoint-down(lg)
 								margin-right: 0px
 						&:hover
 							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 							border: 1px solid rgba(28, 157, 172, 0.1)
-							transition: .3s
+							transition: 0.2s all linear
 						.pagenews__link
 							padding: 50px
 							display: block
@@ -1656,6 +1674,10 @@ header
 								line-height: 28px
 								color: #000000
 								margin-bottom: 10px
+								+media-breakpoint-down(lg)
+									font-size: 18px
+									line-height: 18px
+									margin-bottom: 20px
 								+media-breakpoint-down(xs)
 									font-size: 12px
 									line-height: 12px
@@ -1718,7 +1740,7 @@ header
 					border-radius: 20px
 					padding: 0px
 					margin-bottom: 20px
-					transition: .2s
+					transition: 0.2s all linear
 					border: 1px solid rgba(28, 157, 172, 0.5)
 					+media-breakpoint-down(lg)
 						flex-basis: 310px
@@ -1727,7 +1749,7 @@ header
 						flex-basis: 100%
 						max-width: 100%
 					&:hover
-						transition: .2s
+						transition: 0.2s all linear
 						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 						border: 1px solid rgba(28, 157, 172, 0.1)
 					img
@@ -2209,27 +2231,27 @@ header
 						border-radius: 20px
 						flex-basis: 588px
 						position: relative
-						transition: .2s
+						transition: 0.2s all linear
 						+media-breakpoint-down(lg)
 							flex-basis: 458px
 						+media-breakpoint-down(md)
 							flex-basis: 338px
+							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 						+media-breakpoint-down(sm)
 							flex-basis: 388px
-							margin-bottom: 20px
-							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+							margin-bottom: 20px							
 						+media-breakpoint-down(xs)
 							flex-basis: 100%
 						&:hover
 							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
-							transition: .2s
+							transition: 0.2s all linear
 							.specialists__link
 								.specialists__info
 									border-bottom: 1px solid rgba(28, 157, 172, 0.1)
 									border-left: 1px solid rgba(28, 157, 172, 0.1)
 									border-right: 1px solid rgba(28, 157, 172, 0.1)
-									transition: .2s
-									+media-breakpoint-down(sm)
+									transition: 0.2s all linear
+									+media-breakpoint-down(md)
 										border-bottom: 1px solid transparent
 										border-left: 1px solid transparent
 										border-right: 1px solid transparent	
@@ -2249,12 +2271,12 @@ header
 								align-items: flex-start
 								justify-content: flex-start
 								flex-direction: column
-								transition: .2s
+								transition: 0.2s all linear
 								border-radius: 0 0 20px 20px
 								border-bottom: 1px solid rgba(28, 157, 172, 0.5)
 								border-left: 1px solid rgba(28, 157, 172, 0.5)
 								border-right: 1px solid rgba(28, 157, 172, 0.5)
-								+media-breakpoint-down(sm)
+								+media-breakpoint-down(md)
 									border-bottom: 1px solid transparent
 									border-left: 1px solid transparent
 									border-right: 1px solid transparent	
@@ -2338,24 +2360,24 @@ header
 						flex-basis: 385px
 						margin-bottom: 20px
 						position: relative
-						transition: .2s
+						transition: 0.2s all linear
 						+media-breakpoint-down(md)
 							flex-basis: 338px
-						+media-breakpoint-down(sm)
-							flex-basis: 388px
 							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						+media-breakpoint-down(sm)
+							flex-basis: 388px							
 						+media-breakpoint-down(xs)
 							flex-basis: 100%
 						&:hover
 							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
-							transition: .2s
+							transition: 0.2s all linear
 							.specialists__link
 								.specialists__info
 									border-bottom: 1px solid rgba(28, 157, 172, 0.1)
 									border-left: 1px solid rgba(28, 157, 172, 0.1)
 									border-right: 1px solid rgba(28, 157, 172, 0.1)
-									transition: .2s
-									+media-breakpoint-down(sm)
+									transition: 0.2s all linear
+									+media-breakpoint-down(md)
 										border-bottom: 1px solid transparent
 										border-left: 1px solid transparent
 										border-right: 1px solid transparent	
@@ -2374,12 +2396,12 @@ header
 								align-items: flex-start
 								justify-content: center
 								flex-direction: column
-								transition: .2s
+								transition: 0.2s all linear
 								border-radius: 0 0 20px 20px
 								border-bottom: 1px solid rgba(28, 157, 172, 0.5)
 								border-left: 1px solid rgba(28, 157, 172, 0.5)
 								border-right: 1px solid rgba(28, 157, 172, 0.5)
-								+media-breakpoint-down(sm)
+								+media-breakpoint-down(md)
 									border-bottom: 1px solid transparent
 									border-left: 1px solid transparent
 									border-right: 1px solid transparent	
@@ -3299,9 +3321,11 @@ header
 							margin-bottom: 20px
 							position: relative
 							transition: .2s
+							+media-breakpoint-down(md)
+								box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 							+media-breakpoint-down(sm)
 								min-height: auto
-								box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+								
 							&:hover
 								box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 								transition: .2s
@@ -3311,6 +3335,10 @@ header
 										border-left: 1px solid rgba(28, 157, 172, 0.1)
 										border-right: 1px solid rgba(28, 157, 172, 0.1)
 										transition: .2s
+										+media-breakpoint-down(md)
+											border-bottom: 1px solid transparent
+											border-left: 1px solid transparent
+											border-right: 1px solid transparent	
 										
 							.specialists__link
 								width: 100%
@@ -3332,6 +3360,10 @@ header
 									border-bottom: 1px solid rgba(28, 157, 172, 0.5)
 									border-left: 1px solid rgba(28, 157, 172, 0.5)
 									border-right: 1px solid rgba(28, 157, 172, 0.5)
+									+media-breakpoint-down(md)
+										border-bottom: 1px solid transparent
+										border-left: 1px solid transparent
+										border-right: 1px solid transparent
 									+media-breakpoint-down(sm)
 										position: absolute
 										top: 0
@@ -3341,10 +3373,7 @@ header
 										background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%)
 										border-radius: 20px
 										justify-content: flex-end
-										padding-left: 20px
-										border-bottom: 1px solid transparent
-										border-left: 1px solid transparent
-										border-right: 1px solid transparent	
+										padding-left: 20px											
 									+media-breakpoint-down(xs)
 										padding-left: 0px
 									.specialists__date
@@ -3597,6 +3626,7 @@ header
 					border-radius: 20px
 					margin-bottom: 20px
 					margin-right: 20px
+					overflow: hidden
 					+media-breakpoint-down(md)
 						flex-basis: 320px
 						max-width: 320px
@@ -3617,10 +3647,12 @@ header
 					.gallery__imgBefore
 						display: none
 						width: 100%
+						height: 100%
 						&.is-active
 							display: block
 					.gallery__imgAfter
 						width: 100%
+						height: 100%
 						display: none
 						&.is-active
 							display: block
