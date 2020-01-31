@@ -210,8 +210,7 @@ header
 									content: url(../img/_src/phone-icon.svg)
 									left: -60px
 									top: -8px
-
-								+media-breakpoint-down(sm)
+								+media-breakpoint-down(md)
 									display: block
 							&:first-child
 								.header__phoneMobile
@@ -277,12 +276,20 @@ header
 										display: block
 										position: relative
 										transition: 0.2s all linear
+										+media-breakpoint-down(sm)
+											text-align: center
+											padding-right: 15px										
 										&::before
 											position: absolute
 											content: url(../img/_src/arrMenuRight.png)
 											right: 0
 											top: 2px 
 											transition: 0.2s all linear
+											+media-breakpoint-down(md)
+												right: -10px
+												top: 1px 
+											+media-breakpoint-down(sm)
+												right: 30%
 										&:hover
 											color: $accent
 											transition: 0.2s all linear
@@ -488,7 +495,7 @@ header
 							display: block
 							+media-breakpoint-down(lg)
 								display: none
-					.header__nav
+					.header__nav							
 						.header__list-nav
 							.header__item
 								.header__phoneMobile
@@ -552,12 +559,20 @@ header
 											display: block
 											position: relative
 											transition: 0.2s all linear
+											+media-breakpoint-down(sm)
+												text-align: center
+												padding-right: 15px
 											&::before
 												position: absolute
 												content: url(../img/_src/arrMenuRight.png)
 												right: 0
 												top: 2px 
 												transition: 0.2s all linear
+												+media-breakpoint-down(md)
+													right: -10px
+													top: 1px 
+												+media-breakpoint-down(sm)
+													right: 30%
 											&:hover
 												color: $accent
 												transition: 0.2s all linear

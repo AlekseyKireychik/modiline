@@ -170,6 +170,42 @@
                         .about__itemBottom
                             &:nth-child(1), &:nth-child(2)
                                 flex-basis: 548px
+@media screen and (max-width: 769px)
+    header
+        .container-fluid
+            &.container__header
+                .header
+                    .header__nav
+                        width: 100vw
+                        top: 145px
+                        padding: 0 0px
+                        .header__list-nav
+                            background: #FFF
+                            flex-direction: column
+                            padding-top: 40px
+                            border-top: 2px solid $accent
+                            .header__item
+
+                    .header__function
+                        padding-right: 70px
+            &.scrolled
+                .header
+                    .header__nav
+
+        &.header__home
+            .container-fluid
+                &.container__header
+                    .header
+                        .header__nav
+                            width: 100vw
+                            padding: 0 0px
+                            top: 145px
+        &.is-active
+            .header 
+                .header__function
+                    .header__phone
+                        color: #000
+
 @media screen and (max-width: 320px)
     header
         &.header__home
