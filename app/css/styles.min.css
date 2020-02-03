@@ -2947,8 +2947,8 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .specialists__home .main__container .row.specialists__profile .specialists__wrappBtn .specialists__btn:hover {
-  -webkit-box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25);
-          box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25);
+  -webkit-box-shadow: 0px 4px 30px #B7E1E3;
+          box-shadow: 0px 4px 30px #B7E1E3;
   -webkit-transition: 0.2s all linear;
   -o-transition: 0.2s all linear;
   transition: 0.2s all linear;
@@ -7987,6 +7987,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   margin-bottom: 30px;
+  width: 100%;
 }
 
 @media (max-width: 767.98px) {

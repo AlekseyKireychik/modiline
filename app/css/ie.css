@@ -1,0 +1,15 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .news__text {
+    width: 310px;
+  }
+  .form__check-label {
+    width: 410px;
+  }
+  .gallery__descriptiongAfter,
+  .gallery__descriptionBefore {
+      width: 385px;
+  }
+  .contacts .container .row.contacts__content {
+    flex-wrap: nowrap;
+  }
+}
