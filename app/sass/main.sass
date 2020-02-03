@@ -32,6 +32,7 @@ input, textarea
 		border-color: green
 
 body
+	position: relative
 	font-size: 16px
 	min-width: 320px
 	position: relative
@@ -44,6 +45,8 @@ body
 		width: 100%
 		position: fixed
 		overflow: hidden
+		&::-webkit-scrollbar 
+			-webkit-appearance: none
 
 
 
@@ -3867,8 +3870,7 @@ header
 						max-height: 320px
 						min-height: 320px
 
-body
-	position: relative
+
 .overlay
 	position: fixed
 	top: -160px
