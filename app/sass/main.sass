@@ -1834,6 +1834,8 @@ header
 							justify-content: flex-start
 							width: 100%
 							padding-bottom: 60px
+							+media-breakpoint-down(md)
+								padding-bottom: 10px
 							+media-breakpoint-down(xs)
 								padding-bottom: 20px
 							.cost__title
@@ -1894,6 +1896,8 @@ header
 							justify-content: flex-start
 							width: 100%
 							padding-bottom: 60px
+							+media-breakpoint-down(md)
+								padding-bottom: 10px
 							+media-breakpoint-down(xs)
 								padding-bottom: 20px
 							.cost__title
@@ -1995,6 +1999,8 @@ header
 							justify-content: flex-start
 							width: 100%
 							padding-bottom: 60px
+							+media-breakpoint-down(md)
+								padding-bottom: 10px
 							+media-breakpoint-down(xs)
 								padding-bottom: 60px
 							.akcii__title
@@ -2073,6 +2079,8 @@ header
 							justify-content: flex-start
 							width: 100%
 							padding-bottom: 151px
+							+media-breakpoint-down(md)
+								padding-bottom: 98px
 							+media-breakpoint-down(xs)
 								padding-bottom: 60px
 							.akcii__title
@@ -2295,7 +2303,6 @@ header
 									border-bottom: 1px solid transparent
 									border-left: 1px solid transparent
 									border-right: 1px solid transparent	
-								+media-breakpoint-down(xs)
 									position: absolute
 									top: 0
 									left: 0
@@ -2312,16 +2319,15 @@ header
 									color: #000000
 									padding: 30px 50px 25px
 									+media-breakpoint-down(md)
-										padding: 30px 0px 15px
+										padding: 30px 24px 40px 24px
 										margin: 0 auto
 										font-size: 24px
 										line-height: 28px
+										color: #fff
 									+media-breakpoint-down(xs)
 										font-size: 18px
-										line-height: 21px
-										color: #fff
-										margin: 0
-										padding: 30px 24px 40px 24px
+										line-height: 21px										
+										margin: 0										
 								.specialists__description
 									font-family: 'Roboto', sans-serif
 									font-weight: 300
@@ -2332,14 +2338,14 @@ header
 									+media-breakpoint-down(md)
 										font-size: 18px
 										line-height: 21px
-										padding: 0px 0px 115px
+										padding: 0px 24px 25px 24px
 										margin: 0 auto
+										color: #fff
 									+media-breakpoint-down(xs)
 										font-size: 14px
-										line-height: 16px
-										color: #fff
+										line-height: 16px										
 										margin: 0
-										padding: 0px 24px 25px 24px
+										
 	.container
 		.row
 			&.specialists__bottom
@@ -2420,7 +2426,6 @@ header
 									border-bottom: 1px solid transparent
 									border-left: 1px solid transparent
 									border-right: 1px solid transparent	
-								+media-breakpoint-down(xs)
 									position: absolute
 									top: 0
 									left: 0
@@ -2438,12 +2443,13 @@ header
 									padding-top: 30px
 									padding-bottom: 15px
 									margin: 0 auto
+									+media-breakpoint-down(md)
+										padding: 30px 24px 40px 24px
+										color: #fff
 									+media-breakpoint-down(xs)
 										font-size: 18px
-										line-height: 21px
-										color: #fff
-										margin: 0
-										padding: 30px 24px 40px 24px
+										line-height: 21px										
+										margin: 0										
 								.specialists__description
 									font-family: 'Roboto', sans-serif
 									font-weight: 300
@@ -2452,12 +2458,14 @@ header
 									color: #000000
 									padding-bottom: 105px
 									margin: 0 auto
-									+media-breakpoint-down(xs)
-										font-size: 14px
-										line-height: 16px
+									+media-breakpoint-down(md)
 										color: #fff
 										margin: 0
 										padding: 0px 24px 25px 24px
+									+media-breakpoint-down(xs)
+										font-size: 14px
+										line-height: 16px
+										
 
 ///////////////Pagespecialist page
 .pagespecialist__breadcrumb
@@ -2639,7 +2647,7 @@ header
 		.row
 			.pagespecialist__imgInfo
 				width: 100%
-				+media-breakpoint-down(xs)
+				+media-breakpoint-down(md)
 					display: none
 	.container
 		.row
@@ -2921,6 +2929,10 @@ header
 							min-width: 335px
 							margin-bottom: 0px
 							margin-right: 20px
+							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+							border-bottom: 1px solid transparent
+							border-left: 1px solid transparent
+							border-right: 1px solid transparent
 						+media-breakpoint-down(sm)
 							flex-basis: 388px
 							min-width: 388px
@@ -3309,9 +3321,12 @@ header
 					max-width: 588px
 					+media-breakpoint-down(lg)
 						padding-top: 60px
+					+media-breakpoint-down(md)
+						width: 100%
+						max-width: 100%
 					+media-breakpoint-down(sm)
 						padding-top: 40px
-					.pageservice__specialist
+					.pageservice__specialist						
 						.specialists__title
 							font-weight: 300
 							font-size: 48px
@@ -3338,9 +3353,10 @@ header
 							transition: .2s
 							+media-breakpoint-down(md)
 								box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+								margin: 0 auto 20px
+								max-width: 588px
 							+media-breakpoint-down(sm)
-								min-height: auto
-								
+								min-height: auto								
 							&:hover
 								box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 								transition: .2s
@@ -3426,6 +3442,12 @@ header
 											margin: 0
 											padding: 0px 24px 25px 24px
 					.pageservice__form
+						+media-breakpoint-down(md)
+							max-width: 588px
+							margin: 0 auto
+						.form 
+							+media-breakpoint-down(md)
+								height: auto
 ////////reviews
 .reviews__breadcrumb
 	+media-breakpoint-down(xs)
@@ -3748,6 +3770,8 @@ header
 				justify-content: space-between
 				width: 100%
 				padding-bottom: 60px
+				+media-breakpoint-down(md)
+					margin: 0
 				+media-breakpoint-down(sm)
 					width: auto
 					padding-bottom: 40px
