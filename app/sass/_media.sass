@@ -61,7 +61,7 @@
                     .header__nav
                         display: none
                         width: 100%
-                        height: 0
+                        height: calc( 100vh - 145px )
                         position: absolute
                         left: 50%
                         top: 150px
@@ -70,10 +70,12 @@
                         transition: 0.3s all linear
                         &.is-active
                             display: block
-                            height: 100%
+                            height: calc( 100vh - 145px )
                             transition: 0.3s all linear
                         .header__list-nav
-                            // height: calc(100vh - 150px)
+                            height: 100%
+                            overflow-y: auto
+                            justify-content: flex-start
                             background: #FFF
                             flex-direction: column
                             padding-top: 40px
@@ -92,7 +94,6 @@
                                     .header__item
                                         .header__subLink
                                             font-size: 22px
-
                     .header__function
                         padding-right: 70px
                 .burger-menu
@@ -101,7 +102,10 @@
             &.scrolled
                 .header
                     .header__nav
-                        top: 102px
+                        top: 68px
+                        height: calc( 100vh - 68px )
+                        &.is-active
+                            height: calc( 100vh - 68px )
 
         &.header__home
             .container-fluid
@@ -115,14 +119,18 @@
                             left: 50%
                             transform: translate(-50%, 0px)
                             padding: 0 30px
+                            height: calc( 100vh - 145px )
                             &.is-active
                                 display: block
+                                height: calc( 100vh - 145px )
                             .header__list-nav
-                                // height: calc(100vh - 150px)
                                 background: #FFF
                                 flex-direction: column
                                 padding-top: 40px
                                 border-top: 2px solid $accent
+                                height: 100%
+                                overflow-y: auto
+                                justify-content: flex-start
                                 .header__item
                                     margin-bottom: 30px
                                     .header__link
@@ -148,6 +156,13 @@
                             .burger-menu__button
                                 .burger-menu__lines
                                     background-color: transparent
+                &.scrolled
+                    .header
+                        .header__nav
+                            top: 68px
+                            height: calc( 100vh - 68px )
+                            &.is-active
+                                height: calc( 100vh - 68px )
 
 @media screen and (min-width: 1240px) and (max-width: 1300px)
     .about__specialists
@@ -159,6 +174,7 @@
                         .about__itemBottom
                             &:nth-child(1), &:nth-child(2)
                                 flex-basis: 548px
+
 @media screen and (max-width: 769px)
     header
         .container-fluid
@@ -180,6 +196,7 @@
             &.scrolled
                 .header
                     .header__nav
+                        top: 68px
 
         &.header__home
             .container-fluid
@@ -189,12 +206,46 @@
                             width: 100vw
                             padding: 0 0px
                             top: 145px
+                &.scrolled
+                    .header
+                        .header__nav
+                            top: 68px
         &.is-active
-            .header 
+            .header
                 .header__function
                     .header__phone
                         color: #000
-
+@media screen and ( max-width: 576px )
+    header
+        .container-fluid
+            &.container__header
+                .header
+                    .header__nav
+                        height: calc( 100vh - 95px )
+                        .header__list-nav
+                        &.is-active
+                            height: calc( 100vh - 95px )
+            &.scrolled
+                .header
+                    .header__nav
+                        height: calc( 100vh - 55px )
+                        &.is-active
+                            height: calc( 100vh - 55px )
+        &.header__home
+            .container-fluid
+                &.container__header
+                    .header
+                        .header__nav
+                            height: calc( 100vh - 95px )
+                            .header__list-nav
+                            &.is-active
+                                height: calc( 100vh - 95px )
+                &.scrolled
+                    .header
+                        .header__nav
+                            height: calc( 100vh - 55px )
+                            &.is-active
+                                height: calc( 100vh - 55px )
 @media screen and (max-width: 320px)
     header
         &.header__home
@@ -215,5 +266,3 @@
                         height: 90px
     .pagenews__banner
         max-width: 300px
-
-    
