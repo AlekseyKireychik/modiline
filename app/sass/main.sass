@@ -43,6 +43,7 @@ body
 		height: 100vh
 		width: 100%
 		overflow: hidden
+		position: fixed
 		&::-webkit-scrollbar 
 			-webkit-appearance: none  
 
@@ -169,11 +170,12 @@ header
 				padding: 0px
 				+media-breakpoint-down(xs)
 					padding: 30px 20px
-				.header__logo					
+				.header__logo		
+					width: 176px			
 					+media-breakpoint-down(xs)
 						padding: 0
 					img
-						width: 176px
+						width: 100%						
 						+media-breakpoint-down(xs)
 							width: 130px
 				.header__nav
