@@ -109,7 +109,7 @@
 		</div>
 	  </header>
     <main>
-      <section  class="pageservice__breadcrumb">
+      <div class="pageservice__breadcrumb">
         <div class="container container__breadcrumb">
           <div class="row">
             <nav aria-label="breadcrumb" class="nav__breadcrumb">
@@ -123,7 +123,7 @@
             </nav>
           </div>
         </div>
-      </section>
+      </div>
       <section class="pageservice">
         <div class="container">
           <div class="row">
@@ -224,22 +224,22 @@
                     </div>
                     <div class="form__content">
                       <div class="mainform__group group-01">							
-                        <input type="text" placeholder="Введите Ваше Имя" class="mainform__control" name="pagename" required id="pagename" placeholder="" >
+                        <input type="text" placeholder="Введите Ваше Имя" class="mainform__control" name="pagename" required id="pagename"  >
                         <label for="pagename"  class="mainform__label">Имя</label>
                       </div>
                       <div class="mainform__group group-01">							
-                        <input type="tel" placeholder="Введите Ваш контактный телефон" class="mainform__control validate-numeric" name="pagetel" required id="pagetel" placeholder="">
+                        <input type="tel" placeholder="Введите Ваш контактный телефон" class="mainform__control validate-numeric" name="pagetel" required id="pagetel" >
                         <label for="pagetel" class="mainform__label">Контактный телефон</label>
                       </div>
                       <div class="mainform__group group-01">							
-                        <input type="email" placeholder="Введите Ваш e-mail" class="mainform__control" name="pageemail" required id="pageemail" placeholder="">
+                        <input type="email" placeholder="Введите Ваш e-mail" class="mainform__control" name="pageemail" required id="pageemail" >
                         <label for="pageemail" class="mainform__label">E-mail</label>
                       </div>
                       <div class="mainform__group comment">							
                         <textarea
                             name="pagepagecomment"
                             id="pagepagecomment"
-                            coll="5"
+                            
                             class="mainform__control"
                             placeholder="Введите Ваше сообщение"></textarea>
                         <label for="pagepagecomment" class="mainform__label">Сообщение</label>
@@ -249,7 +249,7 @@
                       <input type="hidden" name="url">
                       <div class="form__bottom">
                         <div class="mainform__group form-check">  
-                          <input class="form__check-input" placeholder=" " required type="checkbox" id="pagecheck1">  
+                          <input class="form__check-input"  required type="checkbox" id="pagecheck1">  
                           <label class="form__check-label" for="pagecheck1">Я даю свое согласие на обработку данных в соответствии с политикой конфиденциальности.</label>  
                         </div> 
                         <div class="form__box">
@@ -266,59 +266,56 @@
         </div>
       </section>
       <div class="overlay"></div>
-		<div class="main__form">
-			<form id="form" class="form">
-				<div class="form__btnCloseWrap">
-					<div class="form__btnClose">
-						<span class="form__line"></span>
-					</div>
-				</div>
-				<div class="form__top">
-				  <h3 class="form__title">Запись на прием</h3>                      
-				  <p class="form__description">Мы перезвоним вам в течение 10 минут для подтверждения записи.</p>				  
-				</div>
-				<div class="form__content">
-				  <div class="mainform__group group-01">							
-					<input type="text" placeholder="Введите Ваше Имя" class="mainform__control" name="name" required id="name" placeholder="" >
-					<label for="name"  class="mainform__label">Имя</label>
-				  </div>
-				  <div class="mainform__group group-01">							
-					<input type="tel" placeholder="Введите Ваш контактный телефон" class="mainform__control validate-numeric" name="tel" required id="tel" placeholder="">
-					<label for="tel" class="mainform__label">Контактный телефон</label>
-				  </div>
-				  <div class="mainform__group group-01">							
-					<input type="email" placeholder="Введите Ваш e-mail" class="mainform__control" name="email" required id="email" placeholder="">
-					<label for="email" class="mainform__label">E-mail</label>
-				  </div>
-				  <div class="mainform__group comment">							
-					<textarea
-						name="comment"
-						id="comment"
-						coll="5"
-						rows="4"
-						class="mainform__control"
-						placeholder="Введите Ваше сообщение"></textarea>
+		  <div class="main__form">
+        <form id="form" class="form">
+          <div class="form__btnCloseWrap">
+            <div class="form__btnClose">
+              <span class="form__line"></span>
+            </div>
+          </div>
+          <div class="form__top">
+            <h3 class="form__title">Запись на прием</h3>                      
+            <p class="form__description">Мы перезвоним вам в течение 10 минут для подтверждения записи.</p>				  
+          </div>
+          <div class="form__content">
+            <div class="mainform__group group-01">							
+            <input type="text" placeholder="Введите Ваше Имя" class="mainform__control" name="name" required id="name"  >
+            <label for="name"  class="mainform__label">Имя</label>
+            </div>
+            <div class="mainform__group group-01">							
+            <input type="tel" placeholder="Введите Ваш контактный телефон" class="mainform__control validate-numeric" name="tel" required id="tel" >
+            <label for="tel" class="mainform__label">Контактный телефон</label>
+            </div>
+            <div class="mainform__group group-01">							
+            <input type="email" placeholder="Введите Ваш e-mail" class="mainform__control" name="email" required id="email" >
+            <label for="email" class="mainform__label">E-mail</label>
+            </div>
+            <div class="mainform__group comment">							
+              <textarea
+                name="comment"
+                id="comment"						
+                rows="4"
+                class="mainform__control"
+                placeholder="Введите Ваше сообщение"></textarea>
+              <label for="comment" class="mainform__label">Сообщение</label>
+            </div>
             
-          
-					<label for="comment" class="mainform__label">Сообщение</label>
-				  </div>
-				  
-				  <input type="hidden" name="culturecode">
-				  <input type="hidden" name="url">
-				  <div class="form__bottom">
-					<div class="mainform__group form-check">  
-					  <input class="form__check-input" placeholder=" " required type="checkbox" id="check1">  
-					  <label class="form__check-label" for="check1">Я даю свое согласие на обработку данных в соответствии с политикой конфиденциальности.</label>  
-					</div> 
-					<div class="form__box">
-					  <button type="submit" id="btn" class="btn submit">
-						Отправить заявку
-					  </button>
-					</div>
-				  </div>					
-				</div>
-			  </form>
-		</div>
+            <input type="hidden" name="culturecode">
+            <input type="hidden" name="url">
+            <div class="form__bottom">
+            <div class="mainform__group form-check">  
+              <input class="form__check-input"  required type="checkbox" id="check1">  
+              <label class="form__check-label" for="check1">Я даю свое согласие на обработку данных в соответствии с политикой конфиденциальности.</label>  
+            </div> 
+            <div class="form__box">
+              <button type="submit" id="btn" class="btn submit">
+              Отправить заявку
+              </button>
+            </div>
+            </div>					
+          </div>
+        </form>
+		  </div>
     </main>
     <footer>
       <div class="container">

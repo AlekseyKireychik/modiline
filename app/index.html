@@ -193,7 +193,7 @@
           />
         </div>
       </section>
-      <section class="services__home">
+      <div class="services__home">
         <div class="container services__wrapper">
           <div class="row">
             <ul class="services__list">
@@ -245,34 +245,10 @@
                 />
                 <span class="services__description">Диетолог</span>
               </li>
-              <li class="services__item">
-                <img
-                  class="services__img"
-                  src="img/_src/services06.png"
-                  alt="Диетолог"
-                />
-                <span class="services__description">Диетолог</span>
-              </li>
-              <li class="services__item">
-                <img
-                  class="services__img"
-                  src="img/_src/services06.png"
-                  alt="Диетолог"
-                />
-                <span class="services__description">Диетолог</span>
-              </li>
-              <li class="services__item">
-                <img
-                  class="services__img"
-                  src="img/_src/services06.png"
-                  alt="Диетолог"
-                />
-                <span class="services__description">Диетолог</span>
-              </li>
             </ul>
           </div>
         </div>
-      </section>
+      </div>
       <section class="specialists__home">
         <div class="container">
           <div class="row">
@@ -601,7 +577,6 @@
                 name="name"
                 id="name"
                 required
-                placeholder=""
               />
               <label for="name" class="mainform__label">Имя</label>
             </div>
@@ -613,7 +588,6 @@
                 required
                 name="tel"
                 id="tel"
-                placeholder=""
               />
               <label for="tel" class="mainform__label"
                 >Контактный телефон</label
@@ -627,7 +601,6 @@
                 name="email"
                 required
                 id="email"
-                placeholder=""
               />
               <label for="email" class="mainform__label">E-mail</label>
             </div>
@@ -635,21 +608,18 @@
               <textarea
                 name="comment"
                 id="comment"
-                coll="5"
                 rows="4"
                 class="mainform__control"
                 placeholder="Введите Ваше сообщение"
               ></textarea>
               <label for="comment" class="mainform__label">Сообщение</label>
             </div>
-
             <input type="hidden" name="culturecode" />
             <input type="hidden" name="url" />
             <div class="form__bottom">
               <div class="mainform__group form-check">
                 <input
                   class="form__check-input"
-                  placeholder=" "
                   required
                   type="checkbox"
                   id="check1"
