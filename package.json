@@ -22,6 +22,7 @@
 		"gulp-rsync": "0.0.8",
 		"gulp-sass": "^4.0.2",
 		"gulp-uglify-es": "^1.0.4",
+		"i": "^0.3.6",
 		"jquery": "^3.4.1",
 		"slick-carousel": "^1.8.1"
 	}

@@ -40,10 +40,10 @@ body
 	overflow-x: hidden
 	color: $text
 	&.is-active
-		height: 100vh
+		// height: 100vh
 		width: 100%
 		overflow: hidden
-		position: fixed
+		// position: fixed
 		&::-webkit-scrollbar 
 			-webkit-appearance: none  
 
@@ -170,12 +170,11 @@ header
 				padding: 0px
 				+media-breakpoint-down(xs)
 					padding: 30px 20px
-				.header__logo		
-					width: 176px			
+				.header__logo
 					+media-breakpoint-down(xs)
 						padding: 0
 					img
-						width: 100%						
+						width: 176px						
 						+media-breakpoint-down(xs)
 							width: 130px
 				.header__nav
@@ -433,7 +432,7 @@ header
 			+media-breakpoint-down(lg)
 					box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.15)
 			.header__logo				
-				padding: 50px 0px 50px 40px
+				padding: 45px 0px 45px 40px
 		&.scrolled
 			box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 			transition: .5s
@@ -744,7 +743,7 @@ header
 	+media-breakpoint-down(lg)
 		margin-top: 0
 	.decoration
-		height: 150px
+		height: 139px
 		width: 100%
 		background: #8ECED6
 		box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
@@ -822,7 +821,7 @@ header
 								box-shadow: 0px 4px 30px #B7E1E3
 .services__home
 	padding-top: 60px
-	padding-bottom: 60px
+	padding-bottom: 40px
 	overflow: hidden
 	+media-breakpoint-down(lg)
 		padding-top: 0px
@@ -850,8 +849,8 @@ header
 				position: relative
 				display: flex
 				align-items: center
-				justify-content: space-between
-				flex-wrap: nowrap
+				justify-content: center
+				flex-wrap: wrap
 				margin-bottom: 0px
 				+media-breakpoint-down(lg)
 					flex-wrap: wrap
@@ -866,6 +865,7 @@ header
 					width: 183px
 					border: 1px solid rgba(28, 157, 172, 0.5)
 					transition: 0.2s all linear
+					margin: 0 15px 20px 0	
 					+media-breakpoint-down(lg)
 						margin-bottom: 10px
 						padding: 10px 18px 10px
@@ -875,19 +875,25 @@ header
 						height: 130px
 						border: 1px solid rgba(28, 157, 172, 0.1)
 						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
+						
 					+media-breakpoint-down(sm)
 						width: 90px
 						height: 100px
 						margin-right: 20px
-						min-width: 30%						
+						min-width: 30%		
+						&:nth-child(3n)
+							margin-right: 0px 				
 					+media-breakpoint-down(xs)
 						margin-right: auto	
 					&:hover
 						border: 1px solid rgba(28, 157, 172, 0.1)
 						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)	
-						transition: 0.2s all linear			
-					&:nth-child(3n)
+						transition: 0.2s all linear	
+					&:last-child						
 						margin-right: 0px
+					&:nth-child(6n)
+						margin-right: 0px 
+
 					.services__img
 						margin-bottom: 32px
 						+media-breakpoint-down(lg)
@@ -895,6 +901,7 @@ header
 							margin-bottom: 10px
 							height: 90px
 						+media-breakpoint-down(md)
+
 							width: auto
 							margin-bottom: 10px
 							height: 80px
@@ -1269,10 +1276,10 @@ header
 							align-items: flex-start
 							justify-content: center
 							min-height: 150px
-							margin-bottom: 60px
+							margin-bottom: 40px
 							+media-breakpoint-down(md)
 								align-items: center
-								margin-bottom: 40px
+								margin-bottom: 30px
 								width: 120px
 								height: 120px
 								min-height: 120px
@@ -1367,6 +1374,8 @@ header
 	overflow: hidden
 	.container
 		.row
+			align-items: flex-start
+			justify-content: space-between
 			.title
 				margin-bottom: 50px
 				+media-breakpoint-down(lg)
@@ -1374,6 +1383,20 @@ header
 				+media-breakpoint-down(xs)
 					margin-bottom: 10px
 					padding: 0 25px
+			.news__btn
+				font-family: 'Open Sans',sans-serif
+				font-style: normal
+				font-weight: 600
+				font-size: 14px
+				line-height: 16px
+				text-align: center
+				letter-spacing: 0.5px
+				color: #1C9DAC
+				margin-top: 15px
+				+media-breakpoint-down(sm)
+					display: none
+				&:hover
+					text-decoration: underline
 	.main__container
 		width: 100%
 		padding-right: 15px
@@ -1989,11 +2012,11 @@ header
 							align-items: center
 							justify-content: flex-start
 							width: 100%
-							padding-bottom: 60px
+							padding-bottom: 50px
 							+media-breakpoint-down(md)
 								padding-bottom: 10px
 							+media-breakpoint-down(xs)
-								padding-bottom: 60px
+								padding-bottom: 50px
 							.akcii__title
 								font-family: 'Roboto', sans-serif
 								font-weight: 300
@@ -2651,7 +2674,7 @@ header
 				.pagespecialist__infoItem
 					margin-bottom: 60px
 					.pagespecialist__title
-						font-family: 'Roboto', sans-serif
+						font-family: 'HelveticaNeueCyr', sans-serif
 						font-weight: 500
 						font-size: 36px
 						line-height: 42px
@@ -2665,7 +2688,7 @@ header
 							margin-bottom: 20px
 					.pagespecialist__list
 						.pagespecialist__item
-							font-family: 'Roboto', sans-serif
+							font-family: 'HelveticaNeueCyr', sans-serif
 							display: flex
 							align-items: flex-start
 							justify-content: flex-start
@@ -3729,7 +3752,7 @@ header
 							line-height: 28px
 							color: #fff
 							padding-bottom: 40px													
-					&:hover
+					&.hover
 						+media-breakpoint-up(xl)
 							.gallery__caption
 								display: flex	
@@ -3865,18 +3888,6 @@ header
 						max-height: 320px
 						min-height: 320px
 
-
-.overlay
-	position: fixed
-	top: -160px
-	bottom: 0
-	left: 0
-	right: 0
-	z-index: 1031
-	background-color: rgba(0, 0, 0, 0.8)
-	display: none
-	&.is-active
-		display: block		
 .main__form
 	position: fixed
 	left: calc((100vw - 588px)/2)
@@ -3895,10 +3906,12 @@ header
 	&.is-active
 		display: block
 	.form
+		border: none
+		padding: 40px 30px 40px 50px
 		position: relative
 		.form__btnCloseWrap
 			position: absolute
-			right: 50px
+			right: 25px
 			top: 50px
 			+media-breakpoint-down(xs)
 				right: 20px
@@ -3947,10 +3960,10 @@ header
 				font-weight: 300
 				font-size: 14px
 				line-height: 19px
-				margin-bottom: 50px
+				margin-bottom: 35px
 		.form__content
 			.mainform__group
-				margin-bottom: 44px
+				margin-bottom: 30px
 				position: relative
 				.mainform__control
 					padding: 12px 16px
@@ -3999,7 +4012,7 @@ header
 						left: 0
 						top: -25px
 			.form__bottom
-				padding-top: 50px
+				padding-top: 10px
 				display: flex
 				align-items: center
 				align-items: flex-start
