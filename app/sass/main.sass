@@ -1409,13 +1409,12 @@ header
 			.news__list
 				display: flex
 				align-items: flex-start
-				justify-content: space-between
+				justify-content: flex-start
 				flex-wrap: wrap
 				margin-bottom: 0
 				padding-bottom: 40px
 				+media-breakpoint-down(lg)
 					width: 100%
-					justify-content: flex-start
 					flex-wrap: nowrap
 					overflow-y: auto
 					padding: 20px 25px 40px 15px
@@ -1445,9 +1444,13 @@ header
 					padding: 38px
 					margin-bottom: 20px
 					transition: 0.2s all linear
+					margin-right: 20px
+					&:nth-child(3n)
+						margin-right: 0px
 					+media-breakpoint-down(lg)
-						margin-right: 20px
 						min-width: 385px
+						&:nth-child(3n)
+							margin-right: 20px
 					+media-breakpoint-down(md)
 						box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 						border: 1px solid transparent
@@ -1518,7 +1521,7 @@ header
 			.news__list
 				display: flex
 				align-items: flex-start
-				justify-content: space-between
+				justify-content: flex-start
 				flex-wrap: wrap
 				margin-bottom: 0
 				padding-bottom: 10px
@@ -1535,8 +1538,12 @@ header
 					transition: 0.2s all linear
 					border-radius: 20px
 					margin-bottom: 20px
+					margin-right: 20px
+					&:nth-child(3n)
+						margin-right: 0px
 					+media-breakpoint-down(lg)
-						margin-right: 20px
+						&:nth-child(3n)
+							margin-right: 20px
 					+media-breakpoint-down(md)
 						flex-basis: 345px
 						max-width: 345px
@@ -1826,7 +1833,8 @@ header
 					width: 100%
 					display: flex
 					align-items: flex-start
-					justify-content: space-between
+					justify-content: flex-start
+					flex-direction: column
 					padding: 50px
 					+media-breakpoint-down(md)
 						padding: 40px 30px
@@ -1834,132 +1842,68 @@ header
 						padding: 30px 15px
 					&:nth-child(even)
 						background: rgba(80, 185, 189, 0.5)
-					.cost__left
+					.cost__top
 						display: flex
-						align-items: flex-start
+						align-items: center
 						justify-content: flex-start
-						flex-direction: column
-						flex-basis: 55%
+						width: 100%
+						padding-bottom: 60px
+						+media-breakpoint-down(md)
+							padding-bottom: 10px
 						+media-breakpoint-down(xs)
-							padding-right: 15px
-						.cost__top
-							display: flex
-							align-items: center
-							justify-content: flex-start
-							width: 100%
-							padding-bottom: 60px
+							padding-bottom: 20px
+						.cost__title
+							font-family: 'Roboto', sans-serif
+							font-weight: 300
+							font-size: 36px
+							line-height: 42px
+							flex-basis: 55%
 							+media-breakpoint-down(md)
-								padding-bottom: 10px
+								font-size: 32px
+								line-height: 36px
+								min-height: 80px
 							+media-breakpoint-down(xs)
-								padding-bottom: 20px
-							.cost__title
-								font-family: 'Roboto', sans-serif
-								font-weight: 300
-								font-size: 36px
-								line-height: 42px
-								+media-breakpoint-down(md)
-									font-size: 32px
-									line-height: 36px
-									min-height: 80px
-								+media-breakpoint-down(xs)
-									font-size: 18px
-									line-height: 20px
-									min-height: 70px
-							.cost__cost
-								font-family: 'Roboto', sans-serif
-								font-weight: 300
-								font-size: 36px
-								line-height: 42px
-								+media-breakpoint-down(md)
-									font-size: 32px
-									line-height: 36px
-									min-height: 80px
-								+media-breakpoint-down(xs)
-									font-size: 18px
-									line-height: 20px
-									min-height: 70px
-						.cost__sublist
-							display: flex
-							align-items: flex-start
-							justify-content: flex-start
-							flex-direction: column
-							.cost__item
-								font-family: 'Roboto', sans-serif
-								font-weight: 300
-								font-size: 24px
-								line-height: 28px
-								margin-bottom: 45px
-								display: flex
-								align-items: center
-								justify-content: space-between
-								+media-breakpoint-down(xs)
-									font-size: 18px
-									line-height: 20px
-									margin-bottom: 25px
-								&:last-child
-									margin-bottom: 0px
-					.cost__right
+								font-size: 18px
+								line-height: 20px
+								min-height: 70px
+						.cost__cost
+							font-family: 'Roboto', sans-serif
+							font-weight: 300
+							font-size: 36px
+							line-height: 42px
+							+media-breakpoint-down(md)
+								font-size: 32px
+								line-height: 36px
+								min-height: 80px
+							+media-breakpoint-down(xs)
+								font-size: 18px
+								line-height: 20px
+								min-height: 70px
+					.cost__sublist
 						display: flex
 						align-items: flex-start
 						justify-content: flex-start
 						flex-direction: column
-						flex-basis: 45%
-						.cost__top
+						width: 100%
+						.cost__item
+							font-family: 'Roboto', sans-serif
+							font-weight: 300
+							font-size: 24px
+							line-height: 28px
+							margin-bottom: 45px
 							display: flex
 							align-items: center
 							justify-content: flex-start
 							width: 100%
-							padding-bottom: 60px
-							+media-breakpoint-down(md)
-								padding-bottom: 10px
 							+media-breakpoint-down(xs)
-								padding-bottom: 20px
+								font-size: 18px
+								line-height: 20px
+								margin-bottom: 25px
+							&:last-child
+								margin-bottom: 0px
 							.cost__title
-								font-family: 'Roboto', sans-serif
-								font-weight: 300
-								font-size: 36px
-								line-height: 42px
-								+media-breakpoint-down(md)
-									font-size: 32px
-									line-height: 36px
-									min-height: 80px
-								+media-breakpoint-down(xs)
-									font-size: 18px
-									line-height: 20px
-									min-height: 70px
-							.cost__cost
-								font-family: 'Roboto', sans-serif
-								font-weight: 300
-								font-size: 36px
-								line-height: 42px
-								+media-breakpoint-down(md)
-									font-size: 32px
-									line-height: 36px
-									min-height: 80px
-								+media-breakpoint-down(xs)
-									font-size: 18px
-									line-height: 20px
-									min-height: 70px
-						.cost__sublist
-							display: flex
-							align-items: flex-start
-							justify-content: flex-start
-							flex-direction: column
-							.cost__item
-								font-family: 'Roboto', sans-serif
-								font-weight: 300
-								font-size: 24px
-								line-height: 28px
-								margin-bottom: 45px
-								display: flex
-								align-items: center
-								justify-content: space-between
-								+media-breakpoint-down(xs)
-									font-size: 18px
-									line-height: 20px
-									margin-bottom: 25px
-								&:last-child
-									margin-bottom: 0px
+								flex-basis: 55%
+							.cost__value
 
 ///////////////akcii page
 .akcii__breadcrumb
@@ -1991,6 +1935,7 @@ header
 					display: flex
 					align-items: flex-start
 					justify-content: space-between
+					flex-direction: column
 					padding: 50px
 					position: relative
 					+media-breakpoint-down(md)
@@ -1999,88 +1944,86 @@ header
 						padding: 30px 15px
 					&:nth-child(even)
 						background: rgba(80, 185, 189, 0.5)
-					.akcii__left
+					.akcii__top
+						display: flex
+						align-items: center
+						justify-content: flex-start
+						width: 100%
+						padding-bottom: 50px
+						+media-breakpoint-down(md)
+							padding-bottom: 10px
+						+media-breakpoint-down(xs)
+							padding-bottom: 50px
+						.akcii__title
+							font-family: 'Roboto', sans-serif
+							font-weight: 300
+							font-size: 36px
+							line-height: 42px
+							flex-basis: 55%
+							+media-breakpoint-down(md)
+								font-size: 32px
+								line-height: 36px
+								min-height: 80px
+							+media-breakpoint-down(xs)
+								font-size: 18px
+								line-height: 20px
+								min-height: 70px
+						.akcii__cost
+							font-family: 'Roboto', sans-serif
+							font-weight: 300
+							font-size: 36px
+							line-height: 42px
+							+media-breakpoint-down(md)
+								font-size: 32px
+								line-height: 36px
+								min-height: 80px
+							+media-breakpoint-down(xs)
+								font-size: 18px
+								line-height: 20px
+								min-height: 70px
+					.akcii__date
+						font-weight: 300
+						font-size: 24px
+						line-height: 24px
+						color: #FFFFFF
+						background: linear-gradient(97.18deg, #50B9BD 0%, #1C9DAC 100%)
+						border-radius: 5px
+						padding: 11px 82px
+						margin-bottom: 45px
+						+media-breakpoint-down(md)
+							padding: 10px 40px
+						+media-breakpoint-down(sm)
+							padding: 10px 10px
+						+media-breakpoint-down(sm)
+							position: absolute
+							top: 85px
+							font-size: 18px
+							line-height: 18px
+					.akcii__sublist
 						display: flex
 						align-items: flex-start
 						justify-content: flex-start
 						flex-direction: column
-						flex-basis: 55%
-						+media-breakpoint-down(xs)
-							padding-right: 15px
-						.akcii__top
+						width: 100%
+						.akcii__item
+							font-family: 'Roboto', sans-serif
+							font-weight: 300
+							font-size: 24px
+							line-height: 28px
+							margin-bottom: 45px
+							width: 100%
 							display: flex
 							align-items: center
 							justify-content: flex-start
-							width: 100%
-							padding-bottom: 50px
-							+media-breakpoint-down(md)
-								padding-bottom: 10px
 							+media-breakpoint-down(xs)
-								padding-bottom: 50px
-							.akcii__title
-								font-family: 'Roboto', sans-serif
-								font-weight: 300
-								font-size: 36px
-								line-height: 42px
-								+media-breakpoint-down(md)
-									font-size: 32px
-									line-height: 36px
-									min-height: 80px
-								+media-breakpoint-down(xs)
-									font-size: 18px
-									line-height: 20px
-									min-height: 70px
-							.akcii__cost
-								font-family: 'Roboto', sans-serif
-								font-weight: 300
-								font-size: 36px
-								line-height: 42px
-								+media-breakpoint-down(md)
-									font-size: 32px
-									line-height: 36px
-									min-height: 80px
-								+media-breakpoint-down(xs)
-									font-size: 18px
-									line-height: 20px
-									min-height: 70px
-						.akcii__date
-							font-weight: 300
-							font-size: 24px
-							line-height: 24px
-							color: #FFFFFF
-							background: linear-gradient(97.18deg, #50B9BD 0%, #1C9DAC 100%)
-							border-radius: 5px
-							padding: 11px 82px
-							margin-bottom: 45px
-							+media-breakpoint-down(md)
-								padding: 10px 40px
-							+media-breakpoint-down(sm)
-								padding: 10px 10px
-							+media-breakpoint-down(sm)
-								position: absolute
-								top: 85px
 								font-size: 18px
-								line-height: 18px
-						.akcii__sublist
-							display: flex
-							align-items: flex-start
-							justify-content: flex-start
-							flex-direction: column
-							.akcii__item
-								font-family: 'Roboto', sans-serif
-								font-weight: 300
-								font-size: 24px
-								line-height: 28px
-								margin-bottom: 45px
-								display: flex
-								align-items: center
-								justify-content: space-between
-								+media-breakpoint-down(xs)
-									font-size: 18px
-									line-height: 20px
-									margin-bottom: 25px
-								&:last-child
-									margin-bottom: 0px
+								line-height: 20px
+								margin-bottom: 25px
+							&:last-child
+								margin-bottom: 0px
+							.akcii__title
+								flex-basis: 55%
+							.akcii__value
 					.akcii__right
 						display: flex
 						align-items: flex-start
@@ -2380,10 +2323,12 @@ header
 				.specialists__listBottom
 					display: flex
 					align-items: flex-start
-					justify-content: space-between
+					justify-content: flex-start
 					flex-wrap: wrap
 					width: 100%
 					margin-bottom: 0px
+					+media-breakpoint-down(lg)
+						justify-content: space-between
 					+media-breakpoint-down(sm)
 						justify-content: center
 					.specialists__itemBottom
@@ -2395,14 +2340,27 @@ header
 						border-radius: 20px
 						flex-basis: 385px
 						margin-bottom: 20px
+						margin-right: 20px
 						position: relative
 						transition: 0.2s all linear
+						&:nth-child(3n)
+							margin-right: 0px
+						+media-breakpoint-down(lg)
+							&:nth-child(3n)
+								margin-right: 20px
+							&:nth-child(2n)
+								margin-right: 0px
 						+media-breakpoint-down(md)
 							flex-basis: 338px
 							box-shadow: 0px 4px 30px rgba(28, 157, 172, 0.25)
 							overflow: hidden
 						+media-breakpoint-down(sm)
-							flex-basis: 388px							
+							flex-basis: 388px
+							margin-right: 0
+							&:nth-child(3n)
+								margin-right: 0
+							&:nth-child(2n)
+								margin-right: 0
 						+media-breakpoint-down(xs)
 							flex-basis: 100%
 						&:hover
@@ -2624,7 +2582,7 @@ header
 				padding: 0 30px 60px
 				display: flex
 				align-items: flex-start
-				justify-content: space-between
+				justify-content: flex-start
 				flex-wrap: wrap
 				+media-breakpoint-down(lg)
 					padding: 0 0 30px 25px
@@ -2638,6 +2596,9 @@ header
 					max-width: 330px
 					height: 300px
 					margin-bottom: 20px
+					margin-right: 5px
+					&:nth-child(4n)
+						margin-right: 0px
 					+media-breakpoint-down(lg)
 						height: auto
 						margin-bottom: 0px
