@@ -444,6 +444,9 @@ template {
   header .container-fluid.container__header .header .header__function {
     padding-right: 70px;
   }
+  header .container-fluid.container__header .burger-menu {
+    top: 46px;
+  }
   header .container-fluid.container__header .burger-menu .burger-menu__button {
     display: block;
   }
@@ -453,6 +456,9 @@ template {
   }
   header .container-fluid.scrolled .header .header__nav.is-active {
     height: calc( 100vh - 68px);
+  }
+  header .container-fluid.scrolled .burger-menu {
+    top: 14px;
   }
   header.header__home .container-fluid.container__header .header {
     position: relative;
@@ -1221,7 +1227,7 @@ header .container-fluid.container__header .header .header__function .header__pho
   position: relative;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   header .container-fluid.container__header .header .header__function .header__phone {
     display: none;
   }
@@ -3922,10 +3928,6 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   }
 }
 
-.pagenews .container .row .pagenews__wrap .pagenews__left p:first-child {
-  margin-bottom: 0;
-}
-
 .pagenews .container .row .pagenews__wrap .pagenews__left p:last-child {
   margin-bottom: 0;
 }
@@ -5045,7 +5047,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .specialists .container .row.specialists__top {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 767.98px) {
@@ -5092,10 +5094,14 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-bottom: 0;
   width: 100%;
 }
 
@@ -5138,6 +5144,12 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
   -webkit-transition: 0.2s all linear;
   -o-transition: 0.2s all linear;
   transition: 0.2s all linear;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.specialists .container .row.specialists__top .specialists__listTop .specialists__itemTop:nth-child(2n) {
+  margin-right: 0px;
 }
 
 @media (max-width: 1199.98px) {
@@ -5161,6 +5173,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 
 @media (max-width: 767.98px) {
   .specialists .container .row.specialists__top .specialists__listTop .specialists__itemTop {
+    margin-right: 0px;
     -webkit-flex-basis: 388px;
         -ms-flex-preferred-size: 388px;
             flex-basis: 388px;
@@ -7114,8 +7127,9 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 }
 
 .pageservice__bottom .container .row.pageservice__content .pageservice__left .pageservice__info {
-  min-height: 400px;
+  min-height: 480px;
   padding-left: 20px;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 1199.98px) {
@@ -7140,7 +7154,7 @@ header.header__home .container-fluid.scrolled .burger-menu .burger-menu__button 
 
 .pageservice__bottom .container .row.pageservice__content .pageservice__left .pageservice__indicationsUse {
   padding-left: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 
 .pageservice__bottom .container .row.pageservice__content .pageservice__left .pageservice__indicationsUse p {
@@ -9442,6 +9456,9 @@ footer .container .footer__bottom .footer__bottomElem .footer__seti .footer__ite
   header .container-fluid.container__header .header .header__function {
     padding-right: 70px;
   }
+  header .container-fluid.container__header .burger-menu {
+    top: 46px;
+  }
   header .container-fluid.container__header .burger-menu .burger-menu__button {
     display: block;
   }
@@ -9451,6 +9468,9 @@ footer .container .footer__bottom .footer__bottomElem .footer__seti .footer__ite
   }
   header .container-fluid.scrolled .header .header__nav.is-active {
     height: calc( 100vh - 68px);
+  }
+  header .container-fluid.scrolled .burger-menu {
+    top: 14px;
   }
   header.header__home .container-fluid.container__header .header {
     position: relative;
