@@ -1,7 +1,7 @@
 
 @media screen and (max-height: 860px)
     .main__form
-        bottom: 3%
+        bottom: 1%
 @media screen and (min-width: 1400px)
     header
         .container-fluid
@@ -82,6 +82,7 @@
                             border-top: 2px solid $accent
                             .header__item
                                 margin-bottom: 30px
+                                text-align: center
                                 .header__link
                                     font-size: 24px
                                     line-height: 24px
@@ -108,7 +109,7 @@
                         &.is-active
                             height: calc( 100vh - 68px )
                 .burger-menu
-                    top: 14px
+                    top: 12px
 
         &.header__home
             .container-fluid
@@ -136,6 +137,7 @@
                                 justify-content: flex-start
                                 .header__item
                                     margin-bottom: 30px
+                                    text-align: center
                                     .header__link
                                         font-size: 24px
                                         line-height: 24px
@@ -177,7 +179,117 @@
                         .about__itemBottom
                             &:nth-child(1), &:nth-child(2)
                                 flex-basis: 548px
-
+@media screen and (min-width: 1199px) and (max-width: 1299px)
+    .services__home 
+        .services__wrapper 
+            .row 
+                .services__list                     
+                    .services__item:nth-child(5)
+                        margin-right: 0px
+                    .services__item:nth-child(6n)
+                        margin-right: 15px
+    .gallery 
+        .container 
+            .row 
+                .gallery__list
+                    justify-content: space-around
+                    .gallery__item
+                        margin: 0 auto 20px
+                        &:nth-child(3n)
+                            margin: 0 auto 20px
+@media screen and (min-width: 992px) and (max-width: 1299px)
+    .about__specialists
+        .container
+            .row
+                &.about__bottom
+                    .about__listBottom
+                        justify-content: space-between
+                        .about__itemBottom
+                            flex-basis: auto
+                            width: 48% 
+                            &:nth-child(1), &:nth-child(2)
+                                flex-basis: auto
+                                width: 48% 
+                                .about__link
+                                    .about__info
+                                        text-align: center
+                                        .about__date
+                                            font-weight: 300
+                                            font-size: 24px
+                                            line-height: 28px
+                                            padding-top: 30px
+                                            padding-bottom: 15px
+                                            margin: 0 auto
+                                        .about__description                    
+                                            font-weight: 300
+                                            font-size: 18px
+                                            line-height: 21px
+                                            padding: 0 15px 10px
+                                            margin: 0 auto
+                                            min-height: 125px
+    .specialists 
+        .container 
+            .row
+                &.specialists__top 
+                    .specialists__listTop
+                        justify-content: space-between 
+                        .specialists__itemTop
+                            flex-basis: auto
+                            width: 49%
+                            margin: 0 0 20px
+                &.specialists__bottom 
+                    .specialists__listBottom 
+                        justify-content: space-between 
+                        .specialists__itemBottom
+                            flex-basis: auto
+                            width: 49%
+                            margin: 0 0 20px
+@media screen and (min-width: 577px) and (max-width: 1024px)
+    header
+        .container-fluid
+            &.container__header 
+                .header 
+                    .header__nav
+                        padding: 0
+                        top: 135px
+                        &.is-active
+                            min-height: calc( 100vh - 135px)
+                            height: 100%
+                        .header__list-nav
+                            padding-bottom: 40px
+                &.scrolled
+                    .header 
+                        .header__nav
+                            top: 68px
+                            &.is-active
+                                min-height: calc( 100vh - 68px)
+                                height: 100%
+                            .header__list-nav
+                                padding-bottom: 40px
+        &.header__home 
+            .container-fluid
+                &.container__header 
+                    .header 
+                        .header__nav
+                            padding: 0
+                            top: 135px
+                            &.is-active
+                                min-height: calc( 100vh - 135px)
+                                height: 100%
+                    &.scrolled
+                        .header 
+                            .header__nav
+                                top: 68px
+                                &.is-active
+                                    min-height: calc( 100vh - 68px)
+                                    height: 100%
+                &.fixed-top 
+                    .burger-menu
+                        top: 46px
+                    &.scrolled
+                        .burger-menu
+                            top: 12px
+                
 @media screen and (max-width: 769px)
     header
         .container-fluid
@@ -185,15 +297,13 @@
                 .header
                     .header__nav
                         width: 100vw
-                        top: 145px
+                        top: 135px
                         padding: 0 0px
                         .header__list-nav
                             background: #FFF
                             flex-direction: column
                             padding-top: 40px
                             border-top: 2px solid $accent
-                            .header__item
-
                     .header__function
                         padding-right: 70px
             &.scrolled
@@ -208,7 +318,7 @@
                         .header__nav
                             width: 100vw
                             padding: 0 0px
-                            top: 145px
+                            top: 135px
                 &.scrolled
                     .header
                         .header__nav
@@ -228,12 +338,16 @@
                         .header__list-nav
                         &.is-active
                             height: calc( 100vh - 95px )
+                .burger-menu
+                    top: 24px
             &.scrolled
                 .header
                     .header__nav
                         height: calc( 100vh - 55px )
                         &.is-active
                             height: calc( 100vh - 55px )
+                .burger-menu
+                    top: 6px
         &.header__home
             .container-fluid
                 &.container__header
