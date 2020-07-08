@@ -165,21 +165,32 @@ $(document).ready(function() {
     $(".submenu").on("mouseenter", function() {
       event.preventDefault();
       $(this).addClass("is-active");
-      $(".header__subList").addClass("is-active");    
+      $(".level-1").addClass("is-active");    
     });
     $(".header__subList").on("mouseleave", function() {
-      $(".submenu").removeClass("is-active");
-      $(".header__subList").removeClass("is-active");
+      $(this).closest(".submenu").removeClass("is-active");
+      $(".level-1").removeClass("is-active");
     });
+    $(".submenu-two").on("mouseenter", function() {
+      $(this).closest(".submenu-two").addClass("is-active");
+    });
+    $(".submenu-two").on("mouseleave", function() {
+      $(this).closest(".submenu-two").removeClass("is-active");
+    });
+    
   } else {
   $(".submenu").on("click", function() {
       event.preventDefault();
       $(".submenu").toggleClass("is-active");
-      $(".header__subList").toggleClass("is-active");
-      $(".header__subList").on("mouseleave", function() {
+      $(".level-1").toggleClass("is-active");
+      $(".level-1").on("mouseleave", function() {
         $(".submenu").removeClass("is-active");
-        $(".header__subList").removeClass("is-active");
+        $(".level-1").removeClass("is-active");
       });
+    });
+    $(".submenu-two").on("click", function() {
+      event.preventDefault();
+      $(this).closest(".submenu-two").toggleClass("is-active");
     });
   }
   
