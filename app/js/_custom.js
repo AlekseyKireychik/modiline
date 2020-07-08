@@ -1,86 +1,35 @@
-//BackForm input-file
 
-// jQuery.each(jQuery("textarea[data-autoresize]"), function() {
-//   var offset = this.offsetHeight - this.clientHeight;
-
-//   var resizeTextarea = function(el) {
-//     jQuery(el)
-//       .css("height", "auto")
-//       .css("height", el.scrollHeight + offset);
-//   };
-//   jQuery(this)
-//     .on("keyup input", function() {
-//       resizeTextarea(this);
-//     })
-//     .removeAttr("data-autoresize");
-// });
-
-$(document).ready(function() {
-  var stop_mobile_scroll = false;
-
-    $('.callback__link').click(function(e){
-      stop_mobile_scroll = true;
-    });
-
-    $('.popup__close').click(function(e){
-      stop_mobile_scroll = false;
-    });
-
-    // $(document).on('touchmove',function(e){
-    //   if (stop_mobile_scroll)
-    //     e.preventDefault();
-    // });
+$(document).ready(function() {    
 
   //form
+
   $(".register").on("click", function(event) {
     event.preventDefault();
-    stop_mobile_scroll = true;
 
     $(".main__form").addClass("is-active");
     $("body").addClass("is-active");
     $(".overlay").addClass("is-active");
 
-    $(document).on('touchmove',function(e){
-      if (stop_mobile_scroll)
-        e.preventDefault();
-    });
-
     $(".overlay").on("click", function(event) {
       $(this).removeClass("is-active");
       $(".main__form").removeClass("is-active");
       $("body").removeClass("is-active");
-      stop_mobile_scroll = false;
-      $(document).on('touchmove',function(e){
-        if (stop_mobile_scroll)
-          e.preventDefault();
-      });      
     });
 
     $(".form__btnClose").on("click", function(event) {
       $(".overlay").removeClass("is-active");
       $(".main__form").removeClass("is-active");
       $("body").removeClass("is-active");
-      stop_mobile_scroll = false;
-      $(document).on('touchmove',function(e){
-        if (stop_mobile_scroll)
-          e.preventDefault();
-      });
     });
 
   });
+
   //form success
   $("#btn-success").on("click", function(event) {
     $(".main__form-success").removeClass("is-active");
   });
 
-  // $("#comment").bind("input", function() {
-  //   if ($("#comment").html($(this).val().length)) {
-  //     $(this).addClass("change");
-  //   } else {
-  //     $(this).removeClass("change");
-  //   }
-  // });
-
+  
   $(document).on("keypress", ".validate-numeric", function(event) {
     return isNumber(event);
   });
@@ -94,114 +43,40 @@ $(document).ready(function() {
         return false; //disable key press
     }
   }
-  //gallery
 
+  //news block - add new elemen in endlist
+  $(".news-home__list, .pagenews__list").append('<li class="news__itemLast"></li>');
+  
   //gallery -- PC
-  let widthWorksPC = "1199";
+  const widthWorksPC = "1199";
 
   if ($(window).outerWidth() > widthWorksPC) {
-    $(".gallery__item").on("mouseover", function() {
-      $(this).addClass("hover");   
-      console.log('111');   
-      $(".gallery__item").on("click", function() {
-        $(".gallery__item").removeClass("hover");
-        event.preventDefault();        
-        if (
-          $(this).children(".gallery__imgBefore")
-            .hasClass("is-active")
-        ) {
-          $(this).children(".gallery__imgBefore")
-            .removeClass("is-active");
-          $(this).children(".gallery__imgAfter")
-            .toggleClass("is-active");
-          $(this).children(".gallery__caption")
-            .children(".gallery__descriptiongAfter")
-            .toggleClass("is-active");
-          $(this).children(".gallery__caption")
-            .children(".gallery__descriptionBefore")
-            .toggleClass("is-active");
-        } else {
-          $(this).children(".gallery__imgBefore")
-            .toggleClass("is-active");
-          $(this).children(".gallery__imgAfter")
-            .toggleClass("is-active");
-          $(this).children(".gallery__caption")
-            .children(".gallery__descriptiongAfter")
-            .toggleClass("is-active");
-          $(this).children(".gallery__caption")
-            .children(".gallery__descriptionBefore")
-            .toggleClass("is-active");
-        }
-      });
+
+    $(".gallery__item").on("mouseenter", function() {
+      $(this).addClass("hover");
     });
-    $(".gallery__item").on("mouseout", function() {
+    $(".gallery__link").on("click", function() {
+      $(this).closest(".gallery__item").removeClass("hover");
+      if ($(this).closest(".gallery__item").children(".gallery__imgBefore").hasClass("is-active")) {
+        $(this).closest(".gallery__item").children(".gallery__imgBefore").removeClass("is-active");
+        $(this).closest(".gallery__item").children(".gallery__imgAfter").toggleClass("is-active");
+        $(this).closest(".gallery__item").children(".gallery__caption").children(".gallery__descriptiongAfter").toggleClass("is-active");
+        $(this).closest(".gallery__item").children(".gallery__caption").children(".gallery__descriptionBefore").toggleClass("is-active");
+      } else {
+        $(this).closest(".gallery__item").children(".gallery__imgBefore").toggleClass("is-active");
+        $(this).closest(".gallery__item").children(".gallery__imgAfter").toggleClass("is-active");
+        $(this).closest(".gallery__item").children(".gallery__caption").children(".gallery__descriptiongAfter").toggleClass("is-active");
+        $(this).closest(".gallery__item").children(".gallery__caption").children(".gallery__descriptionBefore").toggleClass("is-active");
+      }
+    });
+    $(".gallery__item").on("mouseleave", function() {
       $(this).removeClass("hover");
     });
   }
 
-  // if ($(window).outerWidth() > widthWorksPC) {
-  //   $(".gallery__item").on("mousemove", function() {
-  //     $(this).addClass("hover");      
-  //     $(".gallery__link").on("click", function() {
-  //       $(this)
-  //       .closest(".gallery__item")
-  //       .removeClass("hover");
-  //       event.preventDefault();        
-  //       if (
-  //         $(this)
-  //           .closest(".gallery__item")
-  //           .children(".gallery__imgBefore")
-  //           .hasClass("is-active")
-  //       ) {
-  //         $(this)
-  //           .closest(".gallery__item")
-  //           .children(".gallery__imgBefore")
-  //           .removeClass("is-active");
-  //         $(this)
-  //           .closest(".gallery__item")
-  //           .children(".gallery__imgAfter")
-  //           .toggleClass("is-active");
-  //         $(this)
-  //           .closest(".gallery__item")
-  //           .children(".gallery__caption")
-  //           .children(".gallery__descriptiongAfter")
-  //           .toggleClass("is-active");
-  //         $(this)
-  //           .closest(".gallery__item")
-  //           .children(".gallery__caption")
-  //           .children(".gallery__descriptionBefore")
-  //           .toggleClass("is-active");
-  //       } else {
-  //         $(this)
-  //           .closest(".gallery__item")
-  //           .children(".gallery__imgBefore")
-  //           .toggleClass("is-active");
-  //         $(this)
-  //           .closest(".gallery__item")
-  //           .children(".gallery__imgAfter")
-  //           .toggleClass("is-active");
-  //         $(this)
-  //           .closest(".gallery__item")
-  //           .children(".gallery__caption")
-  //           .children(".gallery__descriptiongAfter")
-  //           .toggleClass("is-active");
-  //         $(this)
-  //           .closest(".gallery__item")
-  //           .children(".gallery__caption")
-  //           .children(".gallery__descriptionBefore")
-  //           .toggleClass("is-active");
-  //       }
-  //     });
-  //   });
-  //   $(".gallery__item").on("mouseout", function() {
-  //     $(this).removeClass("hover");
-  //   });
-  // }
-
   //gallery -- Phone
   if ($(window).outerWidth() < widthWorksPC) {
-    let textDescriptionPhoto =
-      "Нажмите на фото еще раз, если вы хотите посмотреть первоначальное состояние";
+    let textDescriptionPhoto = "Нажмите на фото еще раз, если вы хотите посмотреть первоначальное состояние";
     $(".gallery__descriptiongAfter").html(textDescriptionPhoto);
 
     $(".gallery__item").on("click", function() {
@@ -272,8 +147,9 @@ $(document).ready(function() {
       $(this).scrollTop() > $(".container__header").height() / 3
     );
   });
-  //nav-menu
 
+
+  //nav-menu
   $(".burger-menu").on("click", function(event) {
     event.preventDefault();
     $(".header__nav").toggleClass("is-active");
@@ -283,24 +159,39 @@ $(document).ready(function() {
     $(".header__home").toggleClass("is-active");
     $(".header__requestMobile").toggleClass("is-active");
   });
-
-
-  // contacts map
-  const heightMap = $(".contacts__caption").innerHeight();
-  $(".contacts__containerMap").css('height', heightMap);
-  console.log(heightMap);
   
   //sub-menu
-
-  $(".submenu").on("click", function() {
-    event.preventDefault();
-    $(".submenu").toggleClass("is-active");
-    $(".header__subList").toggleClass("is-active");
+  if ($(window).outerWidth() > widthWorksPC) {
+    $(".submenu").on("mouseenter", function() {
+      event.preventDefault();
+      $(this).addClass("is-active");
+      $(".header__subList").addClass("is-active");    
+    });
     $(".header__subList").on("mouseleave", function() {
       $(".submenu").removeClass("is-active");
       $(".header__subList").removeClass("is-active");
     });
-  });
+  } else {
+  $(".submenu").on("click", function() {
+      event.preventDefault();
+      $(".submenu").toggleClass("is-active");
+      $(".header__subList").toggleClass("is-active");
+      $(".header__subList").on("mouseleave", function() {
+        $(".submenu").removeClass("is-active");
+        $(".header__subList").removeClass("is-active");
+      });
+    });
+  }
+  
+  // $(".submenu").on("mouseleave", function() {
+  //   event.preventDefault();
+  //   $(this).removeClass("is-active");
+  //   $(".header__subList").removeClass("is-active");
+  // });
+
+  
+
+
   $(".reviews__list").slick({
     infinite: true,
     arrows: true,
@@ -309,6 +200,7 @@ $(document).ready(function() {
     slidesToScroll: 1,
     autoplay: false,
     focusOnSelect: true,
+    adaptiveHeight: true,
     variableWidth: true
   });
 });
